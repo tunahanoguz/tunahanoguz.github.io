@@ -1,0 +1,35 @@
+title: "Tunahan Oğuz"
+author: "Tunahan Oğuz"
+description: "Tunahan Oğuz"
+seo_description: "Tunahan Oğuz - Bilgisayar Mühendisi - Data Warehouse Developer"
+permalink: /:title/
+lang: "tr"
+excerpt_separator: "\n\n\n"
+date_format: "%d.%m.%Y"
+
+# Layout
+
+show_excerpts: false        # show article excerpts on the home page
+show_frame: false           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+minimal: true             # use a dark header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {title: "Hakkımda", file: "index.md"}
+  - {title: "Yazılar", file: "posts.html"}
+  - {title: "CV", url: "https://linkedin.com/in/tunahan-o%C4%9Fuz"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:tunahanog@gmail.com"}
+  - {title: LinkedIn, icon: linkedin, url: "https://linkedin.com/in/tunahan-o%C4%9Fuz"}
+  - {title: GitHub, icon: github, url: "https://github.com/tunahanoguz"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
+plugins:
+ - jekyll-feed
