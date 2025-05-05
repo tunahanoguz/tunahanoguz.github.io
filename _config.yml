@@ -16,16 +16,16 @@ minimal: true             # use a dark header
 
 # Menu
 
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {title: "Hakkımda", file: "index.md"}
-  - {title: "Yazılar", file: "posts.html"}
-  - {title: "CV", url: "https://linkedin.com/in/tunahan-o%C4%9Fuz"}
+navigation:                # accepts {file, title, url, icon, sidebaricon, new_tab}
+  - {title: "Hakkımda", file: "index.md", new_tab: false}
+  - {title: "Yazılar", file: "posts.html", new_tab: false}
+  - {title: "CV", url: "https://linkedin.com/in/tunahan-o%C4%9Fuz", new_tab: true}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:tunahanog@gmail.com"}
-  - {title: LinkedIn, icon: linkedin, url: "https://linkedin.com/in/tunahan-o%C4%9Fuz"}
-  - {title: GitHub, icon: github, url: "https://github.com/tunahanoguz"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Mail, icon: envelope, url: "mailto:tunahanog@gmail.com", new_tab: true}
+  - {title: LinkedIn, icon: linkedin, url: "https://linkedin.com/in/tunahan-o%C4%9Fuz", new_tab: true}
+  - {title: GitHub, icon: github, url: "https://github.com/tunahanoguz", new_tab: true}
+  - {title: Subscribe, icon: rss, url: "/feed.xml", new_tab: false}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
