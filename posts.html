@@ -1,7 +1,10 @@
 ---
-title: "Arşiv"
-layout: page
-sitemap: false
+layout: default
+title: "Yazılar"
 ---
 
-{% include archive.html %}
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Yazılar"%}
+{% endif %}
