@@ -25,7 +25,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:tunahanog@gmail.com", new_tab: true}
   - {title: LinkedIn, icon: linkedin, url: "https://linkedin.com/in/tunahan-o%C4%9Fuz", new_tab: true}
   - {title: GitHub, icon: github, url: "https://github.com/tunahanoguz", new_tab: true}
-  - {title: Subscribe, icon: rss, url: "/feed.xml", new_tab: false}
+  - {title: Subscribe, icon: rss, url: "/feed.xml", new_tab: true}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
