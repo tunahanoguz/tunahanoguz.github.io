@@ -28,21 +28,21 @@ Aşağıdaki tabloda, REGEXP_INSTR, REGEXP_COUNT, REGEXP_LIKE, REGEXP_SUBSTR ve 
 | {m,n}      | En az ```m```, en çok ```n``` kez tekrarlama                                                                    |
 | \n         | Kendisinden önce ```( )``` ile oluşturulan grupların aynı ifadeyi tekrar yazmadan tekrar kullanılmasını sağlar. |
 | [::]       | POSIX karakter sınıfı ile eşleşir. Tablonun son satırlarında tüm POSIX karakter sınıflarının açıklamaları var.  |
-| [==]       |                                                                                                                 |
+| [==]       | Bir POSIX özelliği olup, eşittir karakterleri arasında konan harfin farklı aksanlarıyla da eşleme sağlar.       |
 | \d         | 0-9 arasındaki rakamlar ile eşleşir. (Python'da farklı dillerdeki rakamları da destekliyor.)                    |
 | \D         | 0-9 arasındaki rakamlar hariç her karakter ile eşleşir.                                                         |
 | \w         | Harfler, 0-9 arasındaki rakamlar ve alt çizgi ile eşleşir. ```[a-zA-Z0-9_]```                                   |
 | \W         | Harfler, 0-9 arasındaki rakamlar ve alt çizgi hariç her karakter ile eşleşir.                                   |
 | \s         | Boşluk karakteri ile eşleşir.                                                                                   |
-| \S         | Boşluk karakteri dışındaki her karaketer ile eşleşir.                                                           |
+| \S         | Boşluk karakteri dışındaki her karakter ile eşleşir.                                                            |
 | \A         | Bir string'in başlangıcını belirtir. Eşleşme modu ```m``` olsa bile sadece ilk satırın başlangıcını belirtir.   |
 | \Z         | Bir string'in bitişini belirtir. Eşleşme modu ```m``` olsa bile sadece ilk satırın bitişini belirtir.           |
-| *?         |                                                                                                            |
-| +?         |                                                                                                            |
-| ??         |                                                                                                            |
-| {n}?       |                                                                                                            |
-| {n,}?      |                                                                                                            |
-| {n,m}?     |                                                                                                            |
+| *?         | ```*``` karakteri tek başına 0 veya daha fazla kez tekrarlama arar ve greedy (açgözlü) eşleşme sağlar. Yani mümkün olan en geniş eşleşmeyi arar. ```*?``` ise, ```*``` karakterinin anlamını korumakla birlikte, non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
+| +?         | ```+``` karakteri tek başına 1 veya daha fazla tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```+?``` ise, ```+``` karakterinin anlamını korumakla birlikte, non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
+| ??         | ```?``` karakteri tek başına 0 veya 1 kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```??``` ise, ```?``` karakterinin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
+| {m}?       | ```{m}``` deseni tek başına ```m``` kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m}?``` ise, ```{m}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
+| {m,}?      | ```{m,}``` deseni tek başına ```m``` veya daha fazla kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m,}?``` ise, ```{m,}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
+| {m,n}?     | ```{m,n}``` deseni tek başına en az ```m```, en çok ```n``` kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m,n}?``` ise, ```{m,n}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
 | [:alnum:]  |                                                                                                            |
 | [:alpha:]  |                                                                                                            |
 | [:digit:]  |                                                                                                            |
