@@ -10,33 +10,33 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 
 Aşağıdaki tabloda, REGEXP_INSTR, REGEXP_COUNT, REGEXP_LIKE, REGEXP_SUBSTR ve REGEXP_REPLACE adlı Oracle SQL fonksiyonlarında kullanılabilen ve regular expression'ın ifade ettiği desenlerin oluşumunu sağlayan ifadeler bulunmaktadır.
 
-| Desen      | Açıklama                                                                                                   |
-|------------|------------------------------------------------------------------------------------------------------------|
-| ^          | Bir string'in başlangıcını belirtir.                                                                       |
-| $          | Bir string'in bitişini belirtir.                                                                           |
-| *          | 0 veya daha fazla kez tekrarlama                                                                           |
-| +          | 1 veya daha fazla kez tekrarlama                                                                           |
-| ?          | 0 veya 1 kez tekrarlama                                                                                    |
-| .          |                                                                                                            |
-| \|         | Veya anlamı taşır. Alternatif oluşturan bir karakterdir.                                                   |
-| \          | Kaçış karakteridir. Özel anlam taşıyan regex metakarakterlerini o anlam dışında kullanmak için kullanılır. |
-| [ ]        | İçinde yer alan karakterlerle eşleşme                                                                      |
-| [^ ]       | İçinde yer alan karakterlerle eşleşmeme                                                                    |
-| ( )        | Grup oluşturur.                                                                                            |
-| {m}        | m kez tekrarlama                                                                                           |
-| {m,}       | m veya daha fazla kez tekrarlama                                                                           |
-| {m,n}      | En az m, en çok n kez tekrarlama                                                                           |
-| \n         |                                                                                                            |
-| [::]       |                                                                                                            |
-| [==]       |                                                                                                            |
-| \d         | 0-9 Python'da farklı rakamları da destekliyor. Arapların dilini mesela.                                    |
-| \D         | not 0-9                                                                                                    |
-| \w         | [a-zA-Z0-9_]                                                                                               |
-| \W         | not [a-zA-Z0-9_]                                                                                           |
-| \s         |                                                                                                            |
-| \S         |                                                                                                            |
-| \A         |                                                                                                            |
-| \Z         |                                                                                                            |
+| Desen      | Açıklama                                                                                                        |
+|------------|-----------------------------------------------------------------------------------------------------------------|
+| ^          | Bir string'in başlangıcını belirtir. Eğer eşleşme modu ```m``` ise her satırın başlangıcını belirtir.           |
+| $          | Bir string'in bitişini belirtir. Eğer eşleşme modu ```m``` ise her satırın bitişini belirtir.                   |
+| *          | 0 veya daha fazla kez tekrarlama                                                                                |
+| +          | 1 veya daha fazla kez tekrarlama                                                                                |
+| ?          | 0 veya 1 kez tekrarlama                                                                                         |
+| .          | ```NULL``` dışında tüm karakterler ile eşleşir.                                                                 |
+| \|         | Veya anlamı taşır. Alternatif oluşturan bir karakterdir.                                                        |
+| \          | Kaçış karakteridir. Özel anlam taşıyan regex metakarakterlerini o anlam dışında kullanmak için kullanılır.      |
+| [ ]        | İçinde yer alan karakterlerle eşleşme                                                                           |
+| [^ ]       | İçinde yer alan karakterlerle eşleşmeme                                                                         |
+| ( )        | Grup oluşturur.                                                                                                 |
+| {m}        | ```m``` kez tekrarlama                                                                                          |
+| {m,}       | ```m``` veya daha fazla kez tekrarlama                                                                          |
+| {m,n}      | En az ```m```, en çok ```n``` kez tekrarlama                                                                    |
+| \n         | Kendisinden önce ```( )``` ile oluşturulan grupların aynı ifadeyi tekrar yazmadan tekrar kullanılmasını sağlar. |
+| [::]       | POSIX karakter sınıfı ile eşleşir. Tablonun son satırlarında tüm POSIX karakter sınıflarının açıklamaları var.  |
+| [==]       |                                                                                                                 |
+| \d         | 0-9 arasındaki rakamlar ile eşleşir. (Python'da farklı dillerdeki rakamları da destekliyor.)                    |
+| \D         | 0-9 arasındaki rakamlar hariç her karakter ile eşleşir.                                                         |
+| \w         | Harfler, 0-9 arasındaki rakamlar ve alt çizgi ile eşleşir. ```[a-zA-Z0-9_]```                                   |
+| \W         | Harfler, 0-9 arasındaki rakamlar ve alt çizgi hariç her karakter ile eşleşir.                                   |
+| \s         | Boşluk karakteri ile eşleşir.                                                                                   |
+| \S         | Boşluk karakteri dışındaki her karaketer ile eşleşir.                                                           |
+| \A         | Bir string'in başlangıcını belirtir. Eşleşme modu ```m``` olsa bile sadece ilk satırın başlangıcını belirtir.   |
+| \Z         | Bir string'in bitişini belirtir. Eşleşme modu ```m``` olsa bile sadece ilk satırın bitişini belirtir.           |
 | *?         |                                                                                                            |
 | +?         |                                                                                                            |
 | ??         |                                                                                                            |
