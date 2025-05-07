@@ -43,15 +43,15 @@ Aşağıdaki tabloda, REGEXP_INSTR, REGEXP_COUNT, REGEXP_LIKE, REGEXP_SUBSTR ve 
 | {m}?       | ```{m}``` deseni tek başına ```m``` kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m}?``` ise, ```{m}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
 | {m,}?      | ```{m,}``` deseni tek başına ```m``` veya daha fazla kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m,}?``` ise, ```{m,}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
 | {m,n}?     | ```{m,n}``` deseni tek başına en az ```m```, en çok ```n``` kez tekrarlama arar ve greedy (açgözlü) bir anlayışla eşleşme sağlar. ```{m,n}?``` ise, ```{m,n}``` deseninin anlamını korumakla birlikte,  non-greedy veya lazy olarak ifade edilen bir anlayışla eşleşme sağlar. Bu da mümkün olan en dar eşleşmenin aranacağı anlamına gelir. |
-| [:alnum:]  |                                                                                                            |
-| [:alpha:]  |                                                                                                            |
-| [:digit:]  |                                                                                                            |
-| [:lower:]  |                                                                                                            |
-| [:upper:]  |                                                                                                            |
-| [:space:]  |                                                                                                            |
-| [:punct:]  |                                                                                                            |
-| [:xdigit:] |                                                                                                            |
-| [:blank:]  |                                                                                                            |
-| [:cntrl:]  |                                                                                                            |
-| [:graph:]  |                                                                                                            |
-| [:print:]  |                                                                                                            |
+| [:alnum:]  |                                                                                                                 |
+| [:alpha:]  | Alfabetik bir karakter ile eşleşir. ```[a-zA-Z]```                                                              |
+| [:digit:]  | 0-9 arasındaki bir rakam ile eşleşir. ```[0-9]```                                                               |
+| [:lower:]  | Küçük alfabetik bir karakter ile eşleşir. ```[a-z]```                                                           |
+| [:upper:]  | Büyük alfabetik bir karakter ile eşleşir. ```[A-Z]```                                                           |
+| [:space:]  |                                                                                                                 |
+| [:punct:]  | Bir noktlama işareti ile eşleşir. ```! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ \` { \| } ~```      |
+| [:xdigit:] |                                                                                                                 |
+| [:blank:]  | Boşluk veya tab karakteri ile eşleşir.                                                                          |
+| [:cntrl:]  |                                                                                                                 |
+| [:graph:]  |                                                                                                                 |
+| [:print:]  |                                                                                                                 |
