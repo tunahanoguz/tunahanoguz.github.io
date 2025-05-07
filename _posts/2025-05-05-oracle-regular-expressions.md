@@ -48,7 +48,7 @@ Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBS
 | [:digit:]  | 0-9 arasındaki bir rakam ile eşleşir. `[0-9]`                                                                   |
 | [:lower:]  | Küçük alfabetik bir karakter ile eşleşir. `[a-z]`                                                               |
 | [:upper:]  | Büyük alfabetik bir karakter ile eşleşir. `[A-Z]`                                                               |
-| [:space:]  | `tab`, `newline`, `vertical tab`, `form feed`, `carriage return` ve `space` karakterlerinden biriyle eşleşir.   |
+| [:space:]  | `horizontal tab`, `newline (line feed)`, `vertical tab`, `form feed (new page)`, `carriage return` ve `space` karakterlerinden biriyle eşleşir.   |
 | [:punct:]  | Bir noktalama işareti ile eşleşir. <br> ```! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~```   |
 | [:xdigit:] | Hexadecimal (on altılı) sayı sisteminde yer alan bir sembol ile eşleşir. <br> `0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f` |
 | [:blank:]  | Boşluk veya tab karakteri ile eşleşir.                                                                          |
