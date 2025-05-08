@@ -8,6 +8,8 @@ Regular expression (düzenli ifade), bir metindeki eşleşme desenini ifade eden
 
 Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütüphanelerde regular expression için özel fonksiyonlar bulunur. Bu fonksiyonların isimleri, aldıkları parametreler ve regular expression desenindeki standartlar her yazılım dili/modül/paket/kütüphanede farklılaşabilir. Örneğin, positive lookahead ve negative lookahead gibi yapılar şimdilik Oracle üzerinde çalışmıyor. `[:KARAKTERSINIFIADI:]` yapısındaki POSIX karakter sınıfları Oracle'da kullanılabilirken, Python'ın yerleşik regular expression modülü olan `re`'de kullanılamaz. Kullanabilmek için `regex` modülünü yüklemek gerekir. Ben bu yazıda regular expression konusunu Oracle odaklı olarak işleyeceğim.
 
+---
+
 Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında kullanılabilen ve regular expression'ın ifade ettiği desenlerin oluşumunu sağlayan ifadeler bulunmaktadır.
 
 | Desen      | Açıklama                                                                                                        |
@@ -55,6 +57,8 @@ Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBS
 | [:cntrl:]  | ASCII kontrol karakteri ile eşleşir. Bu karakterler, 000-037 ve 177 oktal kodlara sahip ASCII karakterleridir.  |
 | [:graph:]  | `[:alnum:]` ve `[:punct:]` karakter sınıflarının eşleştiği bir karakter ile eşleşir.                            |
 | [:print:]  | `[:alnum:]` ve `[:punct:]` karakter sınıflarının eşleştiği bir karakter ve boşluk karakteri ile eşleşir.        |
+
+---
 
 Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında eşleşme davranışını düzenlemek için kullanılan değerler yer almaktadır.
 
