@@ -72,21 +72,26 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
-| String | Desen   | Mod | Eşleşti mi? |
-|--------|---------|-----|-------------|
-| John   | ^J      | -   | +           |
-| John   | n$      | -   | +           |
-| John   | ^Jo*hn$ | -   | +           |
-| Joohn  | ^Jo*hn$ | -   | +           |
-| Jhn    | ^Jo*hn$ | -   | +           |
-| John   | ^Jo+hn$ | -   | +           |
-| Joohn  | ^Jo+hn$ | -   | +           |
-| Jhn    | ^Jo+hn$ | -   | x           |
-| John   | ^Jo?hn$ | -   | +           |
-| Joohn  | ^Jo?hn$ | -   | x           |
-| Jhn    | ^Jo?hn$ | -   | +           |
-| John   | ^J.hn$  | -   | +           |
-| John   | ^J...$  | -   | +           |
-| John   | ^J.*$   | -   | -           |
-| John   | ^J.*n$  | -   | +           |
-| John   | ^.*$    | -   | +           |
+| String | Desen          | Mod | Eşleşti mi? |
+|--------|----------------|-----|-------------|
+| John   | `^J`           | -   | +           |
+| John   | `n$`           | -   | +           |
+| John   | `^Jo*hn$`      | -   | +           |
+| Joohn  | `^Jo*hn$`      | -   | +           |
+| Jhn    | `^Jo*hn$`      | -   | +           |
+| John   | `^Jo+hn$`      | -   | +           |
+| Joohn  | `^Jo+hn$`      | -   | +           |
+| Jhn    | `^Jo+hn$`      | -   | x           |
+| John   | `^Jo?hn$`      | -   | +           |
+| Joohn  | `^Jo?hn$`      | -   | x           |
+| Jhn    | `^Jo?hn$`      | -   | +           |
+| John   | `^J.hn$`       | -   | +           |
+| John   | `^J...$`       | -   | +           |
+| John   | `^J.*$`        | -   | -           |
+| John   | `^J.*n$`       | -   | +           |
+| John   | `^.*$`         | -   | +           |
+| John   | ```^Jo|ahn$``` | -   | +           |
+| Jahn   | ```^Jo|ahn$``` | -   | +           |
+| Jehn   | ```^Jo|ahn$``` | -   | -           |
+| J*hn   | ```^J\*hn$```  | -   | +           |
+| Jo+n   | ```^Jo\+```    | -   | +           |
