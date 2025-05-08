@@ -79,3 +79,14 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 | John   | ^Jo*hn$ | -   | +           |
 | Joohn  | ^Jo*hn$ | -   | +           |
 | Jhn    | ^Jo*hn$ | -   | +           |
+| John   | ^Jo+hn$ | -   | +           |
+| Joohn  | ^Jo+hn$ | -   | +           |
+| Jhn    | ^Jo+hn$ | -   | x           |
+| John   | ^Jo?hn$ | -   | +           |
+| Joohn  | ^Jo?hn$ | -   | x           |
+| Jhn    | ^Jo?hn$ | -   | +           |
+| John   | ^J.hn$  | -   | +           |
+| John   | ^J...$  | -   | +           |
+| John   | ^J.*$   | -   | -           |
+| John   | ^J.*n$  | -   | +           |
+| John   | ^.*$    | -   | +           |
