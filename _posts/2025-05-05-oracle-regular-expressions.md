@@ -55,3 +55,13 @@ Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBS
 | [:cntrl:]  | ASCII kontrol karakteri ile eşleşir. Bu karakterler, 000-037 ve 177 oktal kodlara sahip ASCII karakterleridir.  |
 | [:graph:]  | `[:alnum:]` ve `[:punct:]` karakter sınıflarının eşleştiği bir karakter ile eşleşir.                            |
 | [:print:]  | `[:alnum:]` ve `[:punct:]` karakter sınıflarının eşleştiği bir karakter ve boşluk karakteri ile eşleşir.        |
+
+Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında eşleşme davranışını düzenlemek için kullanılan değerler yer almaktadır.
+
+| Eşleşme Modu | Açıklama                                                                                                                              |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| c            | Case-sensitive eşleşme gerçekleşmesini sağlar.                                                                                        |
+| i            | Case-insensitive eşleşme gerçekleşmesini sağlar.                                                                                      |
+| n            | `.` karakterinin `newline` karakteri ile eşleşmesini sağlar.                                                                          |
+| m            | Eşleşme modunu `multiline mode` olarak düzenler. Bu mod pasifken `^` tüm metnin başını, `$` tüm metnin sonunu, aktifken `^` her satırın başını, `$` her satırın sonunu ifade eder. |
+| x            | Desendeki boşlukları ve yorumları yok sayar. Yorumlar `#` ile başlar ve satır sonunda sona erer. Yorumlar sadece bu modda geçerlidir. |
