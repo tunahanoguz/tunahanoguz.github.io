@@ -69,3 +69,9 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 | n            | `.` karakterinin `newline` karakteri ile eşleşmesini sağlar.                                                                          |
 | m            | Eşleşme modunu `multiline mode` olarak düzenler. Bu mod pasifken `^` tüm metnin başını, `$` tüm metnin sonunu, aktifken `^` her satırın başını, `$` her satırın sonunu ifade eder. |
 | x            | Desendeki boşlukları ve yorumları yok sayar. Yorumlar `#` ile başlar ve satır sonunda sona erer. Yorumlar sadece bu modda geçerlidir. |
+
+---
+
+| String | Desen | Mod | Eşleşti mi?        |
+|--------|-------|-----|--------------------|
+| John   | ^J    | -   | :white_check_mark: |
