@@ -72,6 +72,10 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
-| String | Desen | Mod | Eşleşti mi?        |
-|--------|-------|-----|--------------------|
-| John   | ^J    | -   | :white_check_mark: |
+| String | Desen   | Mod | Eşleşti mi? |
+|--------|---------|-----|-------------|
+| John   | ^J      | -   | +           |
+| John   | n$      | -   | +           |
+| John   | ^Jo*hn$ | -   | +           |
+| Joohn  | ^Jo*hn$ | -   | +           |
+| Jhn    | ^Jo*hn$ | -   | +           |
