@@ -72,6 +72,8 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
+Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşleşme modları için örnekler yer almaktadır.
+
 | String | Desen          | Mod | Eşleşti mi? |
 |--------|----------------|-----|-------------|
 | John   | `^J`           | -   | +           |
