@@ -123,3 +123,16 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 | Jooooohn            | ```^Jo{2,4}hn$```                   | -   | 🔴           |
 | John James Jennifer | ```^([A-Z])ohn \1ames \1ennifer$``` | -   | 🟢           |
 | John James Doe      | ```^([A-Z])ohn \1ames \1oe$```      | -   | 🔴           |
+| 9                   | ```^\d$```                          | -   | 🟢           |
+| 10                  | ```^\d{2}$```                       | -   | 🟢           |
+| A9                  | ```^[A-Z]\d$```                     | -   | 🟢           |
+| A9                  | ```^\D\d$```                        | -   | 🟢           |
+| a9                  | ```^\D\d$```                        | -   | 🟢           |
+| _9                  | ```^\D\d$```                        | -   | 🟢           |
+| 19                  | ```^\D\d$```                        | -   | 🔴           |
+| A                   | ```\w```                            | -   | 🟢           |
+| a                   | ```\w```                            | -   | 🟢           |
+| 9                   | ```\w```                            | -   | 🟢           |
+| _                   | ```\w```                            | -   | 🟢           |
+| ?                   | ```\w```                            | -   | 🔴           |
+| *                   | ```\w```                            | -   | 🔴           |
