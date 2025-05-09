@@ -74,35 +74,50 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşleşme modları için örnekler yer almaktadır.
 
-| String | Desen               | Mod | Eşleşti mi? |
-|--------|---------------------|-----|-------------|
-| John   | `^J`                | -   | 🟢           |
-| John   | `n$`                | -   | 🟢           |
-| John   | `^Jo*hn$`           | -   | 🟢           |
-| Joohn  | `^Jo*hn$`           | -   | 🟢           |
-| Jhn    | `^Jo*hn$`           | -   | 🟢           |
-| John   | `^Jo+hn$`           | -   | 🟢           |
-| Joohn  | `^Jo+hn$`           | -   | 🟢           |
-| Jhn    | `^Jo+hn$`           | -   | 🔴           |
-| John   | `^Jo?hn$`           | -   | 🟢           |
-| Joohn  | `^Jo?hn$`           | -   | 🔴           |
-| Jhn    | `^Jo?hn$`           | -   | 🟢           |
-| John   | `^J.hn$`            | -   | 🟢           |
-| John   | `^J...$`            | -   | 🟢           |
-| John   | `^J.*$`             | -   | 🔴           |
-| John   | `^J.*n$`            | -   | 🟢           |
-| John   | `^.*$`              | -   | 🟢           |
-| John   | ```^Jo|ahn$```      | -   | 🟢           |
-| Jahn   | ```^Jo|ahn$```      | -   | 🟢           |
-| Jehn   | ```^Jo|ahn$```      | -   | 🔴           |
-| J*hn   | ```^J\*hn$```       | -   | 🟢           |
-| Jo+n   | ```^Jo\+n$```       | -   | 🟢           |
-| John   | ```^J[oa]hn$```     | -   | 🟢           |
-| Jahn   | ```^J[oa]hn$```     | -   | 🟢           |
-| Jehn   | ```^J[oa]hn$```     | -   | 🔴           |
-| John   | ```^[A-Z]ohn$```    | -   | 🟢           |
-| Sohn   | ```^[A-Z]ohn$```    | -   | 🟢           |
-| A9     | ```^[A-Z][0-9]$```  | -   | 🟢           |
-| a9     | ```^[A-Z][0-9]$```  | -   | 🔴           |
-| A9     | ```^[^A-Z][0-9]$``` | -   | 🔴           |
-| a9     | ```^[^A-Z][0-9]$``` | -   | 🟢           |
+| String   | Desen               | Mod | Eşleşti mi? |
+|----------|---------------------|-----|-------------|
+| John     | `^J`                | -   | 🟢           |
+| John     | `n$`                | -   | 🟢           |
+| John     | `^Jo*hn$`           | -   | 🟢           |
+| Joohn    | `^Jo*hn$`           | -   | 🟢           |
+| Jhn      | `^Jo*hn$`           | -   | 🟢           |
+| John     | `^Jo+hn$`           | -   | 🟢           |
+| Joohn    | `^Jo+hn$`           | -   | 🟢           |
+| Jhn      | `^Jo+hn$`           | -   | 🔴           |
+| John     | `^Jo?hn$`           | -   | 🟢           |
+| Joohn    | `^Jo?hn$`           | -   | 🔴           |
+| Jhn      | `^Jo?hn$`           | -   | 🟢           |
+| John     | `^J.hn$`            | -   | 🟢           |
+| John     | `^J...$`            | -   | 🟢           |
+| John     | `^J.*$`             | -   | 🔴           |
+| John     | `^J.*n$`            | -   | 🟢           |
+| John     | `^.*$`              | -   | 🟢           |
+| John     | ```^Jo|ahn$```      | -   | 🟢           |
+| Jahn     | ```^Jo|ahn$```      | -   | 🟢           |
+| Jehn     | ```^Jo|ahn$```      | -   | 🔴           |
+| J*hn     | ```^J\*hn$```       | -   | 🟢           |
+| Jo+n     | ```^Jo\+n$```       | -   | 🟢           |
+| John     | ```^J[oa]hn$```     | -   | 🟢           |
+| Jahn     | ```^J[oa]hn$```     | -   | 🟢           |
+| Jehn     | ```^J[oa]hn$```     | -   | 🔴           |
+| John     | ```^[A-Z]ohn$```    | -   | 🟢           |
+| Sohn     | ```^[A-Z]ohn$```    | -   | 🟢           |
+| A9       | ```^[A-Z][0-9]$```  | -   | 🟢           |
+| a9       | ```^[A-Z][0-9]$```  | -   | 🔴           |
+| A9       | ```^[^A-Z][0-9]$``` | -   | 🔴           |
+| a9       | ```^[^A-Z][0-9]$``` | -   | 🟢           |
+| James    | ```^J(ame|one)s$``` | -   | 🟢           |
+| Jones    | ```^J(ame|one)s$``` | -   | 🟢           |
+| Jones    | ```^J(ame|one)s$``` | -   | 🟢           |
+| Jonas    | ```^J(ame|one)s$``` | -   | 🔴           |
+| Joohn    | ```^Jo{2}hn$```     | -   | 🟢           |
+| John     | ```^Jo{2}hn$```     | -   | 🔴           |
+| Jooohn   | ```^Jo{2}hn$```     | -   | 🔴           |
+| Joohn    | ```^Jo{2,}hn$```    | -   | 🟢           |
+| Jooohn   | ```^Jo{2,}hn$```    | -   | 🟢           |
+| John     | ```^Jo{2,}hn$```    | -   | 🔴           |
+| Joohn    | ```^Jo{2,4}hn$```   | -   | 🟢           |
+| Jooohn   | ```^Jo{2,4}hn$```   | -   | 🟢           |
+| Joooohn  | ```^Jo{2,4}hn$```   | -   | 🟢           |
+| John     | ```^Jo{2,4}hn$```   | -   | 🔴           |
+| Jooooohn | ```^Jo{2,4}hn$```   | -   | 🔴           |
