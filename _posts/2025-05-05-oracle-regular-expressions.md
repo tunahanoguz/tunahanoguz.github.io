@@ -177,13 +177,13 @@ Bir desenin bir metin içerisindeki eşleşmesinin konumunu döner. Hiç eşleş
 
 ```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
 
-1. ```metin```:
-2. ```desen```:
-3. ```baslama_konumu```: [opsiyonel]
-4. ```kacinci_eslesme```: [opsiyonel]
-5. ```donus_modu```: [opsiyonel]
-6. ```eslesme_modu```: [opsiyonel]
-7. ```alt_ifade```: [opsiyonel]
+1. ```metin```: *zorunlu*
+2. ```desen```: *zorunlu*
+3. ```baslama_konumu```: *[opsiyonel]*
+4. ```kacinci_eslesme```: *[opsiyonel]*
+5. ```donus_modu```: *[opsiyonel]*
+6. ```eslesme_modu```: *[opsiyonel]*
+7. ```alt_ifade```: *[opsiyonel]*
 
 ### REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
@@ -191,12 +191,12 @@ Bir desenin bir metin içerisindeki eşleşmesinin konumunu döner. Hiç eşleş
 
 Bir metnin desenin eşleştiği kısmını döner. Hiç eşleşme olmazsa NULL dönecektir. İki adet zorunlu, dört adet opsiyonel olmak üzere toplam altı adet parametreye sahiptir.
 
-1. ```metin```:
-2. ```desen```:
-3. ```baslama_konumu```: [opsiyonel]
-4. ```kacinci_eslesme```: [opsiyonel]
-5. ```eslesme_modu```: [opsiyonel]
-6. ```alt_ifade```: [opsiyonel]
+1. ```metin```: *zorunlu*
+2. ```desen```: *zorunlu*
+3. ```baslama_konumu```: *[opsiyonel]*
+4. ```kacinci_eslesme```: *[opsiyonel]*
+5. ```eslesme_modu```: *[opsiyonel]*
+6. ```alt_ifade```: *[opsiyonel]*
 
 ### REGEXP_REPLACE {#REGEXP_REPLACE}
 
@@ -204,12 +204,12 @@ Bir metnin desenin eşleştiği kısmını döner. Hiç eşleşme olmazsa NULL d
 
 Bir metnin desenin eşleştiği kısmını başka bir metin ile değiştirir ve oluşan yeni metni döner. Hiç eşleşme olmazsa herhangi bir değiştirme işlemi olmaz ve metnin ilk hali döner. İki adet zorunlu, dört adet opsiyonel parametreye sahiptir.
 
-1. ```metin```:
-2. ```desen```:
-3. ```degistirilecek_metin```: [opsiyonel]
-4. ```baslama_konumu```: [opsiyonel]
-5. ```kacinci_eslesme```: [opsiyonel]
-6. ```eslesme_modu```: [opsiyonel]
+1. ```metin```: *zorunlu*
+2. ```desen```: *zorunlu*
+3. ```degistirilecek_metin```: *[opsiyonel]*
+4. ```baslama_konumu```: *[opsiyonel]*
+5. ```kacinci_eslesme```: *[opsiyonel]*
+6. ```eslesme_modu```: *[opsiyonel]*
 
 ### REGEXP_COUNT {#REGEXP_COUNT}
 
@@ -217,10 +217,10 @@ Bir desenin bir metinde kaç defa eşleşme yakaladığını döner. İki adet z
 
 ```REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])```
 
-1. ```metin```:
-2. ```desen```:
-3. ```baslama_konumu```: [opsiyonel]
-4. ```eslesme_modu```: [opsiyonel]
+1. ```metin```: *zorunlu*
+2. ```desen```: *zorunlu*
+3. ```baslama_konumu```: *[opsiyonel]*
+4. ```eslesme_modu```: *[opsiyonel]*
 
 ### REGEXP_LIKE {#REGEXP_LIKE}
 
@@ -228,6 +228,6 @@ Bir desenin bir metinde eşleşme yakalayıp yakalayamadığını döner. Dönü
 
 ```REGEXP_LIKE(metin, desen, [eslesme_modu])```
 
-1. ```metin```:
-2. ```desen```:
-3. ```eslesme_modu```: [opsiyonel]
+1. ```metin```: *zorunlu*
+2. ```desen```: *zorunlu*
+3. ```eslesme_modu```: *[opsiyonel]*
