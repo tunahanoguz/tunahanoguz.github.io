@@ -10,11 +10,19 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 
 ---
 
-## Table of Contents
-1. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
+## İçindekiler
+1. [Desenler ve Açıklamaları](#desenler-ve-aciklamalari)
+2. [Eşleşme Modları](#eslesme-modlari)
+3. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
     1. [REGEXP_INSTR](#REGEXP_INSTR)
+    2. [REGEXP_SUBSTR](#REGEXP_SUBSTR)
+    3. [REGEXP_REPLACE](#REGEXP_REPLACE)
+    4. [REGEXP_COUNT](#REGEXP_COUNT)
+    5. [REGEXP_LIKE](#REGEXP_LIKE)
 
 ---
+
+## Desenler ve Açıklamaları {#desenler-ve-aciklamalari}
 
 Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında kullanılabilen ve regular expression'ın ifade ettiği desenlerin oluşumunu sağlayan ifadeler bulunmaktadır.
 
@@ -65,6 +73,8 @@ Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBS
 | [:print:]  | `[:alnum:]` ve `[:punct:]` karakter sınıflarının eşleştiği bir karakter ve boşluk karakteri ile eşleşir.        |
 
 ---
+
+## Eşleşme Modları {#eslesme-modlari}
 
 Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında eşleşme davranışını düzenlemek için kullanılan değerler yer almaktadır.
 
