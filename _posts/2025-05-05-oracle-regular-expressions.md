@@ -91,81 +91,81 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ## 3. Desenler ve Eşleşme Modları İçin Örnekler {#desenler-ve-eslesme-modlari-icin-ornekler}
 
-Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşleşme modları için örnekler yer almaktadır.
+Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer alan desenler için örnekler bulunmaktadır. Eşleşme modlarına dair örnekler Oracle regular expression fonksiyonları üzerinden verilecektir.
 
-| String              | Desen                               | Mod | Eşleşti mi? |
-|---------------------|-------------------------------------|-----|-------------|
-| John                | `^J`                                | -   | 🟢           |
-| John                | `n$`                                | -   | 🟢           |
-| John                | `^Jo*hn$`                           | -   | 🟢           |
-| Joohn               | `^Jo*hn$`                           | -   | 🟢           |
-| Jhn                 | `^Jo*hn$`                           | -   | 🟢           |
-| John                | `^Jo+hn$`                           | -   | 🟢           |
-| Joohn               | `^Jo+hn$`                           | -   | 🟢           |
-| Jhn                 | `^Jo+hn$`                           | -   | 🔴           |
-| John                | `^Jo?hn$`                           | -   | 🟢           |
-| Joohn               | `^Jo?hn$`                           | -   | 🔴           |
-| Jhn                 | `^Jo?hn$`                           | -   | 🟢           |
-| John                | `^J.hn$`                            | -   | 🟢           |
-| John                | `^J...$`                            | -   | 🟢           |
-| John                | `^J.*$`                             | -   | 🔴           |
-| John                | `^J.*n$`                            | -   | 🟢           |
-| John                | `^.*$`                              | -   | 🟢           |
-| John                | ```^Jo|ahn$```                      | -   | 🟢           |
-| Jahn                | ```^Jo|ahn$```                      | -   | 🟢           |
-| Jehn                | ```^Jo|ahn$```                      | -   | 🔴           |
-| J*hn                | ```^J\*hn$```                       | -   | 🟢           |
-| Jo+n                | ```^Jo\+n$```                       | -   | 🟢           |
-| John                | ```^J[oa]hn$```                     | -   | 🟢           |
-| Jahn                | ```^J[oa]hn$```                     | -   | 🟢           |
-| Jehn                | ```^J[oa]hn$```                     | -   | 🔴           |
-| John                | ```^[A-Z]ohn$```                    | -   | 🟢           |
-| Sohn                | ```^[A-Z]ohn$```                    | -   | 🟢           |
-| A9                  | ```^[A-Z][0-9]$```                  | -   | 🟢           |
-| a9                  | ```^[A-Z][0-9]$```                  | -   | 🔴           |
-| A9                  | ```^[^A-Z][0-9]$```                 | -   | 🔴           |
-| a9                  | ```^[^A-Z][0-9]$```                 | -   | 🟢           |
-| James               | ```^J(ame|one)s$```                 | -   | 🟢           |
-| Jones               | ```^J(ame|one)s$```                 | -   | 🟢           |
-| Jones               | ```^J(ame|one)s$```                 | -   | 🟢           |
-| Jonas               | ```^J(ame|one)s$```                 | -   | 🔴           |
-| Joohn               | ```^Jo{2}hn$```                     | -   | 🟢           |
-| John                | ```^Jo{2}hn$```                     | -   | 🔴           |
-| Jooohn              | ```^Jo{2}hn$```                     | -   | 🔴           |
-| Joohn               | ```^Jo{2,}hn$```                    | -   | 🟢           |
-| Jooohn              | ```^Jo{2,}hn$```                    | -   | 🟢           |
-| John                | ```^Jo{2,}hn$```                    | -   | 🔴           |
-| Joohn               | ```^Jo{2,4}hn$```                   | -   | 🟢           |
-| Jooohn              | ```^Jo{2,4}hn$```                   | -   | 🟢           |
-| Joooohn             | ```^Jo{2,4}hn$```                   | -   | 🟢           |
-| John                | ```^Jo{2,4}hn$```                   | -   | 🔴           |
-| Jooooohn            | ```^Jo{2,4}hn$```                   | -   | 🔴           |
-| John James Jennifer | ```^([A-Z])ohn \1ames \1ennifer$``` | -   | 🟢           |
-| John James Doe      | ```^([A-Z])ohn \1ames \1oe$```      | -   | 🔴           |
-| 9                   | ```^\d$```                          | -   | 🟢           |
-| 10                  | ```^\d{2}$```                       | -   | 🟢           |
-| A9                  | ```^[A-Z]\d$```                     | -   | 🟢           |
-| A9                  | ```^\D\d$```                        | -   | 🟢           |
-| a9                  | ```^\D\d$```                        | -   | 🟢           |
-| _9                  | ```^\D\d$```                        | -   | 🟢           |
-| 19                  | ```^\D\d$```                        | -   | 🔴           |
-| A                   | ```\w```                            | -   | 🟢           |
-| a                   | ```\w```                            | -   | 🟢           |
-| 9                   | ```\w```                            | -   | 🟢           |
-| _                   | ```\w```                            | -   | 🟢           |
-| ?                   | ```\w```                            | -   | 🔴           |
-| *                   | ```\w```                            | -   | 🔴           |
-| A                   | ```\W```                            | -   | 🔴           |
-| a                   | ```\W```                            | -   | 🔴           |
-| 9                   | ```\W```                            | -   | 🔴           |
-| _                   | ```\W```                            | -   | 🔴           |
-| ?                   | ```\W```                            | -   | 🟢           |
-| *                   | ```\W```                            | -   | 🟢           |
-| *1                  | ```\W\w```                          | -   | 🟢           |
-| John Doe            | ```^John\sDoe$```                   | -   | 🟢           |
-| John Doe            | ```^\S{4}\s\S{3}$```                | -   | 🟢           |
-| John                | `\AJ`                               | -   | 🟢           |
-| John                | `n\Z`                               | -   | 🟢           |
+| String              | Desen                               | Eşleşti mi? |
+|---------------------|-------------------------------------|-------------|
+| John                | `^J`                                | 🟢           |
+| John                | `n$`                                | 🟢           |
+| John                | `^Jo*hn$`                           | 🟢           |
+| Joohn               | `^Jo*hn$`                           | 🟢           |
+| Jhn                 | `^Jo*hn$`                           | 🟢           |
+| John                | `^Jo+hn$`                           | 🟢           |
+| Joohn               | `^Jo+hn$`                           | 🟢           |
+| Jhn                 | `^Jo+hn$`                           | 🔴           |
+| John                | `^Jo?hn$`                           | 🟢           |
+| Joohn               | `^Jo?hn$`                           | 🔴           |
+| Jhn                 | `^Jo?hn$`                           | 🟢           |
+| John                | `^J.hn$`                            | 🟢           |
+| John                | `^J...$`                            | 🟢           |
+| John                | `^J.*$`                             | 🔴           |
+| John                | `^J.*n$`                            | 🟢           |
+| John                | `^.*$`                              | 🟢           |
+| John                | ```^Jo|ahn$```                      | 🟢           |
+| Jahn                | ```^Jo|ahn$```                      | 🟢           |
+| Jehn                | ```^Jo|ahn$```                      | 🔴           |
+| J*hn                | ```^J\*hn$```                       | 🟢           |
+| Jo+n                | ```^Jo\+n$```                       | 🟢           |
+| John                | ```^J[oa]hn$```                     | 🟢           |
+| Jahn                | ```^J[oa]hn$```                     | 🟢           |
+| Jehn                | ```^J[oa]hn$```                     | 🔴           |
+| John                | ```^[A-Z]ohn$```                    | 🟢           |
+| Sohn                | ```^[A-Z]ohn$```                    | 🟢           |
+| A9                  | ```^[A-Z][0-9]$```                  | 🟢           |
+| a9                  | ```^[A-Z][0-9]$```                  | 🔴           |
+| A9                  | ```^[^A-Z][0-9]$```                 | 🔴           |
+| a9                  | ```^[^A-Z][0-9]$```                 | 🟢           |
+| James               | ```^J(ame|one)s$```                 | 🟢           |
+| Jones               | ```^J(ame|one)s$```                 | 🟢           |
+| Jones               | ```^J(ame|one)s$```                 | 🟢           |
+| Jonas               | ```^J(ame|one)s$```                 | 🔴           |
+| Joohn               | ```^Jo{2}hn$```                     | 🟢           |
+| John                | ```^Jo{2}hn$```                     | 🔴           |
+| Jooohn              | ```^Jo{2}hn$```                     | 🔴           |
+| Joohn               | ```^Jo{2,}hn$```                    | 🟢           |
+| Jooohn              | ```^Jo{2,}hn$```                    | 🟢           |
+| John                | ```^Jo{2,}hn$```                    | 🔴           |
+| Joohn               | ```^Jo{2,4}hn$```                   | 🟢           |
+| Jooohn              | ```^Jo{2,4}hn$```                   | 🟢           |
+| Joooohn             | ```^Jo{2,4}hn$```                   | 🟢           |
+| John                | ```^Jo{2,4}hn$```                   | 🔴           |
+| Jooooohn            | ```^Jo{2,4}hn$```                   | 🔴           |
+| John James Jennifer | ```^([A-Z])ohn \1ames \1ennifer$``` | 🟢           |
+| John James Doe      | ```^([A-Z])ohn \1ames \1oe$```      | 🔴           |
+| 9                   | ```^\d$```                          | 🟢           |
+| 10                  | ```^\d{2}$```                       | 🟢           |
+| A9                  | ```^[A-Z]\d$```                     | 🟢           |
+| A9                  | ```^\D\d$```                        | 🟢           |
+| a9                  | ```^\D\d$```                        | 🟢           |
+| _9                  | ```^\D\d$```                        | 🟢           |
+| 19                  | ```^\D\d$```                        | 🔴           |
+| A                   | ```\w```                            | 🟢           |
+| a                   | ```\w```                            | 🟢           |
+| 9                   | ```\w```                            | 🟢           |
+| _                   | ```\w```                            | 🟢           |
+| ?                   | ```\w```                            | 🔴           |
+| *                   | ```\w```                            | 🔴           |
+| A                   | ```\W```                            | 🔴           |
+| a                   | ```\W```                            | 🔴           |
+| 9                   | ```\W```                            | 🔴           |
+| _                   | ```\W```                            | 🔴           |
+| ?                   | ```\W```                            | 🟢           |
+| *                   | ```\W```                            | 🟢           |
+| *1                  | ```\W\w```                          | 🟢           |
+| John Doe            | ```^John\sDoe$```                   | 🟢           |
+| John Doe            | ```^\S{4}\s\S{3}$```                | 🟢           |
+| John                | `\AJ`                               | 🟢           |
+| John                | `n\Z`                               | 🟢           |
 
 ---
 
@@ -183,7 +183,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 2. ```desen``` *(zorunlu)* — Regular expression
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
-5. ```donus_modu``` *[opsiyonel]* — 0 ise eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ise o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar.
+5. ```donus_modu``` *[opsiyonel]* — 0 ile eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ile o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar. Varsayılan değeri 0'dır.
 6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 7. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar.
 
