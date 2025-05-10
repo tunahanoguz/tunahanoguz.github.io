@@ -23,7 +23,7 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 
 ---
 
-## Desenler ve Açıklamaları {#desenler-ve-aciklamalari}
+## 1. Desenler ve Açıklamaları {#desenler-ve-aciklamalari}
 
 Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında kullanılabilen ve regular expression'ın ifade ettiği desenlerin oluşumunu sağlayan ifadeler bulunmaktadır.
 
@@ -75,7 +75,7 @@ Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBS
 
 ---
 
-## Eşleşme Modları {#eslesme-modlari}
+## 2. Eşleşme Modları {#eslesme-modlari}
 
 Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında eşleşme davranışını düzenlemek için kullanılan değerler yer almaktadır.
 
@@ -89,7 +89,7 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
-## Desenler ve Eşleşme Modları İçin Örnekler {#desenler-ve-eslesme-modlari-icin-ornekler}
+## 3. Desenler ve Eşleşme Modları İçin Örnekler {#desenler-ve-eslesme-modlari-icin-ornekler}
 
 Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşleşme modları için örnekler yer almaktadır.
 
@@ -169,9 +169,9 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ---
 
-## Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
+## 4. Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
 
-### REGEXP_INSTR {#REGEXP_INSTR}
+### 4.1 REGEXP_INSTR {#REGEXP_INSTR}
 
 - Bir desenin bir metin içerisindeki eşleşmesinin konumunu döner.
 - Hiç eşleşme olmazsa 0 dönecektir.
@@ -187,7 +187,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 6. ```eslesme_modu```: *[opsiyonel]*
 7. ```alt_ifade```: *[opsiyonel]*
 
-### REGEXP_SUBSTR {#REGEXP_SUBSTR}
+### 4.2 REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
 - Bir metnin desenin eşleştiği kısmını döner.
 - Hiç eşleşme olmazsa NULL dönecektir.
@@ -202,7 +202,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 5. ```eslesme_modu```: *[opsiyonel]*
 6. ```alt_ifade```: *[opsiyonel]*
 
-### REGEXP_REPLACE {#REGEXP_REPLACE}
+### 4.3 REGEXP_REPLACE {#REGEXP_REPLACE}
 
 - Bir metnin desenin eşleştiği kısmını başka bir metin ile değiştirir ve oluşan yeni metni döner.
 - Hiç eşleşme olmazsa herhangi bir değiştirme işlemi olmaz ve metnin ilk hali döner.
@@ -217,7 +217,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 5. ```kacinci_eslesme```: *[opsiyonel]*
 6. ```eslesme_modu```: *[opsiyonel]*
 
-### REGEXP_COUNT {#REGEXP_COUNT}
+### 4.4 REGEXP_COUNT {#REGEXP_COUNT}
 
 - Bir desenin bir metinde kaç defa eşleşme yakaladığını döner.
 - İki adet zorunlu, iki adet opsiyonal parametreye sahiptir.
@@ -229,7 +229,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 3. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```eslesme_modu```: *[opsiyonel]*
 
-### REGEXP_LIKE {#REGEXP_LIKE}
+### 4.5 REGEXP_LIKE {#REGEXP_LIKE}
 
 - Bir desenin bir metinde eşleşme yakalayıp yakalayamadığını döner.
 - Dönüş değeri TRUE veya FALSE olabilir.
