@@ -173,53 +173,61 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ### REGEXP_INSTR {#REGEXP_INSTR}
 
-Fonksiyona parametre olarak geçilen desenin string içerisindeki eşleşmesinin lokasyonunu döner. Eğer hiç eşleşme olmazsa 0 döner.
+Bir desenin bir metin içerisindeki eşleşmesinin konumunu döner. Hiç eşleşme olmazsa 0 dönecektir. İki adet zorunlu, beş adet opsiyonel olmak üzere toplam yedi adet parametreye sahiptir.
 
-```REGEXP_INSTR(metin, desen, [baslama_lokasyonu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
+```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
 
-1. ```metin``` =>
-2. ```desen``` =>
-3. ```baslama_lokasyonu``` =>
-4. ```kacinci_eslesme``` =>
-5. ```donus_modu``` =>
-6. ```eslesme_modu``` =>
-7. ```alt_ifade``` =>
+1. ```metin```:
+2. ```desen```:
+3. ```baslama_konumu```: [opsiyonel]
+4. ```kacinci_eslesme```: [opsiyonel]
+5. ```donus_modu```: [opsiyonel]
+6. ```eslesme_modu```: [opsiyonel]
+7. ```alt_ifade```: [opsiyonel]
 
 ### REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
-```REGEXP_SUBSTR(metin, desen, [baslama_lokasyonu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])```
+```REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])```
 
-1. ```metin``` =>
-2. ```desen``` =>
-3. ```baslama_lokasyonu``` =>
-4. ```kacinci_eslesme``` =>
-5. ```eslesme_modu``` =>
-6. ```alt_ifade``` =>
+Bir metnin desenin eşleştiği kısmını döner. Hiç eşleşme olmazsa NULL dönecektir. İki adet zorunlu, dört adet opsiyonel olmak üzere toplam altı adet parametreye sahiptir.
+
+1. ```metin```:
+2. ```desen```:
+3. ```baslama_konumu```: [opsiyonel]
+4. ```kacinci_eslesme```: [opsiyonel]
+5. ```eslesme_modu```: [opsiyonel]
+6. ```alt_ifade```: [opsiyonel]
 
 ### REGEXP_REPLACE {#REGEXP_REPLACE}
 
-```REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_lokasyonu], [kacinci_eslesme], [eslesme_modu])```
+```REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])```
 
-1. ```metin``` =>
-2. ```desen``` =>
-3. ```degistirilecek_metin``` =>
-4. ```baslama_lokasyonu``` =>
-5. ```kacinci_eslesme``` =>
-6. ```eslesme_modu``` =>
+Bir metnin desenin eşleştiği kısmını başka bir metin ile değiştirir ve oluşan yeni metni döner. Hiç eşleşme olmazsa herhangi bir değiştirme işlemi olmaz ve metnin ilk hali döner. İki adet zorunlu, dört adet opsiyonel parametreye sahiptir.
+
+1. ```metin```:
+2. ```desen```:
+3. ```degistirilecek_metin```: [opsiyonel]
+4. ```baslama_konumu```: [opsiyonel]
+5. ```kacinci_eslesme```: [opsiyonel]
+6. ```eslesme_modu```: [opsiyonel]
 
 ### REGEXP_COUNT {#REGEXP_COUNT}
 
-```REGEXP_COUNT(metin, desen, [baslama_lokasyonu], [eslesme_modu])```
+Bir desenin bir metinde kaç defa eşleşme yakaladığını döner. İki adet zorunlu, iki adet opsiyonal parametreye sahiptir.
 
-1. ```metin``` =>
-2. ```desen``` =>
-3. ```baslama_lokasyonu``` =>
-4. ```eslesme_modu``` =>
+```REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])```
+
+1. ```metin```:
+2. ```desen```:
+3. ```baslama_konumu```: [opsiyonel]
+4. ```eslesme_modu```: [opsiyonel]
 
 ### REGEXP_LIKE {#REGEXP_LIKE}
 
+Bir desenin bir metinde eşleşme yakalayıp yakalayamadığını döner. Dönüş değeri TRUE veya FALSE olabilir. İki adet zorunlu, bir adet opsiyonel parametre sahiptir.
+
 ```REGEXP_LIKE(metin, desen, [eslesme_modu])```
 
-1. ```metin``` =>
-2. ```desen``` =>
-3. ```eslesme_modu``` =>
+1. ```metin```:
+2. ```desen```:
+3. ```eslesme_modu```: [opsiyonel]
