@@ -199,12 +199,12 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ```REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])```
 
-1. ```metin```: *(zorunlu)* Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen```: *(zorunlu)* Regular expression
-3. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-4. ```kacinci_eslesme```: *[opsiyonel]* Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
-5. ```eslesme_modu```: *[opsiyonel]* Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
-6. ```alt_ifade```: *[opsiyonel]* Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun metninin dönülmesini sağlar.
+1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
+2. ```desen``` *(zorunlu)* — Regular expression
+3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
+4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
+5. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+6. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun metninin dönülmesini sağlar.
 
 | Kullanım | Sonuç |
 |----------|-------|
@@ -218,12 +218,12 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ```REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])```
 
-1. ```metin```: *(zorunlu)* Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen```: *(zorunlu)* Regular expression
-3. ```degistirilecek_metin```: *[opsiyonel]* Eşleşmenin sağlandığı metin parçası ile değiştirilecek metni ifade eder.
-4. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-5. ```kacinci_eslesme```: *[opsiyonel]* Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
-6. ```eslesme_modu```: *[opsiyonel]* Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
+2. ```desen``` *(zorunlu)* — Regular expression
+3. ```degistirilecek_metin``` *[opsiyonel]* — Eşleşmenin sağlandığı metin parçası ile değiştirilecek metni ifade eder.
+4. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
+5. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
+6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
 | Kullanım | Sonuç |
 |----------|-------|
@@ -236,10 +236,10 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ```REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])```
 
-1. ```metin```: *(zorunlu)* Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen```: *(zorunlu)* Regular expression
-3. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-4. ```eslesme_modu```: *[opsiyonel]* Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
+2. ```desen``` *(zorunlu)* — Regular expression
+3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
+4. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
 | Kullanım | Sonuç |
 |----------|-------|
@@ -253,9 +253,9 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ```REGEXP_LIKE(metin, desen, [eslesme_modu])```
 
-1. ```metin```: *(zorunlu)* Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen```: *(zorunlu)* Regular expression
-3. ```eslesme_modu```: *[opsiyonel]* Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
+2. ```desen``` *(zorunlu)* — Regular expression
+3. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
 | Kullanım | Sonuç |
 |----------|-------|
