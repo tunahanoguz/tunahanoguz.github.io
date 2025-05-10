@@ -13,7 +13,8 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 ## İçindekiler
 1. [Desenler ve Açıklamaları](#desenler-ve-aciklamalari)
 2. [Eşleşme Modları](#eslesme-modlari)
-3. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
+3. [Desenler ve Eşleşme Modları İçin Örnekler](#desenler-ve-eslesme-modlari-icin-ornekler)
+4. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
     1. [REGEXP_INSTR](#REGEXP_INSTR)
     2. [REGEXP_SUBSTR](#REGEXP_SUBSTR)
     3. [REGEXP_REPLACE](#REGEXP_REPLACE)
@@ -88,13 +89,7 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
-## Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
-
-### REGEXP_INSTR Fonksiyonu {#REGEXP_INSTR}
-
-```REGEXP_INSTR( string, pattern [, start_position [, nth_appearance [, return_option [, match_parameter [, sub_expression ] ] ] ] ] )```
-
----
+## Desenler ve Eşleşme Modları İçin Örnekler {#desenler-ve-eslesme-modlari-icin-ornekler}
 
 Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşleşme modları için örnekler yer almaktadır.
 
@@ -171,5 +166,27 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 | John Doe            | ```^\S{4}\s\S{3}$```                | -   | 🟢           |
 | John                | `\AJ`                               | -   | 🟢           |
 | John                | `n\Z`                               | -   | 🟢           |
-| John                | `\AJ`                               | -   | 🟢           |
-| John                | `n\Z`                               | -   | 🟢           |
+
+---
+
+## Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
+
+### REGEXP_INSTR Fonksiyonu {#REGEXP_INSTR}
+
+```REGEXP_INSTR( string, pattern [, start_position [, nth_appearance [, return_option [, match_parameter [, sub_expression ] ] ] ] ] )```
+
+### REGEXP_SUBSTR {#REGEXP_SUBSTR}
+
+```REGEXP_SUBSTR( string, pattern [, start_position [, nth_appearance [, match_parameter [, sub_expression ] ] ] ] )```
+
+### REGEXP_REPLACE {#REGEXP_REPLACE}
+
+```REGEXP_REPLACE( string, pattern [, replacement_string [, start_position [, nth_appearance [, match_parameter ] ] ] ] )```
+
+### REGEXP_COUNT {#REGEXP_COUNT}
+
+```REGEXP_COUNT( string, pattern [, start_position [, match_parameter ] ] )```
+
+### REGEXP_LIKE {#REGEXP_LIKE}
+
+```REGEXP_LIKE ( expression, pattern [, match_parameter ] )```
