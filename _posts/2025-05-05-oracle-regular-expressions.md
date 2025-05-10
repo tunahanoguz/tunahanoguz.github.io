@@ -177,9 +177,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 - Hiç eşleşme olmazsa 0 dönecektir.
 - İki adet zorunlu, beş adet opsiyonel olmak üzere toplam yedi adet parametreye sahiptir.
 
-{% highlight %}
-REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])
-{% endhighlight %}
+```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
 
 1. ```metin```: *zorunlu* Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen```: *zorunlu* Regular expression
@@ -188,6 +186,10 @@ REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [e
 5. ```donus_modu```: *[opsiyonel]*
 6. ```eslesme_modu```: *[opsiyonel]*
 7. ```alt_ifade```: *[opsiyonel]*
+
+| Kullanım | Sonuç |
+|----------|-------|
+| -        | -     |
 
 ### 4.2 REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
@@ -204,6 +206,10 @@ REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [e
 5. ```eslesme_modu```: *[opsiyonel]*
 6. ```alt_ifade```: *[opsiyonel]*
 
+| Kullanım | Sonuç |
+|----------|-------|
+| -        | -     |
+
 ### 4.3 REGEXP_REPLACE {#REGEXP_REPLACE}
 
 - Bir metnin desenin eşleştiği kısmını başka bir metin ile değiştirir ve oluşan yeni metni döner.
@@ -219,6 +225,10 @@ REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [e
 5. ```kacinci_eslesme```: *[opsiyonel]*
 6. ```eslesme_modu```: *[opsiyonel]*
 
+| Kullanım | Sonuç |
+|----------|-------|
+| -        | -     |
+
 ### 4.4 REGEXP_COUNT {#REGEXP_COUNT}
 
 - Bir desenin bir metinde kaç defa eşleşme yakaladığını döner.
@@ -231,6 +241,10 @@ REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [e
 3. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```eslesme_modu```: *[opsiyonel]*
 
+| Kullanım | Sonuç |
+|----------|-------|
+| -        | -     |
+
 ### 4.5 REGEXP_LIKE {#REGEXP_LIKE}
 
 - Bir desenin bir metinde eşleşme yakalayıp yakalayamadığını döner.
@@ -242,3 +256,7 @@ REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [e
 1. ```metin```: *zorunlu* Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen```: *zorunlu* Regular expression
 3. ```eslesme_modu```: *[opsiyonel]*
+
+| Kullanım | Sonuç |
+|----------|-------|
+| -        | -     |
