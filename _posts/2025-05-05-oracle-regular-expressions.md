@@ -91,7 +91,7 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ## 3. Desenler İçin Örnekler {#desenler-icin-ornekler}
 
-Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer alan desenler için örnekler bulunmaktadır. Eşleşme modlarına dair örnekler Oracle regular expression fonksiyonları üzerinden verilecektir.
+Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer alan desenler için örnekler bulunmaktadır. Bazı desenler açıklamalardan çok net anlaşılabildiği için hariç tutulmuştur. Eşleşme modlarına dair örnekler Oracle regular expression fonksiyonları üzerinden verilecektir.
 
 | String              | Desen                               | Eşleşti mi? |
 |---------------------|-------------------------------------|-------------|
@@ -127,7 +127,6 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | a9                  | ```^[^A-Z][0-9]$```                 | 🟢           |
 | James               | ```^J(ame|one)s$```                 | 🟢           |
 | Jones               | ```^J(ame|one)s$```                 | 🟢           |
-| Jones               | ```^J(ame|one)s$```                 | 🟢           |
 | Jonas               | ```^J(ame|one)s$```                 | 🔴           |
 | Joohn               | ```^Jo{2}hn$```                     | 🟢           |
 | John                | ```^Jo{2}hn$```                     | 🔴           |
@@ -142,28 +141,6 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | Jooooohn            | ```^Jo{2,4}hn$```                   | 🔴           |
 | John James Jennifer | ```^([A-Z])ohn \1ames \1ennifer$``` | 🟢           |
 | John James Doe      | ```^([A-Z])ohn \1ames \1oe$```      | 🔴           |
-| 9                   | ```^\d$```                          | 🟢           |
-| 10                  | ```^\d{2}$```                       | 🟢           |
-| A9                  | ```^[A-Z]\d$```                     | 🟢           |
-| A9                  | ```^\D\d$```                        | 🟢           |
-| a9                  | ```^\D\d$```                        | 🟢           |
-| _9                  | ```^\D\d$```                        | 🟢           |
-| 19                  | ```^\D\d$```                        | 🔴           |
-| A                   | ```\w```                            | 🟢           |
-| a                   | ```\w```                            | 🟢           |
-| 9                   | ```\w```                            | 🟢           |
-| _                   | ```\w```                            | 🟢           |
-| ?                   | ```\w```                            | 🔴           |
-| *                   | ```\w```                            | 🔴           |
-| A                   | ```\W```                            | 🔴           |
-| a                   | ```\W```                            | 🔴           |
-| 9                   | ```\W```                            | 🔴           |
-| _                   | ```\W```                            | 🔴           |
-| ?                   | ```\W```                            | 🟢           |
-| *                   | ```\W```                            | 🟢           |
-| *1                  | ```\W\w```                          | 🟢           |
-| John Doe            | ```^John\sDoe$```                   | 🟢           |
-| John Doe            | ```^\S{4}\s\S{3}$```                | 🟢           |
 | John                | `\AJ`                               | 🟢           |
 | John                | `n\Z`                               | 🟢           |
 
