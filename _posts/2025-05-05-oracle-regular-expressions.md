@@ -171,22 +171,55 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ## Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
 
-### REGEXP_INSTR Fonksiyonu {#REGEXP_INSTR}
+### REGEXP_INSTR {#REGEXP_INSTR}
 
-```REGEXP_INSTR( string, pattern [, start_position [, nth_appearance [, return_option [, match_parameter [, sub_expression ] ] ] ] ] )```
+Fonksiyona parametre olarak geçilen desenin string içerisindeki eşleşmesinin lokasyonunu döner. Eğer hiç eşleşme olmazsa 0 döner.
+
+```REGEXP_INSTR(metin, desen, [baslama_lokasyonu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
+
+1. ```metin``` =>
+2. ```desen``` =>
+3. ```baslama_lokasyonu``` =>
+4. ```kacinci_eslesme``` =>
+5. ```donus_modu``` =>
+6. ```eslesme_modu``` =>
+7. ```alt_ifade``` =>
 
 ### REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
-```REGEXP_SUBSTR( string, pattern [, start_position [, nth_appearance [, match_parameter [, sub_expression ] ] ] ] )```
+```REGEXP_SUBSTR(metin, desen, [baslama_lokasyonu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])```
+
+1. ```metin``` =>
+2. ```desen``` =>
+3. ```baslama_lokasyonu``` =>
+4. ```kacinci_eslesme``` =>
+5. ```eslesme_modu``` =>
+6. ```alt_ifade``` =>
 
 ### REGEXP_REPLACE {#REGEXP_REPLACE}
 
-```REGEXP_REPLACE( string, pattern [, replacement_string [, start_position [, nth_appearance [, match_parameter ] ] ] ] )```
+```REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_lokasyonu], [kacinci_eslesme], [eslesme_modu])```
+
+1. ```metin``` =>
+2. ```desen``` =>
+3. ```degistirilecek_metin``` =>
+4. ```baslama_lokasyonu``` =>
+5. ```kacinci_eslesme``` =>
+6. ```eslesme_modu``` =>
 
 ### REGEXP_COUNT {#REGEXP_COUNT}
 
-```REGEXP_COUNT( string, pattern [, start_position [, match_parameter ] ] )```
+```REGEXP_COUNT(metin, desen, [baslama_lokasyonu], [eslesme_modu])```
+
+1. ```metin``` =>
+2. ```desen``` =>
+3. ```baslama_lokasyonu``` =>
+4. ```eslesme_modu``` =>
 
 ### REGEXP_LIKE {#REGEXP_LIKE}
 
-```REGEXP_LIKE ( expression, pattern [, match_parameter ] )```
+```REGEXP_LIKE(metin, desen, [eslesme_modu])```
+
+1. ```metin``` =>
+2. ```desen``` =>
+3. ```eslesme_modu``` =>
