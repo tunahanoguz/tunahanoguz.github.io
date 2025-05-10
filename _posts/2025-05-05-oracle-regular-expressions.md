@@ -10,6 +10,12 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 
 ---
 
+## Table of Contents
+1. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
+    1. [REGEXP_INSTR](#REGEXP_INSTR)
+
+---
+
 Aşağıdaki tabloda `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP_SUBSTR` ve `REGEXP_REPLACE` adlı Oracle SQL fonksiyonlarında kullanılabilen ve regular expression'ın ifade ettiği desenlerin oluşumunu sağlayan ifadeler bulunmaktadır.
 
 | Desen      | Açıklama                                                                                                        |
@@ -69,6 +75,14 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 | n            | `.` karakterinin `newline` karakteri ile eşleşmesini sağlar.                                                                          |
 | m            | Eşleşme modunu `multiline mode` olarak düzenler. Bu mod pasifken `^` tüm metnin başını, `$` tüm metnin sonunu, aktifken `^` her satırın başını, `$` her satırın sonunu ifade eder. |
 | x            | Desendeki boşlukları ve yorumları yok sayar. Yorumlar `#` ile başlar ve satır sonunda sona erer. Yorumlar sadece bu modda geçerlidir. |
+
+---
+
+## Oracle Regular Expression Fonksiyonları {#oracle-regular-expression-fonksiyonlari}
+
+### REGEXP_INSTR Fonksiyonu {#REGEXP_INSTR}
+
+```REGEXP_INSTR( string, pattern [, start_position [, nth_appearance [, return_option [, match_parameter [, sub_expression ] ] ] ] ] )```
 
 ---
 
@@ -143,3 +157,9 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 | ?                   | ```\W```                            | -   | 🟢           |
 | *                   | ```\W```                            | -   | 🟢           |
 | *1                  | ```\W\w```                          | -   | 🟢           |
+| John Doe            | ```^John\sDoe$```                   | -   | 🟢           |
+| John Doe            | ```^\S{4}\s\S{3}$```                | -   | 🟢           |
+| John                | `\AJ`                               | -   | 🟢           |
+| John                | `n\Z`                               | -   | 🟢           |
+| John                | `\AJ`                               | -   | 🟢           |
+| John                | `n\Z`                               | -   | 🟢           |
