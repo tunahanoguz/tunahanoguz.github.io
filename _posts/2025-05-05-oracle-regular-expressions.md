@@ -13,7 +13,7 @@ Birçok yazılım dilinde ve o yazılım dilinde kullanılan modül/paket/kütü
 ## İçindekiler
 1. [Desenler ve Açıklamaları](#desenler-ve-aciklamalari)
 2. [Eşleşme Modları](#eslesme-modlari)
-3. [Desenler ve Eşleşme Modları İçin Örnekler](#desenler-ve-eslesme-modlari-icin-ornekler)
+3. [Desenler İçin Örnekler](#desenler-ve-eslesme-modlari-icin-ornekler)
 4. [Oracle Regular Expression Fonksiyonları](#oracle-regular-expression-fonksiyonlari)
     1. [REGEXP_INSTR](#REGEXP_INSTR)
     2. [REGEXP_SUBSTR](#REGEXP_SUBSTR)
@@ -89,7 +89,7 @@ Aşağıdaki tabloda yine `REGEXP_INSTR`, `REGEXP_COUNT`, `REGEXP_LIKE`, `REGEXP
 
 ---
 
-## 3. Desenler ve Eşleşme Modları İçin Örnekler {#desenler-ve-eslesme-modlari-icin-ornekler}
+## 3. Desenler İçin Örnekler {#desenler-icin-ornekler}
 
 Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer alan desenler için örnekler bulunmaktadır. Eşleşme modlarına dair örnekler Oracle regular expression fonksiyonları üzerinden verilecektir.
 
