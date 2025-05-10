@@ -177,11 +177,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 - Hiç eşleşme olmazsa 0 dönecektir.
 - İki adet zorunlu, beş adet opsiyonel olmak üzere toplam yedi adet parametreye sahiptir.
 
-{% highlight sql %}
-SELECT 'EXAMPLE' FROM DUAL;
-{% endhighlight %}
-
-{% highlight sql %}
+{% highlight %}
 REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])
 {% endhighlight %}
 
