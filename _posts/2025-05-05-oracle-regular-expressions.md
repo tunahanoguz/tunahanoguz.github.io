@@ -189,7 +189,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 | Kullanım | Sonuç |
 |----------|-------|
-| -        | -     |
+| x        | x     |
 
 ### 4.2 REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
@@ -208,7 +208,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 | Kullanım | Sonuç |
 |----------|-------|
-| -        | -     |
+| x        | x     |
 
 ### 4.3 REGEXP_REPLACE {#REGEXP_REPLACE}
 
@@ -227,7 +227,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 | Kullanım | Sonuç |
 |----------|-------|
-| -        | -     |
+| x        | x     |
 
 ### 4.4 REGEXP_COUNT {#REGEXP_COUNT}
 
@@ -243,7 +243,7 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 | Kullanım | Sonuç |
 |----------|-------|
-| -        | -     |
+| x        | x     |
 
 ### 4.5 REGEXP_LIKE {#REGEXP_LIKE}
 
@@ -259,4 +259,4 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 | Kullanım | Sonuç |
 |----------|-------|
-| -        | -     |
+| x        | x     |
