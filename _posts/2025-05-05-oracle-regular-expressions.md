@@ -179,13 +179,13 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 
 ```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
 
-1. ```metin```: *(zorunlu)* Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen```: *(zorunlu)* Regular expression
-3. ```baslama_konumu```: *[opsiyonel]* Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-4. ```kacinci_eslesme```: *[opsiyonel]* Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
-5. ```donus_modu```: *[opsiyonel]* 0 ise eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ise o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar.
-6. ```eslesme_modu```: *[opsiyonel]* Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
-7. ```alt_ifade```: *[opsiyonel]* Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar.
+1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
+2. ```desen``` *(zorunlu)* — Regular expression
+3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
+4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
+5. ```donus_modu``` *[opsiyonel]* — 0 ise eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ise o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar.
+6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+7. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar.
 
 | Kullanım | Sonuç |
 |----------|-------|
