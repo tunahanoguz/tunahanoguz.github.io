@@ -177,7 +177,9 @@ Aşağıdaki tabloda üstteki iki tabloda açıklamaları yer alan desen ve eşl
 - Hiç eşleşme olmazsa 0 dönecektir.
 - İki adet zorunlu, beş adet opsiyonel olmak üzere toplam yedi adet parametreye sahiptir.
 
-```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
+{% highlight sql %}
+REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])
+{% endhighlight %}
 
 1. ```metin```: *zorunlu* Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen```: *zorunlu* Regular expression
