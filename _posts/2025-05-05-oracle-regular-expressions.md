@@ -159,11 +159,11 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | `REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen``` *(zorunlu)* — Regular expression
+2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
 5. ```donus_modu``` *[opsiyonel]* — 0 ile eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ile o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar. Varsayılan değeri 0'dır.
-6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır. Eğer belirtilmezse `metin` tek bir satır olarak kabul edilir, case-sensitive eşleşme aranır ve `.` karakteri `newline` karakteri ile eşleşmez.
 7. ```alt_ifade``` *[opsiyonel]* — Desendeki kaçıncı grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar. 0-9 arasında olacak şekilde bir sayı kabul eder. 0 ise tüm eşleşmeyi, 0'dan büyük bir rakam ise karşılık gelen grubu temel alır.
 
 | Kullanım                                                                                                     | Sonuç |
@@ -210,10 +210,10 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | `REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen``` *(zorunlu)* — Regular expression
+2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
-5. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+5. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır. Eğer belirtilmezse `metin` tek bir satır olarak kabul edilir, case-sensitive eşleşme aranır ve `.` karakteri `newline` karakteri ile eşleşmez.
 6. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun metninin dönülmesini sağlar. 0-9 arasında olacak şekilde bir sayı kabul eder. 0 ise tüm eşleşmeyi, 0'dan büyük bir rakam ise karşılık gelen grubu temel alır.
 
 | Kullanım                                                           | Sonuç   |
@@ -242,11 +242,11 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | `REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen``` *(zorunlu)* — Regular expression
+2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
 3. ```degistirilecek_metin``` *[opsiyonel]* — Eşleşmenin sağlandığı metin parçası ile değiştirilecek metni ifade eder.
 4. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 5. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder. 0 ise tüm eşleşmeler için değiştirme işlemi yapılır.
-6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır. Eğer belirtilmezse `metin` tek bir satır olarak kabul edilir, case-sensitive eşleşme aranır ve `.` karakteri `newline` karakteri ile eşleşmez.
 
 | Kullanım                                                                                                    | Sonuç                      |
 |-------------------------------------------------------------------------------------------------------------|----------------------------|
@@ -275,9 +275,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | `REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen``` *(zorunlu)* — Regular expression
+2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-4. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+4. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır. Eğer belirtilmezse `metin` tek bir satır olarak kabul edilir, case-sensitive eşleşme aranır ve `.` karakteri `newline` karakteri ile eşleşmez.
 
 | Kullanım                                                                                                                       | Sonuç |
 |--------------------------------------------------------------------------------------------------------------------------------|-------|
@@ -307,8 +307,8 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 | `REGEXP_LIKE(metin, desen, [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
-2. ```desen``` *(zorunlu)* — Regular expression
-3. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
+2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
+3. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır. Eğer belirtilmezse `metin` tek bir satır olarak kabul edilir, case-sensitive eşleşme aranır ve `.` karakteri `newline` karakteri ile eşleşmez.
 
 | Kullanım                                                  | Sonuç |
 |-----------------------------------------------------------|-------|
