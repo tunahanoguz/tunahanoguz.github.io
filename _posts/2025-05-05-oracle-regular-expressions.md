@@ -200,7 +200,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 - Hiç eşleşme olmazsa NULL dönecektir.
 - İki adet zorunlu, dört adet opsiyonel olmak üzere toplam altı adet parametreye sahiptir.
 
-```REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])```
+| Syntax                                                                                          |
+|-------------------------------------------------------------------------------------------------|
+| `REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression
@@ -219,7 +221,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 - Hiç eşleşme olmazsa herhangi bir değiştirme işlemi olmaz ve metnin ilk hali döner.
 - İki adet zorunlu, dört adet opsiyonel parametreye sahiptir.
 
-```REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])```
+| Syntax                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------|
+| `REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression
@@ -237,7 +241,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 - Bir desenin bir metinde kaç defa eşleşme yakaladığını döner.
 - İki adet zorunlu, iki adet opsiyonal parametreye sahiptir.
 
-```REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])```
+| Syntax                                                         |
+|----------------------------------------------------------------|
+| `REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression
@@ -254,7 +260,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 - Dönüş değeri TRUE veya FALSE olabilir.
 - İki adet zorunlu, bir adet opsiyonel parametre sahiptir.
 
-```REGEXP_LIKE(metin, desen, [eslesme_modu])```
+| Syntax                                      |
+|---------------------------------------------|
+| `REGEXP_LIKE(metin, desen, [eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression
