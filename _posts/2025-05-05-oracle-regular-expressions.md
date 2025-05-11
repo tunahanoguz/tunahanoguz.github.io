@@ -164,35 +164,40 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
 5. ```donus_modu``` *[opsiyonel]* — 0 ile eşleşmenin sağlandığı kısmın ilk karakterinin, 1 ile o kısmın ardından gelen ilk karakterin konumunun dönülmesini sağlar. Varsayılan değeri 0'dır.
 6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
-7. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar.
+7. ```alt_ifade``` *[opsiyonel]* — Desendeki kaçıncı grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar. 0-9 arasında olacak şekilde bir sayı kabul eder. 0 ise tüm eşleşmeyi, 0'dan büyük bir rakam ise karşılık gelen grubu temel alır.
 
-| Kullanım                                                                                             | Sonuç |
-|------------------------------------------------------------------------------------------------------|-------|
-| `REGEXP_INSTR('Hello World!', 'W[a-z]{3}d!')`                                                        | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 7)`                                        | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 8)`                                        | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 14)`                                       | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 15)`                                       | 21    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1)`                                     | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2)`                                     | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3)`                                     | 21    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 1)`                                  | 12    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2, 1)`                                  | 19    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3, 1)`                                  | 26    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'c')`                             | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'c')`                             | 0     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'i')`                             | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'i')`                             | 7     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0)```                            | 0     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0, 'n')```                       | 1     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0, 'm')``` | 1     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0)```      | 1     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0, 'm')``` | 7     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0)```      | 0     |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0, 'm')``` | 13    |
-| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0)```      | 0     |
-| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0, 'x')`                       | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0)`                            | 0     |
+| Kullanım                                                                                                     | Sonuç |
+|--------------------------------------------------------------------------------------------------------------|-------|
+| `REGEXP_INSTR('Hello World!', 'W[a-z]{3}d!')`                                                                | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 7)`                                                | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 8)`                                                | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 14)`                                               | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 15)`                                               | 21    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1)`                                             | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2)`                                             | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3)`                                             | 21    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 1)`                                          | 12    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2, 1)`                                          | 19    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3, 1)`                                          | 26    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'c')`                                     | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'c')`                                     | 0     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'i')`                                     | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'i')`                                     | 7     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0)```                                    | 0     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0, 'n')```                               | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0, 'm')```         | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0)```              | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0, 'm')```         | 7     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0)```              | 0     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0, 'm')```         | 13    |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0)```              | 0     |
+| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0, 'x')`                               | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0)`                                    | 0     |
+| ```REGEXP_INSTR('29.04.2025', '(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})')```                  | 1     |
+| ```REGEXP_INSTR('29.04.2025', '(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})', 1, 1, 0, 'c', 0)``` | 1     |
+| ```REGEXP_INSTR('29.04.2025', '(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})', 1, 1, 0, 'c', 1)``` | 1     |
+| ```REGEXP_INSTR('29.04.2025', '(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})', 1, 1, 0, 'c', 2)``` | 4     |
+| ```REGEXP_INSTR('29.04.2025', '(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})', 1, 1, 0, 'c', 3)``` | 7     |
 
 ### 4.2 REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
@@ -209,11 +214,22 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
 5. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
-6. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun metninin dönülmesini sağlar.
+6. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun metninin dönülmesini sağlar. 0-9 arasında olacak şekilde bir sayı kabul eder. 0 ise tüm eşleşmeyi, 0'dan büyük bir rakam ise karşılık gelen grubu temel alır.
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+| Kullanım                                                           | Sonuç   |
+|--------------------------------------------------------------------|---------|
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]')`            | 3       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1)`         | 3       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 1)`      | 3       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 2)`      | 5       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 3)`      | 7       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 1, 'i')` | 3       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 2, 'i')` | 5       |
+| `REGEXP_SUBSTR('3, 5 and 7 are odd numbers.', '[0-9]', 1, 3, 'i')` | 7       |
+| `REGEXP_SUBSTR('3, 5, 7', '^(\d), (\d), (\d)$', 1, 1, 'i', 0)`     | 3, 5, 7 |
+| `REGEXP_SUBSTR('3, 5, 7', '^(\d), (\d), (\d)$', 1, 1, 'i', 1)`     | 3       |
+| `REGEXP_SUBSTR('3, 5, 7', '^(\d), (\d), (\d)$', 1, 1, 'i', 2)`     | 5       |
+| `REGEXP_SUBSTR('3, 5, 7', '^(\d), (\d), (\d)$', 1, 1, 'i', 3)`     | 7       |
 
 ### 4.3 REGEXP_REPLACE {#REGEXP_REPLACE}
 
