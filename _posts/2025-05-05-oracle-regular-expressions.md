@@ -154,7 +154,9 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 - Hiç eşleşme olmazsa 0 dönecektir.
 - İki adet zorunlu, beş adet opsiyonel olmak üzere toplam yedi adet parametreye sahiptir.
 
-```REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])```
+| Syntax                                                                                                       |
+|--------------------------------------------------------------------------------------------------------------|
+| `REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression
