@@ -297,6 +297,27 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 2. ```desen``` *(zorunlu)* — Regular expression
 3. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+| Kullanım                                                  | Sonuç |
+|-----------------------------------------------------------|-------|
+| `REGEXP_LIKE('John', '^J')`                               | TRUE  |
+| `REGEXP_LIKE('John', '^J', 'm')`                          | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '^J', 'm')```  | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '^D', 'm')```  | TRUE  |
+| `REGEXP_LIKE('John', '\AJ')`                              | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '\AJ')```      | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '\AD')```      | FALSE |
+| `REGEXP_LIKE('John', '\AJ', 'm')`                         | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '\AJ', 'm')``` | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', '\AD', 'm')``` | FALSE |
+| `REGEXP_LIKE('John', 'n$')`                               | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'n$')```       | FALSE |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'e$')```       | TRUE  |
+| `REGEXP_LIKE('John', 'n$', 'm')`                          | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'n$', 'm')```  | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'e$', 'm')```  | TRUE  |
+| `REGEXP_LIKE('John', 'n\Z')`                              | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'n\Z')```      | FALSE |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'e\Z')```      | TRUE  |
+| `REGEXP_LIKE('John', 'n\Z', 'm')`                         | TRUE  |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'n\Z', 'm')``` | FALSE |
+| ```REGEXP_LIKE('John' || CHR(10) || 'Doe', 'e\Z', 'm')``` | TRUE  |
