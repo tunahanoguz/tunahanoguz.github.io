@@ -248,9 +248,22 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 5. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
 6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+| Kullanım                                                                                                    | Sonuç                      |
+|-------------------------------------------------------------------------------------------------------------|----------------------------|
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d')`                                                | Hello , , !                |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon')`                                        | Hello Moon, Moon, Moon!    |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1)`                                     | Hello Moon, Moon, Moon!    |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 0)`                                  | Hello Moon, Moon, Moon!    |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 1)`                                  | Hello Moon, World, World!  |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 2)`                                  | Hello World, Moon, World!  |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 3)`                                  | Hello World, World, Moon!  |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 0, 'c')`                             | Hello Moon, Moon, Moon!    |
+| `REGEXP_REPLACE('Hello World, World, World!', 'W[a-z]{3}d', 'Moon', 1, 0, 'i')`                             | Hello Moon, Moon, Moon!    |
+| `REGEXP_REPLACE('Hello World, World, World!', 'w[a-z]{3}d', 'Moon', 1, 0, 'c')`                             | Hello World, World, World! |
+| `REGEXP_REPLACE('Hello World, World, World!', 'w[a-z]{3}d', 'Moon', 1, 0, 'i')`                             | Hello Moon, Moon, Moon!    |
+| ```REGEXP_REPLACE('World' || CHR(10) || 'World', 'W[a-z]{3}d.W[a-z]{3}d', 'Moon', 1, 0, 'n')```             | Moon                       |
+| ```REGEXP_REPLACE('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 'Moon', 1, 0, 'm')``` | Moon<br>Moon<br>Moon       |
+| `REGEXP_REPLACE('Hello World, World, World!', ' W [a-z]{3}d   ', 'Moon', 1, 0, 'x')`                        | Hello Moon, Moon, Moon!    |
 
 ### 4.4 REGEXP_COUNT {#REGEXP_COUNT}
 
