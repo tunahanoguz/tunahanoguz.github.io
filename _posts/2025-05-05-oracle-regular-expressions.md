@@ -266,9 +266,22 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 3. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
 4. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+| Kullanım                                                                                                                       | Sonuç |
+|--------------------------------------------------------------------------------------------------------------------------------|-------|
+| `REGEXP_COUNT('Hello World, World, World!', 'W[a-z]{3}d')`                                                                     | 3     |
+| `REGEXP_COUNT('Hello World, World, World!', 'W[a-z]{3}d', 1, 'c')`                                                             | 3     |
+| `REGEXP_COUNT('Hello World, World, World!', 'w[a-z]{3}d', 1, 'c')`                                                             | 0     |
+| `REGEXP_COUNT('Hello World, World, World!', 'W[a-z]{3}d', 1, 'i')`                                                             | 3     |
+| `REGEXP_COUNT('Hello World, World, World!', 'w[a-z]{3}d', 1, 'i')`                                                             | 3     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World', 'W[a-z]{3}d.W[a-z]{3}d', 1, 'n')```                                             | 1     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World' || CHR(10) || 'World', 'W[a-z]{3}d.W[a-z]{3}d', 1, 'n')```                       | 1     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World' || CHR(10) || 'World' || CHR(10) || 'World', 'W[a-z]{3}d.W[a-z]{3}d', 1, 'n')``` | 1     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World', '^W[a-z]{3}d', 1)```                                                            | 1     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 'm')```                                                       | 2     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World', 'W[a-z]{3}d$', 1)```                                                            | 1     |
+| ```REGEXP_COUNT('World' || CHR(10) || 'World', 'W[a-z]{3}d$', 1, 'm')```                                                       | 2     |
+| `REGEXP_COUNT('Hello World, World, World!', ' W [a-z]{3} d    ', 1, 'x')`                                                      | 3     |
+| `REGEXP_COUNT('Hello World, World, World!', ' W [a-z]{3} d    ', 1)`                                                           | 3     |
 
 ### 4.5 REGEXP_LIKE {#REGEXP_LIKE}
 
