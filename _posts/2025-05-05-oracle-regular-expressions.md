@@ -164,23 +164,33 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 7. ```alt_ifade``` *[opsiyonel]* — Desendeki hangi grubun temel alınacağını ifade eder. İlgili grubun konumunun dönülmesini sağlar.
 
-| Kullanım                                                                 | Sonuç |
-|--------------------------------------------------------------------------|-------|
-| `REGEXP_INSTR('Hello World!', 'W[a-z]{3}d!')`                            | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 7)`            | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 8)`            | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 14)`           | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 15)`           | 21    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1)`         | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2)`         | 14    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3)`         | 21    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 1)`      | 12    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2, 1)`      | 19    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3, 1)`      | 26    |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'c')` | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'c')` | 0     |
-| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'i')` | 7     |
-| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'i')` | 7     |
+| Kullanım                                                                                             | Sonuç |
+|------------------------------------------------------------------------------------------------------|-------|
+| `REGEXP_INSTR('Hello World!', 'W[a-z]{3}d!')`                                                        | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 7)`                                        | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 8)`                                        | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 14)`                                       | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 15)`                                       | 21    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1)`                                     | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2)`                                     | 14    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3)`                                     | 21    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 1)`                                  | 12    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 2, 1)`                                  | 19    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 3, 1)`                                  | 26    |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'c')`                             | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'c')`                             | 0     |
+| `REGEXP_INSTR('Hello World, World, World!', 'W[a-z]{3}d', 1, 1, 0, 'i')`                             | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', 'w[a-z]{3}d', 1, 1, 0, 'i')`                             | 7     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0)```                            | 0     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World', 'World.World', 1, 1, 0, 'n')```                       | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0, 'm')``` | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 1, 0)```      | 1     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0, 'm')``` | 7     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 2, 0)```      | 0     |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0, 'm')``` | 13    |
+| ```REGEXP_INSTR('World' || CHR(10) || 'World' || CHR(10) || 'World', '^W[a-z]{3}d', 1, 3, 0)```      | 0     |
+| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0, 'x')`                       | 7     |
+| `REGEXP_INSTR('Hello World, World, World!', ' W [a-z]{3} d   ', 1, 1, 0)`                            | 0     |
 
 ### 4.2 REGEXP_SUBSTR {#REGEXP_SUBSTR}
 
