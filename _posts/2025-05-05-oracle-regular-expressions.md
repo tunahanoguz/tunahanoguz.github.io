@@ -245,7 +245,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 2. ```desen``` *(zorunlu)* — Regular expression
 3. ```degistirilecek_metin``` *[opsiyonel]* — Eşleşmenin sağlandığı metin parçası ile değiştirilecek metni ifade eder.
 4. ```baslama_konumu``` *[opsiyonel]* — Metnin kaçıncı karakterinden itibaren eşleşme aranacağını ifade eder.
-5. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder.
+5. ```kacinci_eslesme``` *[opsiyonel]* — Desenin metin üzerindeki kaçıncı eşleşmesinin temel alınacağını ifade eder. 0 ise tüm eşleşmeler için değiştirme işlemi yapılır.
 6. ```eslesme_modu``` *[opsiyonel]* — Yazının önceki kısımlarında anlatılan [eşleşme modlarından](#eslesme-modlari) birini alır.
 
 | Kullanım                                                                                                    | Sonuç                      |
