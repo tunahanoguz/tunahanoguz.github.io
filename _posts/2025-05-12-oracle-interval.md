@@ -24,6 +24,13 @@ INTERVAL veri tipi, iki date time arasındaki zaman aralığını ifade eder ve 
 
 Yıl ve ay bazında zaman aralığını belirtir.
 
+| Syntax                                                   |
+|----------------------------------------------------------|
+| INTERVAL YEAR [(yil_hassasiyeti)] TO MONTH               |
+| INTERVAL 'year[-month]' YEAR[(yil_hassasiyeti)] TO MONTH |
+
+- `yil_hassasiyeti`, YEAR alanının alacağı sayının maksimum kaç haneden oluşabileceğini ifade eder. 0-9 arasında bir sayıyı kabul eder. Varsayılan değeri 2'dir. Varsayılan değerle birlikte en fazla 99 yıl 11 aylık aralık ifade edilebilir. YEAR alanının alabileceği en büyük sayı 999.999.999'dur.
+
 ### 1.1 NUMTOYMINTERVAL Fonksiyonu {#numtoyminterval}
 
 ### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
