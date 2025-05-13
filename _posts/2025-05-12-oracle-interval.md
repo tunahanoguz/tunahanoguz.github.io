@@ -32,13 +32,13 @@ Yıl ve ay bazında zaman aralığı belirtir.
 - `yil_hassasiyeti`, `YEAR` alanının alacağı sayının maksimum kaç haneden oluşabileceğini ifade eder. 0-9 arasında bir sayıyı kabul eder. Varsayılan değeri 2'dir. Varsayılan değerle birlikte en fazla 99 yıl 11 aylık bir aralığı ifade edilebilir. YEAR alanının alabileceği en büyük sayı 999.999.999'dur.
 - `MONTH` alanı için hassasiyet belirtilmez. `YEAR TO MONTH` formatında kullanıldığında en az 0, en fazla 11 olabilir. Sadece `MONTH` formatında kullanıldığında en az 0, en fazla 12 olabilir.
 
-| Kullanım                                    | Açıklama                                                                                                                 |
-|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `INTERVAL '10-11' YEAR TO MONTH`            | 10 yıl 11 aylık aralık ifade eder.                                                                                       |
-| `INTERVAL '120-11' YEAR(3) TO MONTH`        | 120 yıl 11 aylık aralık ifade eder. Yıl değeri 2'den fazla hane içerdiği için mutlaka `yil_hassasiyeti` belirtilmelidir. |
-| `INTERVAL '10' YEAR`                        | 10 yıllık aralık ifade eder.                                                                                             |
-| `INTERVAL '100' YEAR(3)`                    | 100 yıllık aralık ifade eder. Yıl değeri 2'den fazla hane içerdiği için mutlaka `yil_hassasiyeti` belirtilmelidir.       |
-| `INTERVAL 'AY' MONTH`                       | AY aylık aralık ifade eder.                                                                                              |
+| Kullanım                                    | Açıklama                            | Sonuç |
+|---------------------------------------------|-------------------------------------|-------|
+| `INTERVAL '10-11' YEAR TO MONTH`            | 10 yıl 11 aylık aralık ifade eder.  | x     |
+| `INTERVAL '120-11' YEAR(3) TO MONTH`        | 120 yıl 11 aylık aralık ifade eder. | x     |
+| `INTERVAL '10' YEAR`                        | 10 yıllık aralık ifade eder.        | x     |
+| `INTERVAL '100' YEAR(3)`                    | 100 yıllık aralık ifade eder.       | x     |
+| `INTERVAL 'AY' MONTH`                       | AY aylık aralık ifade eder.         | x     |
 
 ### 1.1 NUMTOYMINTERVAL Fonksiyonu {#numtoyminterval}
 
