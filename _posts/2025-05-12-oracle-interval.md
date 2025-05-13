@@ -35,6 +35,8 @@ Yıl ve ay bazında zaman aralığı belirtir.
 
 ### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
 
+---
+
 ## 2. INTERVAL DAY TO SECOND {#interval-day-to-second}
 
 Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
