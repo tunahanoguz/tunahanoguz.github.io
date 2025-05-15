@@ -87,6 +87,15 @@ Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
 | `INTERVAL 'dk' MINUTE[(hassasiyet)]`                            | Dakika bazlı tarih aralığı ifade eder.                                   |
 | `INTERVAL 'sn.kesirli_sn' SECOND[(hassasiyet), (hassasiyet)]`   | Saniye bazlı tarih aralığı ifade eder.                                   |
 
+- Gün hassasiyeti;
+    - x
+- Saat hassasiyeti;
+    - x
+- Dakika hassasiyeti;
+    - x
+- Saniye hassasiyeti;
+    - x
+
 | Syntax | Açıklama |
 |--------|----------|
 | `INTERVAL '999999999 23:59:59.999999999' DAY(9) TO SECOND(9)` | x |
