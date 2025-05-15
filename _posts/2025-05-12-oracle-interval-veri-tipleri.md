@@ -88,13 +88,17 @@ Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
 | `INTERVAL 'sn.kesirli_sn' SECOND[(hassasiyet), (hassasiyet)]`   | Saniye bazlı tarih aralığı ifade eder.                                   |
 
 - Gün hassasiyeti;
-    - x
+    - 0-9 arasında olabilir.
+    - Varsayılan değeri 2'dir.
 - Saat hassasiyeti;
-    - x
+    - 0-9 arasında olabilir.
+    - Varsayılan değeri 3'tür.
 - Dakika hassasiyeti;
-    - x
+    - 0-9 arasında olabilir.
+    - Varsayılan değeri 4'tür.
 - Saniye hassasiyeti;
-    - x
+    - Saniyenin ana kısmı için 0-9 arasında olabilir, varsayılan değeri 6'dır.
+    - Saniyenin kesirli kısmı için de 0-9 arasında olabilir, varsayılan değeri 6'dır.
 
 | Syntax | Açıklama |
 |--------|----------|
