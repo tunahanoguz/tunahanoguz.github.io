@@ -73,19 +73,35 @@ Yıl ve ay bazında zaman aralığı belirtir.
 
 Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
 
-| Syntax                                                         | Açıklama                                                    |
-|----------------------------------------------------------------|-------------------------------------------------------------|
-| `INTERVAL DAY[(hassasiyet)] TO SECOND[(hassasiyet)]`           | Veri tipini belirtir.                                       |
-| `INTERVAL 'g sa:dk:sn.kesirli_sn' DAY TO SECOND[(hassasiyet)]` | Gün, saat, dakika ve saniye bazlı tarih aralığı ifade eder. |
-| `INTERVAL 'g sa:dk' DAY[(hassasiyet)] TO MINUTE`               | Gün, saat ve dakika bazlı tarih aralığı ifade eder.         |
-| `INTERVAL 'g sa' DAY[(hassasiyet)] TO HOUR[(hassasiyet)]`      | Gün ve saat bazlı tarih aralığı ifade eder.                 |
-| `INTERVAL 'g' DAY[(hassasiyet)]`                               | Gün bazlı tarih aralığı ifade eder.                         |
-| `INTERVAL 'sa:dk:sn.kesirli_sn' HOUR TO SECOND[(hassasiyet)]`  | Saat, dakika ve saniye bazlı tarih aralığı ifade eder.      |
-| `INTERVAL 'sa:dk' HOUR TO MINUTE`                              | Saat ve dakika bazlı tarih aralığı ifade eder.              |
-| `INTERVAL 'sa' HOUR`                                           | Saat bazlı tarih aralığı ifade eder.                        |
-| `INTERVAL 'dk:sn' MINUTE TO SECOND[(hassasiyet)]`              | Dakika ve saniye bazlı tarih aralığı ifade eder.            |
-| `INTERVAL 'dk' MINUTE`                                         | Dakika bazlı tarih aralığı ifade eder.                      |
-| `INTERVAL 'sn.kesirli_sn' SECOND(2,3)`                         | Saniye bazlı tarih aralığı ifade eder.                      |
+| Syntax                                                          | Açıklama                                                                 |
+|-----------------------------------------------------------------|--------------------------------------------------------------------------|
+| `INTERVAL DAY[(hassasiyet)] TO SECOND[(hassasiyet)]`            | Veri tipini belirtir.                                                    |
+| `INTERVAL 'g sa:dk:sn.kesirli_sn' DAY[(hassasiyet)] TO SECOND[(hassasiyet)]` | Gün, saat, dakika ve saniye bazlı tarih aralığı ifade eder. |
+| `INTERVAL 'g sa:dk' DAY[(hassasiyet)] TO MINUTE`                | Gün, saat ve dakika bazlı tarih aralığı ifade eder.                      |
+| `INTERVAL 'g sa' DAY[(hassasiyet)] TO HOUR`                     | Gün ve saat bazlı tarih aralığı ifade eder.                              |
+| `INTERVAL 'g' DAY[(hassasiyet)]`                                | Gün bazlı tarih aralığı ifade eder.                                      |
+| `INTERVAL 'sa:dk:sn.kesirli_sn' HOUR TO SECOND[(hassasiyet)]`   | Saat, dakika ve saniye bazlı tarih aralığı ifade eder.                   |
+| `INTERVAL 'sa:dk' HOUR[(hassasiyet)] TO MINUTE`                 | Saat ve dakika bazlı tarih aralığı ifade eder.                           |
+| `INTERVAL 'sa' HOUR[(hassasiyet)]`                              | Saat bazlı tarih aralığı ifade eder.                                     |
+| `INTERVAL 'dk:sn' MINUTE[(hassasiyet)] TO SECOND[(hassasiyet)]` | Dakika ve saniye bazlı tarih aralığı ifade eder.                         |
+| `INTERVAL 'dk' MINUTE[(hassasiyet)]`                            | Dakika bazlı tarih aralığı ifade eder.                                   |
+| `INTERVAL 'sn.kesirli_sn' SECOND[(hassasiyet), (hassasiyet)]`   | Saniye bazlı tarih aralığı ifade eder.                                   |
+
+| Syntax | Açıklama |
+|--------|----------|
+| `INTERVAL '999999999 23:59:59.999999999' DAY(9) TO SECOND(9)` | x |
+| `INTERVAL '999999999 23:59' DAY(9) TO MINUTE` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
+| `` | x |
 
 ### 2.1 NUMTODSINTERVAL Fonksiyonu {#numtodsinterval}
 
