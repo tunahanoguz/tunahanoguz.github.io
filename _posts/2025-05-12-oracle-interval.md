@@ -37,31 +37,31 @@ Yıl ve ay bazında zaman aralığı belirtir.
     - Yıl ve ay bazlı aralık ifade edilirken 2 ile sınırlandırılır. Bu durumda ay değeri en az 0 en fazla 11 olabilir.
     - Tek başına ay bazlı aralık ifade edildiği durumda sınırsızdır. -11'den küçük veya 11'den büyük değerler için 12'den büyük kısmı yıla dahil edilerek ay-yıl hesabı otomatik bir şekilde yapılır.
 
-| Kullanım                                    | Açıklama                            | Sonuç |
-|---------------------------------------------|-------------------------------------|-------|
-| `INTERVAL '0-0' YEAR TO MONTH`              | 0 yıl 0 aylık aralık ifade eder.    | x     |
-| `INTERVAL '0-1' YEAR TO MONTH`              | 0 yıl 1 aylık aralık ifade eder.    | x     |
-| `INTERVAL '1-0' YEAR TO MONTH`              | 1 yıl 0 aylık aralık ifade eder.    | x     |
-| `INTERVAL '10-1' YEAR TO MONTH`             | 10 yıl 1 aylık aralık ifade eder.   | x     |
-| `INTERVAL '99-11' YEAR TO MONTH`            | 99 yıl 11 aylık aralık ifade eder.  | x     |
-| `INTERVAL '100-1' YEAR(3) TO MONTH`         | 100 yıl 1 aylık aralık ifade eder.  | x     |
-| `INTERVAL '999-11' YEAR(3) TO MONTH`        | 999 yıl 11 aylık aralık ifade eder. | x     |
-| `INTERVAL '0' YEAR`                         | 0 yıllık aralık ifade eder.         | x     |
-| `INTERVAL '1' YEAR`                         | 1 yıllık aralık ifade eder.         | x     |
-| `INTERVAL '10' YEAR`                        | 10 yıllık aralık ifade eder.        | x     |
-| `INTERVAL '99' YEAR`                        | 99 yıllık aralık ifade eder.        | x     |
-| `INTERVAL '0' YEAR(3)`                      | 0 yıllık aralık ifade eder.         | x     |
-| `INTERVAL '1' YEAR(3)`                      | 1 yıllık aralık ifade eder.         | x     |
-| `INTERVAL '10' YEAR(3)`                     | 10 yıllık aralık ifade eder.        | x     |
-| `INTERVAL '99' YEAR(3)`                     | 99 yıllık aralık ifade eder.        | x     |
-| `INTERVAL '100' YEAR(3)`                    | 100 yıllık aralık ifade eder.       | x     |
-| `INTERVAL '999' YEAR(3)`                    | 999 yıllık aralık ifade eder.       | x     |
-| `INTERVAL '0' MONTH`                        | 0 aylık aralık ifade eder.          | x     |
-| `INTERVAL '1' MONTH`                        | 1 aylık aralık ifade eder.          | x     |
-| `INTERVAL '11' MONTH`                       | 11 aylık aralık ifade eder.         | x     |
-| `INTERVAL '12' MONTH`                       | 12 aylık aralık ifade eder.         | x     |
-| `INTERVAL '23' MONTH`                       | 23 aylık aralık ifade eder.         | x     |
-| `INTERVAL '24' MONTH`                       | 24 aylık aralık ifade eder.         | x     |
+| Kullanım                                    | Açıklama                            | Sonuç   |
+|---------------------------------------------|-------------------------------------|---------|
+| `INTERVAL '0-0' YEAR TO MONTH`              | 0 yıl 0 aylık aralık ifade eder.    | +0-0    |
+| `INTERVAL '0-1' YEAR TO MONTH`              | 0 yıl 1 aylık aralık ifade eder.    | +0-1    |
+| `INTERVAL '1-0' YEAR TO MONTH`              | 1 yıl 0 aylık aralık ifade eder.    | +1-0    |
+| `INTERVAL '10-1' YEAR TO MONTH`             | 10 yıl 1 aylık aralık ifade eder.   | +10-1   |
+| `INTERVAL '99-11' YEAR TO MONTH`            | 99 yıl 11 aylık aralık ifade eder.  | +99-11  |
+| `INTERVAL '100-1' YEAR(3) TO MONTH`         | 100 yıl 1 aylık aralık ifade eder.  | +100-1  |
+| `INTERVAL '999-11' YEAR(3) TO MONTH`        | 999 yıl 11 aylık aralık ifade eder. | +999-11 |
+| `INTERVAL '0' YEAR`                         | 0 yıllık aralık ifade eder.         | +0-0    |
+| `INTERVAL '1' YEAR`                         | 1 yıllık aralık ifade eder.         | +1-0    |
+| `INTERVAL '10' YEAR`                        | 10 yıllık aralık ifade eder.        | +10-0   |
+| `INTERVAL '99' YEAR`                        | 99 yıllık aralık ifade eder.        | +99-0   |
+| `INTERVAL '0' YEAR(3)`                      | 0 yıllık aralık ifade eder.         | +0-0    |
+| `INTERVAL '1' YEAR(3)`                      | 1 yıllık aralık ifade eder.         | +1-0    |
+| `INTERVAL '10' YEAR(3)`                     | 10 yıllık aralık ifade eder.        | +10-0   |
+| `INTERVAL '99' YEAR(3)`                     | 99 yıllık aralık ifade eder.        | +99-0   |
+| `INTERVAL '100' YEAR(3)`                    | 100 yıllık aralık ifade eder.       | +100-0  |
+| `INTERVAL '999' YEAR(3)`                    | 999 yıllık aralık ifade eder.       | +999-0  |
+| `INTERVAL '0' MONTH`                        | 0 aylık aralık ifade eder.          | +0-0    |
+| `INTERVAL '1' MONTH`                        | 1 aylık aralık ifade eder.          | +0-1    |
+| `INTERVAL '11' MONTH`                       | 11 aylık aralık ifade eder.         | +0-11   |
+| `INTERVAL '12' MONTH`                       | 12 aylık aralık ifade eder.         | +1-0    |
+| `INTERVAL '23' MONTH`                       | 23 aylık aralık ifade eder.         | +1-11   |
+| `INTERVAL '24' MONTH`                       | 24 aylık aralık ifade eder.         | +2-0    |
 
 ### 1.1 NUMTOYMINTERVAL Fonksiyonu {#numtoyminterval}
 
