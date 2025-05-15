@@ -104,12 +104,12 @@ Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
 |--------|----------|
 | `INTERVAL '999999999 23:59:59.999999999' DAY(9) TO SECOND(9)` | x |
 | `INTERVAL '999999999 23:59' DAY(9) TO MINUTE` | x |
-| `` | x |
-| `` | x |
-| `` | x |
-| `` | x |
-| `` | x |
-| `` | x |
+| `INTERVAL '999999999 23' DAY(9) TO HOUR` | x |
+| `INTERVAL '999999999' DAY(9)` | x |
+| `INTERVAL '23:59:59.999999999' HOUR TO SECOND(9)` | x |
+| `INTERVAL '23:59:59.999999999' HOUR TO SECOND(9)` | x |
+| `INTERVAL '999999999:59' HOUR(9) TO MINUTE` | x |
+| `INTERVAL '999999999' HOUR(9)` | x |
 | `` | x |
 | `` | x |
 | `` | x |
