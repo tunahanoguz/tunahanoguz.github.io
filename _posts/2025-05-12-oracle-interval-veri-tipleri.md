@@ -145,8 +145,10 @@ Bir sayıyı `INTERVAL DAY TO SECOND` tipine çevirir.
 
 Aşağıdaki tabloda NUMTODSINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
 
-| Kullanım                       | Sonuç                         |
-|--------------------------------|-------------------------------|
-| `NUMTODSINTERVAL(0, 'DAY')`    | +000000000 00:00:00.000000000 |
+| Kullanım                            | Sonuç                         |
+|-------------------------------------|-------------------------------|
+| `NUMTODSINTERVAL(0, 'DAY')`         | +000000000 00:00:00.000000000 |
+| `NUMTODSINTERVAL(1, 'DAY')`         | +000000001 00:00:00.000000000 |
+| `NUMTODSINTERVAL(999999999, 'DAY')` | +999999999 00:00:00.000000000 |
 
 ### 2.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
