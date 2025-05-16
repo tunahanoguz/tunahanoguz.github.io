@@ -145,10 +145,23 @@ Bir sayıyı `INTERVAL DAY TO SECOND` tipine çevirir.
 
 Aşağıdaki tabloda NUMTODSINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
 
-| Kullanım                            | Sonuç                         |
-|-------------------------------------|-------------------------------|
-| `NUMTODSINTERVAL(0, 'DAY')`         | +000000000 00:00:00.000000000 |
-| `NUMTODSINTERVAL(1, 'DAY')`         | +000000001 00:00:00.000000000 |
-| `NUMTODSINTERVAL(999999999, 'DAY')` | +999999999 00:00:00.000000000 |
+| Kullanım                                 | Sonuç                         |
+|------------------------------------------|-------------------------------|
+| `NUMTODSINTERVAL(0, 'DAY')`              | +000000000 00:00:00.000000000 |
+| `NUMTODSINTERVAL(1, 'DAY')`              | +000000001 00:00:00.000000000 |
+| `NUMTODSINTERVAL(999999999, 'DAY')`      | +999999999 00:00:00.000000000 |
+| `NUMTODSINTERVAL(0, 'HOUR')`             | +000000000 00:00:00.000000000 |
+| `NUMTODSINTERVAL(1, 'HOUR')`             | +000000000 01:00:00.000000000 |
+| `NUMTODSINTERVAL(23, 'HOUR')`            | +000000000 23:00:00.000000000 |
+| `NUMTODSINTERVAL(24, 'HOUR')`            | +000000001 00:00:00.000000000 |
+| `NUMTODSINTERVAL(0, 'MINUTE')`           | +000000000 00:00:00.000000000 |
+| `NUMTODSINTERVAL(1, 'MINUTE')`           | +000000000 00:01:00.000000000 |
+| `NUMTODSINTERVAL(59, 'MINUTE')`          | +000000000 00:59:00.000000000 |
+| `NUMTODSINTERVAL(60, 'MINUTE')`          | +000000000 01:00:00.000000000 |
+| `NUMTODSINTERVAL(0, 'SECOND')`           | +000000000 00:00:00.000000000 |
+| `NUMTODSINTERVAL(1, 'SECOND')`           | +000000000 00:00:01.000000000 |
+| `NUMTODSINTERVAL(1.999999999, 'SECOND')` | +000000000 00:00:01.999999999 |
+| `NUMTODSINTERVAL(59, 'SECOND')`          | +000000000 00:00:59.000000000 |
+| `NUMTODSINTERVAL(60, 'SECOND')`          | +000000000 00:01:00.000000000 |
 
 ### 2.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
