@@ -82,7 +82,28 @@ Aşağıdaki tabloda NUMTOYMINTERVAL fonksiyonunun kullanım örnekleri bulunmak
 | `NUMTOYMINTERVAL(0, 'YEAR')`   | +000000000-00 |
 | `NUMTOYMINTERVAL(1, 'YEAR')`   | +000000001-00 |
 
-### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
+### 1.2 TO_YMINTERVAL Fonksiyonu {#to_dsinterval}
+
+Bir string'i `INTERVAL YEAR TO MONTH` tipine çevirir.
+
+| Syntax                                    |
+|-------------------------------------------|
+| `TO_YMINTERVAL(string)`                   |
+
+Aşağıdaki tabloda TO_YMINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
+
+| Kullanım                         | Sonuç                                      |
+|----------------------------------|--------------------------------------------|
+| `TO_YMINTERVAL('0-0')`           | +000000000-00                              |
+| `TO_YMINTERVAL('0-1')`           | +000000000-01                              |
+| `TO_YMINTERVAL('-0-1')`          | -000000000-01                              |
+| `TO_YMINTERVAL('1-0')`           | +000000001-00                              |
+| `TO_YMINTERVAL('1-0')`           | -000000001-00                              |
+| `TO_YMINTERVAL('0-11')`          | +000000000-11                              |
+| `TO_YMINTERVAL('-0-11')`         | -000000000-11                              |
+| `TO_YMINTERVAL('0-12')`          | ORA-01843: An invalid month was specified. |
+| `TO_YMINTERVAL('999999999-11')`  | +999999999-11                              |
+| `TO_YMINTERVAL('-999999999-11')` | -999999999-11                              |
 
 ---
 
