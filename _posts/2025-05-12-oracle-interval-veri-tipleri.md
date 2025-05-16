@@ -65,6 +65,8 @@ Yıl ve ay bazında zaman aralığı belirtir.
 
 ### 1.1 NUMTOYMINTERVAL Fonksiyonu {#numtoyminterval}
 
+Bir sayıyı `INTERVAL YEAR TO MONTH` tipine çevirir.
+
 | Syntax                                    |
 |-------------------------------------------|
 | ```NUMTOYMINTERVAL(sayi, MONTH | YEAR)``` |
@@ -123,6 +125,8 @@ Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
 | `INTERVAL '999999999.999999999' SECOND(9, 9)`                 | 999999999.999999999 saniye                             | +000011574 01:46:39.999999999 |
 
 ### 2.1 NUMTODSINTERVAL Fonksiyonu {#numtodsinterval}
+
+Bir sayıyı `INTERVAL DAY TO SECOND` tipine çevirir.
 
 | Syntax                                                    |
 |-----------------------------------------------------------|
