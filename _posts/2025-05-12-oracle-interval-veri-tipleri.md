@@ -71,6 +71,15 @@ Bir sayıyı `INTERVAL YEAR TO MONTH` tipine çevirir.
 |-------------------------------------------|
 | ```NUMTOYMINTERVAL(sayi, MONTH | YEAR)``` |
 
+| Kullanım                       | Sonuç         |
+|--------------------------------|---------------|
+| `NUMTOYMINTERVAL(0, 'MONTH')`  | +000000000-00 |
+| `NUMTOYMINTERVAL(1, 'MONTH')`  | +000000000-01 |
+| `NUMTOYMINTERVAL(11, 'MONTH')` | +000000000-11 |
+| `NUMTOYMINTERVAL(12, 'MONTH')` | +000000001-00 |
+| `NUMTOYMINTERVAL(0, 'YEAR')`   | +000000000-00 |
+| `+000000001-00`                | +000000001-00 |
+
 ### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
 
 ---
