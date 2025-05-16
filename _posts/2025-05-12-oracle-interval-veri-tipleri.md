@@ -11,7 +11,7 @@ INTERVAL veri tipleri, bir süreyi/zaman aralığını ifade eder.
 ## İçindekiler
 1. [INTERVAL YEAR TO MONTH](#interval-year-to-month)
     1. [NUMTOYMINTERVAL Fonksiyonu](#numtoyminterval)
-    2. [TO_DSINTERVAL Fonksiyonu](#to_dsinterval)
+    2. [TO_YMINTERVAL Fonksiyonu](#to_yminterval)
 3. [INTERVAL DAY TO SECOND](#interval-day-to-second)
     1. [NUMTODSINTERVAL Fonksiyonu](#numtodsinterval)
     2. [TO_DSINTERVAL Fonksiyonu](#to_dsinterval)
@@ -82,7 +82,7 @@ Aşağıdaki tabloda NUMTOYMINTERVAL fonksiyonunun kullanım örnekleri bulunmak
 | `NUMTOYMINTERVAL(0, 'YEAR')`   | +000000000-00 |
 | `NUMTOYMINTERVAL(1, 'YEAR')`   | +000000001-00 |
 
-### 1.2 TO_YMINTERVAL Fonksiyonu {#to_dsinterval}
+### 1.2 TO_YMINTERVAL Fonksiyonu {#to_yminterval}
 
 Bir string'i `INTERVAL YEAR TO MONTH` tipine çevirir.
 
@@ -186,3 +186,26 @@ Aşağıdaki tabloda NUMTODSINTERVAL fonksiyonunun kullanım örnekleri bulunmak
 | `NUMTODSINTERVAL(60, 'SECOND')`          | +000000000 00:01:00.000000000 |
 
 ### 2.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
+
+Bir string'i `INTERVAL DAY TO SECOND` tipine çevirir.
+
+| Syntax                                    |
+|-------------------------------------------|
+| `TO_DSINTERVAL(string)`                   |
+
+Aşağıdaki tabloda TO_DSINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
+
+| Kullanım                                        | Sonuç                                       |
+|-------------------------------------------------|---------------------------------------------|
+| `TO_DSINTERVAL('0 0:0:0')`                      | +000000000 00:00:00.000000000               |
+| `TO_DSINTERVAL('0 0:0:0.0')`                    | +000000000 00:00:00.000000000               |
+| `TO_DSINTERVAL('999999999 23:59:59.999999999')` | +999999999 23:59:59.999999999               |
+| `TO_DSINTERVAL('0 23:0:0')`                     | +000000000 23:00:00.000000000               |
+| `TO_DSINTERVAL('0 23:00:00')`                   | +000000000 23:00:00.000000000               |
+| `TO_DSINTERVAL('0 24:0:0')`                     | ORA-01850: hour must be between 0 and 23    |
+| `TO_DSINTERVAL('0 0:59:0')`                     | +000000000 00:59:00.000000000               |
+| `TO_DSINTERVAL('0 00:59:00')`                   | +000000000 00:59:00.000000000               |
+| `TO_DSINTERVAL('0 0:60:0')`                     | ORA-01851: minutes must be between 0 and 59 |
+| `TO_DSINTERVAL('0 0:0:59')`                     | +000000000 00:00:59.000000000               |
+| `TO_DSINTERVAL('0 00:00:59')`                   | +000000000 00:00:59.000000000               |
+| `TO_DSINTERVAL('0 0:0:60')`                     | ORA-01852: seconds must be between 0 and 59 |
