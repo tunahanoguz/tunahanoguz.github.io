@@ -65,6 +65,10 @@ Yıl ve ay bazında zaman aralığı belirtir.
 
 ### 1.1 NUMTOYMINTERVAL Fonksiyonu {#numtoyminterval}
 
+| Syntax                                    |
+|-------------------------------------------|
+| ```NUMTOYMINTERVAL(sayi, MONTH | YEAR)``` |
+
 ### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
 
 ---
@@ -100,22 +104,28 @@ Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
     - Saniyenin ana kısmı için 0-9 arasında olabilir, varsayılan değeri 6'dır.
     - Saniyenin kesirli kısmı için de 0-9 arasında olabilir, varsayılan değeri 6'dır.
 
-| Syntax | Açıklama |
-|--------|----------|
-| `INTERVAL '999999999 23:59:59.999999999' DAY(9) TO SECOND(9)` | x |
-| `INTERVAL '999999999 23:59' DAY(9) TO MINUTE` | x |
-| `INTERVAL '999999999 23' DAY(9) TO HOUR` | x |
-| `INTERVAL '999999999' DAY(9)` | x |
-| `INTERVAL '23:59:59.999999999' HOUR TO SECOND(9)` | x |
-| `INTERVAL '23:59:59.999999999' HOUR TO SECOND(9)` | x |
-| `INTERVAL '999999999:59' HOUR(9) TO MINUTE` | x |
-| `INTERVAL '999999999' HOUR(9)` | x |
-| `` | x |
-| `` | x |
-| `` | x |
-| `` | x |
-| `` | x |
+| Syntax                                                        | Açıklama                                               | Sonuç                         |
+|---------------------------------------------------------------|--------------------------------------------------------|-------------------------------|
+| `INTERVAL '999999999 23:59:59.999999999' DAY(9) TO SECOND(9)` | 999999999 gün, 23 saat, 59 dakika, 59.999999999 saniye | +999999999 23:59:59.999999999 |
+| `INTERVAL '999999999 23:59' DAY(9) TO MINUTE`                 | 999999999 gün, 23 saat, 59 dakika                      | +999999999 23:59:00           |
+| `INTERVAL '999999999 23' DAY(9) TO HOUR`                      | 999999999 gün, 23 saat                                 | +999999999 23:00:00           |
+| `INTERVAL '999999999' DAY(9)`                                 | 999999999 gün                                          | +999999999 00:00:00           |
+| `INTERVAL '00:00:00.000000' HOUR TO SECOND`                   | 0 saat, 0 dakika, 0 saniye                             | +00 00:00:00.000000           |
+| `INTERVAL '00:00:00.999999' HOUR TO SECOND`                   | 0 saat, 0 dakika, 0.999999 saniye                      | +00 00:00:00.999999           |
+| `INTERVAL '00:00:00.9999999' HOUR TO SECOND`                  | 0 saat, 1 dakika, 0 saniye                             | +00 00:00:01.000000           |
+| `INTERVAL '23:59:59.999999999' HOUR TO SECOND(9)`             | 23 saat, 59 dakika, 59.999999999 saniye                | +00 23:59:59.999999999        |
+| `INTERVAL '999999999:59' HOUR(9) TO MINUTE`                   | 999999999 saat, 59 dakika                              | +041666666 15:59:00           |
+| `INTERVAL '0' HOUR`                                           | 0 saat                                                 | +00 00:00:00                  |
+| `INTERVAL '999999999' HOUR(9)`                                | 999999999 saat                                         | +041666666 15:00:00           |
+| `INTERVAL '999999999:59.999999999' MINUTE(9) TO SECOND(9)`    | 999999999 dakika, 59.999999999 saniye                  | +000694444 10:39:59.999999999 |
+| `INTERVAL '0' MINUTE`                                         | 0 dakika                                               | +00 00:00:00                  |
+| `INTERVAL '999999999' MINUTE(9)`                              | 999999999 dakika                                       | +000694444 10:39:00           |
+| `INTERVAL '999999999.999999999' SECOND(9, 9)`                 | 999999999.999999999 saniye                             | +000011574 01:46:39.999999999 |
 
 ### 2.1 NUMTODSINTERVAL Fonksiyonu {#numtodsinterval}
+
+| Syntax                                                    |
+|-----------------------------------------------------------|
+| ```NUMTODSINTERVAL(sayi, DAY | HOUR | MINUTE | SECOND)``` |
 
 ### 2.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
