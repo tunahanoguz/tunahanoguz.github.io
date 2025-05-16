@@ -71,6 +71,8 @@ Bir sayıyı `INTERVAL YEAR TO MONTH` tipine çevirir.
 |-------------------------------------------|
 | ```NUMTOYMINTERVAL(sayi, MONTH | YEAR)``` |
 
+Aşağıdaki tabloda NUMTOYMINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
+
 | Kullanım                       | Sonuç         |
 |--------------------------------|---------------|
 | `NUMTOYMINTERVAL(0, 'MONTH')`  | +000000000-00 |
@@ -140,5 +142,11 @@ Bir sayıyı `INTERVAL DAY TO SECOND` tipine çevirir.
 | Syntax                                                    |
 |-----------------------------------------------------------|
 | ```NUMTODSINTERVAL(sayi, DAY | HOUR | MINUTE | SECOND)``` |
+
+Aşağıdaki tabloda NUMTODSINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
+
+| Kullanım                       | Sonuç                         |
+|--------------------------------|-------------------------------|
+| `NUMTODSINTERVAL(0, 'DAY')`    | +000000000 00:00:00.000000000 |
 
 ### 2.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
