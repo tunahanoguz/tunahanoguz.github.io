@@ -80,7 +80,7 @@ Aşağıdaki tabloda NUMTOYMINTERVAL fonksiyonunun kullanım örnekleri bulunmak
 | `NUMTOYMINTERVAL(11, 'MONTH')` | +000000000-11 |
 | `NUMTOYMINTERVAL(12, 'MONTH')` | +000000001-00 |
 | `NUMTOYMINTERVAL(0, 'YEAR')`   | +000000000-00 |
-| `+000000001-00`                | +000000001-00 |
+| `NUMTOYMINTERVAL(1, 'YEAR')`   | +000000001-00 |
 
 ### 1.2 TO_DSINTERVAL Fonksiyonu {#to_dsinterval}
 
