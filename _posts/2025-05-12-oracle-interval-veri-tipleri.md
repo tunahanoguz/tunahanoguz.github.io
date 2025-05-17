@@ -36,7 +36,7 @@ Yıl ve ay bazında zaman aralığı belirtir.
     - 0 olduğunda yıl değeri için 0 basamaklık yer ayrılır. Yani yıl değeri tutulmaz, yalnızca ay değeri tutulur.
 - Ay hassasiyeti;
     - Yıl ve ay bazlı aralık ifade edilirken 2 ile sınırlandırılır. Bu durumda ay değeri en az 0 en fazla 11 olabilir.
-    - Tek başına ay bazlı aralık ifade edildiği durumda sınırsızdır. -11'den küçük veya 11'den büyük değerler için 12'den büyük kısmı yıla dahil edilerek ay-yıl hesabı otomatik bir şekilde yapılır.
+    - Tek başına ay bazlı aralık ifade edildiği durumda sınırsızdır. -11'den küçük veya 11'den büyük değerler yıla dahil edilir.
 
 | Kullanım                                    | Açıklama                            | Sonuç   |
 |---------------------------------------------|-------------------------------------|---------|
