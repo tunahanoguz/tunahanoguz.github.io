@@ -21,7 +21,7 @@ INTERVAL veri tipleri, bir süreyi/zaman aralığını ifade eder.
 
 ## 1. INTERVAL YEAR TO MONTH {#interval-year-to-month}
 
-Yıl ve ay bazında zaman aralığı belirtir.
+Yıl ve ay bazında süre/zaman aralığı belirtir.
 
 | Syntax                                            | Açıklama                           |
 |---------------------------------------------------|------------------------------------|
@@ -70,7 +70,7 @@ Bir sayıyı `INTERVAL YEAR TO MONTH` tipine çevirir.
 
 | Syntax                                    |
 |-------------------------------------------|
-| ```NUMTOYMINTERVAL(sayi, MONTH | YEAR)``` |
+| ```NUMTOYMINTERVAL(sayi, YEAR | MONTH)``` |
 
 Aşağıdaki tabloda NUMTOYMINTERVAL fonksiyonunun kullanım örnekleri bulunmaktadır.
 
@@ -110,7 +110,7 @@ Aşağıdaki tabloda TO_YMINTERVAL fonksiyonunun kullanım örnekleri bulunmakta
 
 ## 2. INTERVAL DAY TO SECOND {#interval-day-to-second}
 
-Gün, saat, dakika ve saniye bazında zaman aralığını belirtir.
+Gün, saat, dakika ve saniye bazında süre/zaman aralığı belirtir.
 
 | Syntax                                                          | Açıklama                                                                 |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------|
