@@ -15,7 +15,6 @@ INTERVAL veri tipleri, bir süreyi/zaman aralığını ifade eder.
 2. [INTERVAL DAY TO SECOND](#interval-day-to-second)
     1. [NUMTODSINTERVAL Fonksiyonu](#numtodsinterval)
     2. [TO_DSINTERVAL Fonksiyonu](#to_dsinterval)
-3. [Genel Kullanım Örnekleri](#genel-kullanim-ornekleri)
 
 ---
 
@@ -210,11 +209,3 @@ Aşağıdaki tabloda TO_DSINTERVAL fonksiyonunun kullanım örnekleri bulunmakta
 | `TO_DSINTERVAL('0 0:0:59')`                     | +000000000 00:00:59.000000000               |
 | `TO_DSINTERVAL('0 00:00:59')`                   | +000000000 00:00:59.000000000               |
 | `TO_DSINTERVAL('0 0:0:60')`                     | ORA-01852: seconds must be between 0 and 59 |
-
----
-
-## 3. Genel Kullanım Örnekleri {#genel-kullanim-ornekleri}
-
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
