@@ -1,5 +1,5 @@
 ---
-title:  "Oracle - DATE ve TIMESTAMP Veri Tipleri"
+title:  "Oracle - DATE ve TIMESTAMP Veri Tipleri ve İlgili Fonksiyonlar"
 layout: post
 categories: oracle
 ---
