@@ -11,6 +11,8 @@ categories: oracle
 2. [TIMESTAMP](#TIMESTAMP)
 3. [TIMESTAMP WITH TIME ZONE](#TIMESTAMP-WITH-TIME-ZONE)
 4. [TIMESTAMP WITH LOCAL TIME ZONE](#TIMESTAMP-WITH-LOCAL-TIME-ZONE)
+5. [İlgili Fonksiyonlar](#İlgili-Fonksiyonlar)
+    1. [Birinci Fonksiyon](#Birinci-Fonksiyon)
 
 ---
 
@@ -112,3 +114,9 @@ categories: oracle
 | İlgili Fonksiyon | Açıklama |
 |------------------|----------|
 | x                | x        |
+
+---
+
+## 5. İlgili Fonksiyonlar {#İlgili-Fonksiyonlar}
+
+### 5.1 Birinci Fonksiyon
