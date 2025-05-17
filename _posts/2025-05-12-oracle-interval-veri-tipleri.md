@@ -12,9 +12,10 @@ INTERVAL veri tipleri, bir süreyi/zaman aralığını ifade eder.
 1. [INTERVAL YEAR TO MONTH](#interval-year-to-month)
     1. [NUMTOYMINTERVAL Fonksiyonu](#numtoyminterval)
     2. [TO_YMINTERVAL Fonksiyonu](#to_yminterval)
-3. [INTERVAL DAY TO SECOND](#interval-day-to-second)
+2. [INTERVAL DAY TO SECOND](#interval-day-to-second)
     1. [NUMTODSINTERVAL Fonksiyonu](#numtodsinterval)
     2. [TO_DSINTERVAL Fonksiyonu](#to_dsinterval)
+3. [Genel Kullanım Örnekleri](#genel-kullanim-ornekleri)
 
 ---
 
@@ -98,7 +99,7 @@ Aşağıdaki tabloda TO_YMINTERVAL fonksiyonunun kullanım örnekleri bulunmakta
 | `TO_YMINTERVAL('0-1')`           | +000000000-01                              |
 | `TO_YMINTERVAL('-0-1')`          | -000000000-01                              |
 | `TO_YMINTERVAL('1-0')`           | +000000001-00                              |
-| `TO_YMINTERVAL('1-0')`           | -000000001-00                              |
+| `TO_YMINTERVAL('-1-0')`          | -000000001-00                              |
 | `TO_YMINTERVAL('0-11')`          | +000000000-11                              |
 | `TO_YMINTERVAL('-0-11')`         | -000000000-11                              |
 | `TO_YMINTERVAL('0-12')`          | ORA-01843: An invalid month was specified. |
@@ -209,3 +210,11 @@ Aşağıdaki tabloda TO_DSINTERVAL fonksiyonunun kullanım örnekleri bulunmakta
 | `TO_DSINTERVAL('0 0:0:59')`                     | +000000000 00:00:59.000000000               |
 | `TO_DSINTERVAL('0 00:00:59')`                   | +000000000 00:00:59.000000000               |
 | `TO_DSINTERVAL('0 0:0:60')`                     | ORA-01852: seconds must be between 0 and 59 |
+
+---
+
+## 3. Genel Kullanım Örnekleri {#genel-kullanim-ornekleri}
+
+| Kullanım | Sonuç |
+|----------|-------|
+| x        | x     |
