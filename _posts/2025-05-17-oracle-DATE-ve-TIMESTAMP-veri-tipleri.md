@@ -94,19 +94,19 @@ categories: oracle
 - Zaman dilimi içerir.
 - Belirtilmediği durumda varsayılan saat bilgisi `00:00:00.000000000` olur.
 
-| İlgili Fonksiyon    | Açıklama |
-|---------------------|----------|
-| `SYSTIMESTAMP`      | x        |
-| `CURRENT_TIMESTAMP` | x        |
-| `TO_TIMESTAMP_TZ`   | x        |
-| `FROM_TZ`           | x        |
-| `TO_CHAR`           | x        |
-| `EXTRACT`           | x        |
-| `TRUNC`             | x        |
-| `ROUND`             | x        |
-| `ADD_MONTHS`        | x        |
-| `MONTHS_BETWEEN`    | x        |
-| `LAST_DAY`          | x        |
+| İlgili Fonksiyon    | Açıklama                                                                                                                                      |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| `SYSTIMESTAMP`      | Sistemin tarih ve saat bilgisini `TIMESTAMP WITH TIME ZONE` tipinde verir.                                                                    |
+| `CURRENT_TIMESTAMP` | Kullanıcı oturumunda ayarlanmış time zone bilgisine göre `TIMESTAMP WITH TIME ZONE` tipinde tarih ve saat bilgisini verir.                    |
+| `TO_TIMESTAMP_TZ`   | Bir string'i `TIMESTAMP WITH TIME ZONE` tipine çevirir.                                                                                       |
+| `FROM_TZ`           | `TIMESTAMP` tipinde bir değeri `TIMESTAMP WITH TIME ZONE` tipine çevirir.                                                                     |
+| `TO_CHAR`           | `TIMESTAMP WITH TIME ZONE` tipindeki bir değeri string'e çevirir.                                                                             |
+| `EXTRACT`           | Gün, ay, yıl, saat, dakika, saniye, saniyenin kesirli kısmı ve zaman dilimi bilgisini numerik bir değeri olarak verir.                        |
+| `TRUNC`             | `TIMESTAMP WITH TIME ZONE` tipindeki bir değeri gün, ay, yıl, saat, dakika, çeyrek ve hafta bazında aşağıya yuvarlar ve `DATE` tipinde döner. |
+| `ROUND`             | `TIMESTAMP WITH TIME ZONE` tipindeki bir değeri gün, ay, yıl, saat, dakika, çeyrek ve hafta bazında yuvarlar ve `DATE` tipinde döner.         |
+| `ADD_MONTHS`        | `TIMESTAMP WITH TIME ZONE` tipindeki bir değere belirtilen sayı kadar ay ekler ve `DATE` tipinde döner.                                       |
+| `MONTHS_BETWEEN`    | `TIMESTAMP WITH TIME ZONE` tipindeki iki değer arasındaki ay farkını verir.                                                                   |
+| `LAST_DAY`          | `TIMESTAMP WITH TIME ZONE` tipindeki bir değerdeki ay için ayın son gününü verir ve `DATE` tipinde döner.                                     |
 
 ---
 
