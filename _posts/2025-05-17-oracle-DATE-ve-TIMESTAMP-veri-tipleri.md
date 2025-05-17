@@ -29,7 +29,17 @@ categories: oracle
 
 | İlgili Fonksiyon | Açıklama |
 |------------------|----------|
-| x                | x        |
+| `SYSDATE`        | x        |
+| `CURRENT_DATE`   | x        |
+| `TO_DATE`        | x        |
+| `TO_CHAR`        | x        |
+| `EXTRACT`        | x        |
+| `TRUNC`          | x        |
+| `ROUND`          | x        |
+| `ADD_MONTHS`     | x        |
+| `MONTHS_BETWEEN` | x        |
+| `LAST_DAY`       | x        |
+
 
 ---
 
