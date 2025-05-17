@@ -76,7 +76,14 @@ categories: oracle
 
 | İlgili Fonksiyon | Açıklama |
 |------------------|----------|
-| x                | x        |
+| `TO_TIMESTAMP`   | x        |
+| `TO_CHAR`        | x        |
+| `EXTRACT`        | x        |
+| `TRUNC`          | x        |
+| `ROUND`          | x        |
+| `ADD_MONTHS`     | x        |
+| `MONTHS_BETWEEN` | x        |
+| `LAST_DAY`       | x        |
 
 ---
 
@@ -87,9 +94,19 @@ categories: oracle
 - Zaman dilimi içerir.
 - Belirtilmediği durumda varsayılan saat bilgisi `00:00:00.000000000` olur.
 
-| İlgili Fonksiyon | Açıklama |
-|------------------|----------|
-| x                | x        |
+| İlgili Fonksiyon    | Açıklama |
+|---------------------|----------|
+| `SYSTIMESTAMP`      | x        |
+| `CURRENT_TIMESTAMP` | x        |
+| `TO_TIMESTAMP_TZ`   | x        |
+| `FROM_TZ`           | x        |
+| `TO_CHAR`           | x        |
+| `EXTRACT`           | x        |
+| `TRUNC`             | x        |
+| `ROUND`             | x        |
+| `ADD_MONTHS`        | x        |
+| `MONTHS_BETWEEN`    | x        |
+| `LAST_DAY`          | x        |
 
 ---
 
