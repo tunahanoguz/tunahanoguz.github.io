@@ -40,8 +40,9 @@ categories: oracle
 | `MONTHS_BETWEEN` | İki tarih arasındaki ay farkını verir.                                                               |
 | `LAST_DAY`       | Verilen tarihteki ay için ayın son gününü verir.                                                     |
 
-Aşağıdaki tabloda yukarıda açıklamaları verilen fonksiyonlar için örnekler bulunmaktadır.
-Session tarih formatı `DD.MM.YYYY HH24:MI:SS` olarak ayarlanmıştır.
+- Aşağıdaki tabloda yukarıda açıklamaları verilen fonksiyonlar için örnekler bulunmaktadır.
+- Session tarih formatı `DD.MM.YYYY HH24:MI:SS` olarak ayarlanmıştır.
+- Sorgular 2025 yılının mayıs ayında çalıştırılmıştır.
 
 | Kullanım                                                  | Sonuç               |
 |-----------------------------------------------------------|---------------------|
@@ -53,6 +54,11 @@ Session tarih formatı `DD.MM.YYYY HH24:MI:SS` olarak ayarlanmıştır.
 | `TO_DATE('14', 'HH24')`                                   | 01.05.2025 14:00:00 |
 | `TO_DATE('37', 'MI')`                                     | 01.05.2025 00:37:00 |
 | `TO_DATE('28', 'SS')`                                     | 01.05.2025 00:00:28 |
+| `TO_DATE('17.05', 'DD.MM')`                               | 17.05.2025 00:00:00 |
+| `TO_DATE('05.2025', 'MM.YYYY')`                           | 01.05.2025 00:00:00 |
+| `TO_DATE('17.2025', 'DD.YYYY')`                           | 17.05.2025 00:00:00 |
+| `TO_DATE('14:37', 'HH24:MI')`                             | 01.05.2025 14:37:00 |
+| `TO_DATE('14:37:28', 'HH24:MI:SS')`                       | 01.05.2025 14:37:28 |
 
 ---
 
