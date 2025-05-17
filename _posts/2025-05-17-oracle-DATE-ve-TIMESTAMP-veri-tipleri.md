@@ -117,6 +117,8 @@ categories: oracle
 
 ---
 
+TIMESTAMP - TIMESTAMP => INTERVAL DAY TO SECOND
+
 ## 5. İlgili Fonksiyonlar {#İlgili-Fonksiyonlar}
 
 ### 5.1 Birinci Fonksiyon
