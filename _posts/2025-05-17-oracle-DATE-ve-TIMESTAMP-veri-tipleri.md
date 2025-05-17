@@ -29,7 +29,7 @@ categories: oracle
 
 | İlgili Fonksiyon | Açıklama                                                                                             |
 |------------------|------------------------------------------------------------------------------------------------------|
-| [`SYSDATE` 🔗](#DATE)        | Sistemin tarih ve saat bilgisini DATE tipinde verir.                                                 |
+| [`SYSDATE 🔗`](#DATE)        | Sistemin tarih ve saat bilgisini DATE tipinde verir.                                                 |
 | `CURRENT_DATE`   | Kullanıcı oturumunda ayarlanmış time zone bilgisine göre DATE tipinde tarih ve saat bilgisini verir. |
 | `TO_DATE`        | Bir string'i DATE veri tipine çevirir.                                                               |
 | `TO_CHAR`        | DATE tipindeki bir değeri string'e çevirir.                                                          |
