@@ -1,5 +1,6 @@
 ---
 title:  "Oracle - CURRENT_DATE Fonksiyonu"
+date: 2025-05-18 11:15:00 +0300
 layout: post
 categories: oracle
 ---
