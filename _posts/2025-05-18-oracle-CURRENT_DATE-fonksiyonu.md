@@ -9,7 +9,7 @@ categories: oracle
 - Parametre almaz.
 - Bu fonksiyonun döndüğü tarihin formatı, `NLS_DATE_FORMAT` adındaki oturum veya veritabanı düzeyinde belirlenebilen bir parametrenin değerine göre değişmektedir.
 
-| Time Zone | Format                  | Sonuç               |
+| TIME_ZONE | NLS_DATE_FORMAT         | Sonuç               |
 |-----------|-------------------------|---------------------|
 | `+3:0`    | `DD`                    | 18                  |
 | `+3:0`    | `MM`                    | 05                  |
