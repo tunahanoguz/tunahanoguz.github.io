@@ -1,6 +1,6 @@
 ---
 title:  "Oracle - SYSDATE Fonksiyonu"
-date: 2025-05-18 10:55:00
+date: 2025-05-18 10:55:00 +0300
 layout: post
 categories: oracle
 ---
