@@ -13,6 +13,8 @@ categories: oracle
 |--------------------------------------------------------------|
 | ```SYSTIMESTAMP [AT TIME ZONE '+TZH:TZM' | 'zone1/zone2']``` |
 
+Aşağıdaki tabloda farklı format ve kullanımlara göre elde edilecek sonuçlar bulunmaktadır.
+
 | NLS_TIMESTAMP_TZ_FORMAT            | Kullanım                                      | Sonuç                             |
 |------------------------------------|-----------------------------------------------|-----------------------------------|
 | `DD`                               | `SYSTIMESTAMP`                                | 18                                |
