@@ -9,15 +9,15 @@ categories: oracle
 - Parametre almaz.
 - Bu fonksiyonun döndüğü tarihin formatı, `NLS_DATE_FORMAT` adındaki oturum veya veritabanı düzeyinde belirlenebilen bir parametrenin değerine göre değişmektedir.
 
-| Time Zone | Format                  | Kullanım                         | Sonuç               |
-|-----------|-------------------------|----------------------------------|---------------------|
-| `+3:0`    | `DD`                    | `SELECT CURRENT_DATE FROM DUAL;` | 18                  |
-| `+3:0`    | `MM`                    | `SELECT CURRENT_DATE FROM DUAL;` | 05                  |
-| `+3:0`    | `YYYY`                  | `SELECT CURRENT_DATE FROM DUAL;` | 2025                |
-| `+3:0`    | `HH24`                  | `SELECT CURRENT_DATE FROM DUAL;` | 10                  |
-| `+3:0`    | `MI`                    | `SELECT CURRENT_DATE FROM DUAL;` | 47                  |
-| `+3:0`    | `SS`                    | `SELECT CURRENT_DATE FROM DUAL;` | 38                  |
-| `+3:0`    | `DD.MM.YYYY`            | `SELECT CURRENT_DATE FROM DUAL;` | 18.05.2025          |
-| `+3:0`    | `DD.MM.YYYY HH24`       | `SELECT CURRENT_DATE FROM DUAL;` | 18.05.2025 10       |
-| `+3:0`    | `DD.MM.YYYY HH24:MI`    | `SELECT CURRENT_DATE FROM DUAL;` | 18.05.2025 10:47    |
-| `+3:0`    | `DD.MM.YYYY HH24:MI:SS` | `SELECT CURRENT_DATE FROM DUAL;` | 18.05.2025 10:47:38 |
+| Time Zone | Format                  | Sonuç               |
+|-----------|-------------------------|---------------------|
+| `+3:0`    | `DD`                    | 18                  |
+| `+3:0`    | `MM`                    | 05                  |
+| `+3:0`    | `YYYY`                  | 2025                |
+| `+3:0`    | `HH24`                  | 10                  |
+| `+3:0`    | `MI`                    | 47                  |
+| `+3:0`    | `SS`                    | 38                  |
+| `+3:0`    | `DD.MM.YYYY`            | 18.05.2025          |
+| `+3:0`    | `DD.MM.YYYY HH24`       | 18.05.2025 10       |
+| `+3:0`    | `DD.MM.YYYY HH24:MI`    | 18.05.2025 10:47    |
+| `+3:0`    | `DD.MM.YYYY HH24:MI:SS` | 18.05.2025 10:47:38 |
