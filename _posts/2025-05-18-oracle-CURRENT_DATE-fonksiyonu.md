@@ -9,6 +9,6 @@ categories: oracle
 - Parametre almaz.
 - Bu fonksiyonun döndüğü tarihin formatı, `NLS_DATE_FORMAT` adındaki oturum veya veritabanı düzeyinde belirlenebilen bir parametrenin değerine göre değişmektedir.
 
-| Time Zone | Format | Kullanım | Sonuç |
-|-----------|--------|----------|-------|
-| x         | x      | x        | x     |
+| Time Zone            | Format                                      | Kullanım                         | Sonuç               |
+|----------------------|---------------------------------------------|----------------------------------|---------------------|
+| `TIME_ZONE = '+3:0'` | `NLS_DATE_FORMAT = 'DD.MM.YYYY HH24:MI:SS'` | `SELECT CURRENT_DATE FROM DUAL;` | 18.05.2025 10:47:38 |
