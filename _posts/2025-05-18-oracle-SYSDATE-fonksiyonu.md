@@ -12,15 +12,15 @@ categories: oracle
 Aşağıdaki tabloda farklı `NLS_DATE_FORMAT` değerleriyle elde edilebilecek `SYSDATE` sonuçları bulunmaktadır.
 Örnekler çoğaltılabilir. İhtiyaca uygun farklı kullanımlar her zaman için mümkündür.
 
-| Format                                      | Kullanım                    | Sonuç               |
-|---------------------------------------------|-----------------------------|---------------------|
-| `NLS_DATE_FORMAT = "DD"`                    | `SELECT SYSDATE FROM DUAL;` | 18                  |
-| `NLS_DATE_FORMAT = "MM"`                    | `SELECT SYSDATE FROM DUAL;` | 05                  |
-| `NLS_DATE_FORMAT = "YYYY"`                  | `SELECT SYSDATE FROM DUAL;` | 2025                |
-| `NLS_DATE_FORMAT = "HH24"`                  | `SELECT SYSDATE FROM DUAL;` | 10                  |
-| `NLS_DATE_FORMAT = "MI"`                    | `SELECT SYSDATE FROM DUAL;` | 47                  |
-| `NLS_DATE_FORMAT = "SS"`                    | `SELECT SYSDATE FROM DUAL;` | 38                  |
-| `NLS_DATE_FORMAT = "DD.MM.YYYY"`            | `SELECT SYSDATE FROM DUAL;` | 18.05.2025          |
-| `NLS_DATE_FORMAT = "DD.MM.YYYY HH24"`       | `SELECT SYSDATE FROM DUAL;` | 18.05.2025 10       |
-| `NLS_DATE_FORMAT = "DD.MM.YYYY HH24:MI"`    | `SELECT SYSDATE FROM DUAL;` | 18.05.2025 10:47    |
-| `NLS_DATE_FORMAT = "DD.MM.YYYY HH24:MI:SS"` | `SELECT SYSDATE FROM DUAL;` | 18.05.2025 10:47:38 |
+| NLS_DATE_FORMAT         | Sonuç               |
+|-------------------------|---------------------|
+| `DD`                    | 18                  |
+| `MM`                    | 05                  |
+| `YYYY`                  | 2025                |
+| `HH24`                  | 10                  |
+| `MI`                    | 47                  |
+| `SS`                    | 38                  |
+| `DD.MM.YYYY`            | 18.05.2025          |
+| `DD.MM.YYYY HH24`       | 18.05.2025 10       |
+| `DD.MM.YYYY HH24:MI`    | 18.05.2025 10:47    |
+| `DD.MM.YYYY HH24:MI:SS` | 18.05.2025 10:47:38 |
