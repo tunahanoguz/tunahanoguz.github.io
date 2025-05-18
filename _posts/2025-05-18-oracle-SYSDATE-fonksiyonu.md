@@ -1,11 +1,13 @@
 ---
 title:  "Oracle - SYSDATE Fonksiyonu"
+date: 2025-05-18 10:55:00
 layout: post
 categories: oracle
 ---
 
 - `SYSDATE` fonksiyonu, sistemin tarih ve saat bilgisini `DATE` tipinde dönen bir fonksiyondur.
-- Bu fonksiyonun döndüğü tarihin formatı `NLS_DATE_FORMAT` adındaki oturum veya veritabanı düzeyinde belirlenebilen bir parametrenin değerine göre değişmektedir.
+- Parametre almaz.
+- Bu fonksiyonun döndüğü tarihin formatı, `NLS_DATE_FORMAT` adındaki oturum veya veritabanı düzeyinde belirlenebilen bir parametrenin değerine göre değişmektedir.
 
 Aşağıdaki tabloda farklı `NLS_DATE_FORMAT` değerleriyle elde edilebilecek `SYSDATE` sonuçları bulunmaktadır.
 Örnekler çoğaltılabilir. İhtiyaca uygun farklı kullanımlar her zaman için mümkündür.
