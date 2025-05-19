@@ -26,9 +26,11 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `HH`             | 12 saatlik zaman diliminde günün saatini ifade eder. |
 | `HH12`           | 12 saatlik zaman diliminde günün saatini ifade eder. |
 | `HH24`           | 24 saatlik zaman diliminde günün saatini ifade eder. |
-| `MI`             | Dakikayı ifade eder. |
-| `SS`             | Saniyeyi ifade eder. |
-| `DD`             | Ayın gününü ifade eder. |
+| `MI`             | Dakikayı ifade eder.                                 |
+| `SS`             | Saniyeyi ifade eder.                                 |
+| `DD`             | Ayın gününü ifade eder.                              |
+| `YYYY`           | 4 haneli yıl bilgisini ifade eder.                   |
+| `RRRR`           | 2 haneli yıl bilgisi kabul eder ve bu bilgiye göre 4 haneli yıl bilgisini oluşturur. Yıl bilgisinin ilk 2 hanesi, string ifadede belirtilen yıl 0-49 arasındaysa içinde bulunulan yüzyıl, 50-99 arasındaysa bir önceki yüzyıl ile tamamlanır.     |
 
 - Gün belirtilmediğinde, gün bilgisi doğrudan **ayın 1'i** olarak belirlenir.
 - Ay belirtilmediğinde, ay bilgisi doğrudan **yılın ilk ayı** olarak belirlenir.
