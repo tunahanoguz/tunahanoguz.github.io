@@ -28,8 +28,9 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `SS`             | Saniyeyi ifade eder. |
 | `DD`             | Ayın gününü ifade eder. |
 
-Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
-`NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
+- Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
+- `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
+- Sorgular 19.05.2025 tarihinde çalıştırılmıştır.
 
 | Kullanım                      | Sonuç                                    |
 |-------------------------------|------------------------------------------|
