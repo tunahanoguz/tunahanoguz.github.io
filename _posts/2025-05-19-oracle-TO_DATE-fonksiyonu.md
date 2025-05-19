@@ -19,9 +19,14 @@ categories: oracle
 
 Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onların açıklamaları yer almaktadır.
 
-| Format | Açıklama |
-|--------|----------|
-| x      | x        |
+| Format         | Açıklama |
+|----------------|----------|
+| HH             | 12 saatlik zaman diliminde günün saatini ifade eder. |
+| HH12           | 12 saatlik zaman diliminde günün saatini ifade eder. |
+| HH24           | 24 saatlik zaman diliminde günün saatini ifade eder. |
+| MI             | - Dakikayı ifade eder. - Tek başına kullanıldığında, içinde bulunulan günün 00:MI:00 zamanını ifade eder. |
+| SS             | Saniyeyi ifade eder. |
+| DD             | Ayın gününü ifade eder. |
 
 Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
 
