@@ -19,17 +19,29 @@ categories: oracle
 
 Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onların açıklamaları yer almaktadır.
 
-| Format         | Açıklama |
-|----------------|----------|
-| HH             | 12 saatlik zaman diliminde günün saatini ifade eder. |
-| HH12           | 12 saatlik zaman diliminde günün saatini ifade eder. |
-| HH24           | 24 saatlik zaman diliminde günün saatini ifade eder. |
-| MI             | - Dakikayı ifade eder. - Tek başına kullanıldığında, içinde bulunulan günün 00:MI:00 zamanını ifade eder. |
-| SS             | Saniyeyi ifade eder. |
-| DD             | Ayın gününü ifade eder. |
+| Format           | Açıklama |
+|------------------|----------|
+| `HH`             | 12 saatlik zaman diliminde günün saatini ifade eder. |
+| `HH12`           | 12 saatlik zaman diliminde günün saatini ifade eder. |
+| `HH24`           | 24 saatlik zaman diliminde günün saatini ifade eder. |
+| `MI`             | Dakikayı ifade eder. |
+| `SS`             | Saniyeyi ifade eder. |
+| `DD`             | Ayın gününü ifade eder. |
 
 Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
+`NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+| Kullanım                      | Sonuç                                    |
+|-------------------------------|------------------------------------------|
+| `TO_DATE('12', 'HH')`         | 01.05.2025 12:00:00 PM                   |
+| `TO_DATE('12 AM', 'HH AM')`   | 01.05.2025 12:00:00 AM                   |
+| `TO_DATE('12 AM', 'HH PM')`   | 01.05.2025 12:00:00 AM                   |
+| `TO_DATE('00', 'HH')`         | ORA-01849: hour must be between 1 and 12 |
+| `TO_DATE('13', 'HH')`         | ORA-01849: hour must be between 1 and 12 |
+| `TO_DATE('12', 'HH12')`       | 01.05.2025 12:00:00 PM                   |
+| `TO_DATE('12 AM', 'HH12 AM')` | 01.05.2025 12:00:00 AM                   |
+| `TO_DATE('12 AM', 'HH12 PM')` | 01.05.2025 12:00:00 AM                   |
+| `TO_DATE('00', 'HH12')`       | ORA-01849: hour must be between 1 and 12 |
+| `TO_DATE('13', 'HH12')`       | ORA-01849: hour must be between 1 and 12 |
+| `TO_DATE('12', 'HH24')`       | 01.05.2025 12:00:00 PM                   |
+| `TO_DATE('24', 'HH24')`       | ORA-01850: hour must be between 0 and 23 |
