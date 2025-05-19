@@ -17,6 +17,8 @@ categories: oracle
   - Bu parametre verilmezse, `initialization parameter` grubunda yer alan `NLS_DATE_FORMAT` ve `NLS_TERRITORY` parametrelerinin değerleri dikkate alınır.
 - `['NLS_DATE_LANGUAGE = dil']` ifadesi, string ifadenin hangi dilde olduğunu belirtir.
 
+---
+
 Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onların açıklamaları yer almaktadır.
 
 | Format           | Açıklama |
@@ -27,6 +29,16 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `MI`             | Dakikayı ifade eder. |
 | `SS`             | Saniyeyi ifade eder. |
 | `DD`             | Ayın gününü ifade eder. |
+
+- Gün belirtilmediğinde, gün bilgisi doğrudan **ayın 1'i** olarak belirlenir.
+- Ay belirtilmediğinde, ay bilgisi doğrudan **yılın ilk ayı** olarak belirlenir.
+- Yıl belirtilmediğinde, yıl bilgisi doğrudan **içinde bulunulan yıl** olarak belirlenir.
+- Saat belirtilmediğinde, saat bilgisi doğrudan **00** olarak belirlenir.
+- Dakika belirtilmediğinde, dakika bilgisi doğrudan **00** olarak belirlenir.
+- Saniye belirtilmediğinde, saniye bilgisi doğrudan **00** olarak belirlenir.
+- 12 saatlik zaman diliminde, AM/PM belirtilmediğinde, AM/PM bilgisi doğrudan **PM** olarak belirlenir.
+
+---
 
 - Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
 - `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
