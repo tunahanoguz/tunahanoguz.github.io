@@ -14,7 +14,7 @@ categories: oracle
 - `metin` isimli parametre, `DATE` tipine dönüştürülecek string ifadedir.
 - `[DEFAULT deger ON CONVERSION ERROR]` ifadesi, dönüştürme işleminin hata alması durumunda fonksiyonun varsayılan bir değer dönmesini sağlar.
 - `format` isimli parametre, string ifadenin hangi formatta olduğunu belirtir.
-  - Bu parametre verilmezse `NLS_DATE_FORMAT` veya `NLS_TERRITORY`
+  - Bu parametre verilmezse, `initialization parameter` grubunda yer alan `NLS_DATE_FORMAT` ve `NLS_TERRITORY` parametrelerinin değerleri dikkate alınır.
 - `['NLS_DATE_LANGUAGE = dil']` ifadesi, string ifadenin hangi dilde olduğunu belirtir.
 
 Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onların açıklamaları yer almaktadır.
