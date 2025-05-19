@@ -9,7 +9,7 @@ categories: oracle
 
 | Syntax                                                                                      |
 |---------------------------------------------------------------------------------------------|
-| `TO_DATE(metin [DEFAULT deger ON CONVERSION ERROR], [format], ['NLS_DATE_LANGUAGE = dil'])` |
+| `TO_DATE(metin [DEFAULT deger ON CONVERSION ERROR] [,format] [,'NLS_DATE_LANGUAGE = dil'])` |
 
 - `metin` isimli parametre, `DATE` tipine dönüştürülecek string ifadedir.
 - `[DEFAULT deger ON CONVERSION ERROR]` ifadesi, dönüştürme işleminin hata alması durumunda fonksiyonun varsayılan bir değer dönmesini sağlar.
