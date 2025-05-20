@@ -28,9 +28,22 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `HH24`           | 24 saatlik zaman diliminde günün saatini ifade eder. |
 | `MI`             | Dakikayı ifade eder.                                 |
 | `SS`             | Saniyeyi ifade eder.                                 |
+| `D`              | x |
 | `DD`             | Ayın gününü ifade eder.                              |
+| `DDD`            | x |
+| `MM`             | 2 haneli sayı olacak şekilde ayı ifade eder.         |
+| `MON`            | Kısaltılmış ayı ifade eder.                          |
+| `MONTH`          | Tam ay adını ifade eder.                             |
+| `RM`             | x |
+| `Y`              | x |
+| `YY`             | x |
+| `YYY`            | x |
 | `YYYY`           | 4 haneli yıl bilgisini ifade eder.                   |
-| `RRRR`           | 2 haneli veya 4 haneli yıl bilgisi kabul eder. 2 haneli yıl bilgisi belirtilmesi durumunda, ilk 2 hane, string ifadede belirtilen yıl 0-49 arasındaysa içinde bulunulan yüzyıl, 50-99 arasındaysa bir önceki yüzyıl ile tamamlanır.               |
+| `RRRR`           | 2 haneli veya 4 haneli yıl bilgisi kabul eder. 2 haneli yıl bilgisi belirtilmesi durumunda, ilk 2 hane, string ifadede belirtilen yıl 0-49 arasındaysa içinde bulunulan yüzyıl, 50-99 arasındaysa bir önceki yüzyıl ile tamamlanır.     |
+| `AM` veya `A.M.` | x |
+| `PM` veya `P.M.` | x |
+| `BC` veya `B.C.` | x |
+| `AD` veya `A.D.` | x |
 
 - Gün belirtilmediğinde, gün bilgisi doğrudan **ayın 1'i** olarak belirlenir.
 - Ay belirtilmediğinde, ay bilgisi doğrudan **yılın ilk ayı** olarak belirlenir.
@@ -48,7 +61,7 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 ---
 
 - Aşağıdaki tabloda `TO_DATE` fonksiyonu için kullanım örnekleri yer almaktadır.
-- `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
+- `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM BC` olarak belirlenmiştir. (Ek bilgi; AM yerine PM de kullanılabilir. Format belirtilirken ikisi eşdeğerdir.)
 - Sorgular 19.05.2025 tarihinde çalıştırılmıştır.
 
 | Kullanım                              | Sonuç                                    |
@@ -83,3 +96,27 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_DATE('18.03', 'DD.MM')`           | 01.03.2025 12:00:00 AM                   |
 | `TO_DATE('18.03.2025', 'DD.MM.YYYY')` | 18.03.2025 12:00:00 AM                   |
 | `TO_DATE('18.03.2024', 'DD.MM.YYYY')` | 18.03.2024 12:00:00 AM                   |
+| `SELECT TO_DATE('OCA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.01.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('ŞUB', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.02.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('MAR', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.03.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('NİS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.04.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('MAY', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.05.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('HAZ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('TEM', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.07.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('AĞU', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('EYL', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.09.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('EKİ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.10.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('KAS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.11.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('ARA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.12.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('OCAK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.01.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('ŞUBAT', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.02.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('MART', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.03.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('NİSAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.04.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('MAYIS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.05.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('HAZİRAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('TEMMUZ', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.07.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('AĞUSTOS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('EYLÜL', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.09.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('EKİM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.10.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('KASIM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.11.2025 12:00:00 AM                   |
+| `SELECT TO_DATE('ARALIK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.12.2025 12:00:00 AM                   |
