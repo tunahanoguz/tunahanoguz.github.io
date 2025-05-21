@@ -30,10 +30,10 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `SS`             | Saniyeyi ifade eder.                                 |
 | `AM` veya `A.M.` | Öğleden önce veya öğleden sonra ifadesidir.          |
 | `PM` veya `P.M.` | Öğleden önce veya öğleden sonra ifadesidir.          |
-| `D`              | Haftanın bir gününü ifade eder. (1-8)                |
+| `D`              | Haftanın bir gününü ifade eder. (1-7) Tek başına yeterli değildir, daha ayrıntılı bir tarih bilgisinin parçası olarak kullanılabilir ve bu tarih bilgisiyle uyumlu olmalıdır. `NLS_TERRITORY` initialization parametresinin değerine göre haftanın başlangıç-bitiş günü değişebilir. (AMERICA -> {1, SUNDAY}, TURKEY -> {1, PAZARTESİ}) |
 | `DD`             | Ayın bir gününü ifade eder. (1-31)                   |
-| `DY`             | Haftanın bir gününü, kısaltılmış haliyle ifade eder. |
-| `DAY`            | Haftanın bir gününü, adının tam haliyle ifade eder.  |
+| `DY`             | Haftanın bir gününü, kısaltılmış haliyle ifade eder. Tek başına yeterli değildir, daha ayrıntılı bir tarih bilgisinin parçası olarak kullanılabilir ve bu tarih bilgisiyle uyumlu olmalıdır. |
+| `DAY`            | Haftanın bir gününü, adının tam haliyle ifade eder. Tek başına yeterli değildir, daha ayrıntılı bir tarih bilgisinin parçası olarak kullanılabilir ve bu tarih bilgisiyle uyumlu olmalıdır.  |
 | `DDD`            | Yılın bir gününü ifade eder. (1-366)                 |
 | `MM`             | 2 haneli sayı olacak şekilde ayı ifade eder.         |
 | `MON`            | Ay bilgisini, adı kısaltılmış şekliyle ifade eder.   |
@@ -196,3 +196,19 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_DATE('2', 'SSSSS')` | 01.05.2025 12:00:02 AM AD |
 | `TO_DATE('60', 'SSSSS')` | 01.05.2025 12:01:00 AM AD |
 | `TO_DATE('86399', 'SSSSS')` | 01.05.2025 11:59:59 PM AD |
+| `TO_DATE('19.05.2025 PZT', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 19.05.2025 12:00:00 AM AD |
+| `TO_DATE('19.05.2025 SAL', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | ORA-01835: day of week conflicts with Julian date |
+| `TO_DATE('20.05.2025 SAL', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 20.05.2025 12:00:00 AM AD |
+| `TO_DATE('21.05.2025 ÇAR', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 21.05.2025 12:00:00 AM AD |
+| `TO_DATE('22.05.2025 PER', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 22.05.2025 12:00:00 AM AD |
+| `TO_DATE('23.05.2025 CUM', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 23.05.2025 12:00:00 AM AD |
+| `TO_DATE('24.05.2025 CMT', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 24.05.2025 12:00:00 AM AD |
+| `TO_DATE('25.05.2025 PAZ', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 25.05.2025 12:00:00 AM AD |
+| `TO_DATE('19.05.2025 1', 'DD.MM.YYYY D')` | 19.05.2025 12:00:00 AM AD |
+| `TO_DATE('19.05.2025 1', 'DD.MM.YYYY D')` | ORA-01835: day of week conflicts with Julian date |
+| `TO_DATE('20.05.2025 1', 'DD.MM.YYYY D')` | 20.05.2025 12:00:00 AM AD |
+| `TO_DATE('21.05.2025 1', 'DD.MM.YYYY D')` | 21.05.2025 12:00:00 AM AD |
+| `TO_DATE('22.05.2025 1', 'DD.MM.YYYY D')` | 22.05.2025 12:00:00 AM AD |
+| `TO_DATE('23.05.2025 1', 'DD.MM.YYYY D')` | 23.05.2025 12:00:00 AM AD |
+| `TO_DATE('24.05.2025 1', 'DD.MM.YYYY D')` | 24.05.2025 12:00:00 AM AD |
+| `TO_DATE('25.05.2025 1', 'DD.MM.YYYY D')` | 25.05.2025 12:00:00 AM AD |
