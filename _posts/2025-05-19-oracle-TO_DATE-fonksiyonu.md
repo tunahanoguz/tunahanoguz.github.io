@@ -173,3 +173,15 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `SELECT TO_DATE('EKİM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.10.2025 12:00:00 AM AD                  |
 | `SELECT TO_DATE('KASIM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.11.2025 12:00:00 AM AD                  |
 | `SELECT TO_DATE('ARALIK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.12.2025 12:00:00 AM AD                  |
+| `TO_DATE('I', 'RM')` | 01.01.2025 12:00:00 AM AD |
+| `TO_DATE('II', 'RM')` | 01.02.2025 12:00:00 AM AD |
+| `TO_DATE('III', 'RM')` | 01.03.2025 12:00:00 AM AD |
+| `TO_DATE('IV', 'RM')` | 01.04.2025 12:00:00 AM AD |
+| `TO_DATE('V', 'RM')` | 01.05.2025 12:00:00 AM AD |
+| `TO_DATE('VI', 'RM')` | 01.06.2025 12:00:00 AM AD |
+| `TO_DATE('VII', 'RM')` | 01.07.2025 12:00:00 AM AD |
+| `TO_DATE('VIII', 'RM')` | 01.08.2025 12:00:00 AM AD |
+| `TO_DATE('IX', 'RM')` | 01.09.2025 12:00:00 AM AD |
+| `TO_DATE('X', 'RM')` | 01.10.2025 12:00:00 AM AD |
+| `TO_DATE('XI', 'RM')` | 01.11.2025 12:00:00 AM AD |
+| `TO_DATE('XII', 'RM')` | 01.12.2025 12:00:00 AM AD |
