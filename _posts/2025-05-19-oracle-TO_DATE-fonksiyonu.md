@@ -46,6 +46,8 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `RRRR`           | 2 haneli veya 4 haneli yıl bilgisi kabul eder. 2 haneli yıl bilgisi belirtilmesi durumunda, ilk 2 hane, string ifadede belirtilen yıl 0-49 arasındaysa içinde bulunulan yüzyıl, 50-99 arasındaysa bir önceki yüzyıl ile tamamlanır.                                                           |
 | `BC` veya `B.C.` | Milattan önce veya milattan sonra ifadesidir.        |
 | `AD` veya `A.D.` | Milattan önce veya milattan sonra ifadesidir.        |
+| `J`              | Jülyen günü; MÖ 4712 yılı 1 Ocak'ından bu yana geçen gün sayısıdır. |
+| `SSSSS`          | Gece yarısından sonra geçen saniyelerdir. (0-86399)  |
 
 - Gün belirtilmediğinde, gün bilgisi doğrudan **ayın 1'i** olarak belirlenir.
 - Ay belirtilmediğinde, ay bilgisi doğrudan **yılın ilk ayı** olarak belirlenir.
@@ -185,3 +187,12 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_DATE('X', 'RM')` | 01.10.2025 12:00:00 AM AD |
 | `TO_DATE('XI', 'RM')` | 01.11.2025 12:00:00 AM AD |
 | `TO_DATE('XII', 'RM')` | 01.12.2025 12:00:00 AM AD |
+| `TO_DATE('1', 'J')` | 01.01.4712 12:00:00 AM BC |
+| `TO_DATE('2', 'J')` | 02.01.4712 12:00:00 AM BC |
+| `TO_DATE('3', 'J')` | 03.01.4712 12:00:00 AM BC |
+| `TO_DATE('366', 'J')` | 01.01.4711 12:00:00 AM BC |
+| `TO_DATE('0', 'SSSSS')` | 01.05.2025 12:00:00 AM |
+| `TO_DATE('1', 'SSSSS')` | 01.05.2025 12:00:01 AM |
+| `TO_DATE('2', 'SSSSS')` | 01.05.2025 12:00:02 AM |
+| `TO_DATE('60', 'SSSSS')` | 01.05.2025 12:01:00 AM |
+| `TO_DATE('86399', 'SSSSS')` | 01.05.2025 11:59:59 PM |
