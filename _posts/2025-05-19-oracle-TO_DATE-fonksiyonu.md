@@ -151,30 +151,30 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_DATE('18.03', 'DD.MM')`           | 01.03.2025 12:00:00 AM AD                |
 | `TO_DATE('18.03.2025', 'DD.MM.YYYY')` | 18.03.2025 12:00:00 AM AD                |
 | `TO_DATE('18.03.2024', 'DD.MM.YYYY')` | 18.03.2024 12:00:00 AM AD                |
-| `SELECT TO_DATE('OCA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.01.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('ŞUB', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.02.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('MAR', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.03.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('NİS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.04.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('MAY', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.05.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('HAZ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('TEM', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.07.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('AĞU', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('EYL', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.09.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('EKİ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.10.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('KAS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.11.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('ARA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.12.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('OCAK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.01.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('ŞUBAT', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.02.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('MART', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.03.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('NİSAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.04.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('MAYIS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.05.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('HAZİRAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('TEMMUZ', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.07.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('AĞUSTOS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('EYLÜL', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.09.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('EKİM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.10.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('KASIM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.11.2025 12:00:00 AM AD                  |
-| `SELECT TO_DATE('ARALIK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.12.2025 12:00:00 AM AD                  |
+| `TO_DATE('OCA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.01.2025 12:00:00 AM AD                  |
+| `TO_DATE('ŞUB', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.02.2025 12:00:00 AM AD                  |
+| `TO_DATE('MAR', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.03.2025 12:00:00 AM AD                  |
+| `TO_DATE('NİS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.04.2025 12:00:00 AM AD                  |
+| `TO_DATE('MAY', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('HAZ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM AD                  |
+| `TO_DATE('TEM', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.07.2025 12:00:00 AM AD                  |
+| `TO_DATE('AĞU', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM AD                  |
+| `TO_DATE('EYL', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.09.2025 12:00:00 AM AD                  |
+| `TO_DATE('EKİ', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.10.2025 12:00:00 AM AD                  |
+| `TO_DATE('KAS', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.11.2025 12:00:00 AM AD                  |
+| `TO_DATE('ARA', 'MON', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.12.2025 12:00:00 AM AD                  |
+| `TO_DATE('OCAK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.01.2025 12:00:00 AM AD                  |
+| `TO_DATE('ŞUBAT', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.02.2025 12:00:00 AM AD                  |
+| `TO_DATE('MART', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.03.2025 12:00:00 AM AD                  |
+| `TO_DATE('NİSAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.04.2025 12:00:00 AM AD                  |
+| `TO_DATE('MAYIS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('HAZİRAN', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.06.2025 12:00:00 AM AD                  |
+| `TO_DATE('TEMMUZ', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.07.2025 12:00:00 AM AD                  |
+| `TO_DATE('AĞUSTOS', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')` | 01.08.2025 12:00:00 AM AD                  |
+| `TO_DATE('EYLÜL', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.09.2025 12:00:00 AM AD                  |
+| `TO_DATE('EKİM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`    | 01.10.2025 12:00:00 AM AD                  |
+| `TO_DATE('KASIM', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`   | 01.11.2025 12:00:00 AM AD                  |
+| `TO_DATE('ARALIK', 'MONTH', 'NLS_DATE_LANGUAGE = TURKISH')`  | 01.12.2025 12:00:00 AM AD                  |
 | `TO_DATE('I', 'RM')` | 01.01.2025 12:00:00 AM AD |
 | `TO_DATE('II', 'RM')` | 01.02.2025 12:00:00 AM AD |
 | `TO_DATE('III', 'RM')` | 01.03.2025 12:00:00 AM AD |
