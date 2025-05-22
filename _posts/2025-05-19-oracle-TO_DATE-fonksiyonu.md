@@ -205,6 +205,14 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_DATE('23.05.2025 CUM', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 23.05.2025 12:00:00 AM AD                  |
 | `TO_DATE('24.05.2025 CMT', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 24.05.2025 12:00:00 AM AD                  |
 | `TO_DATE('25.05.2025 PAZ', 'DD.MM.YYYY DY', 'NLS_DATE_LANGUAGE = TURKISH')` | 25.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('19.05.2025 PAZARTESİ', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')` | 19.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('19.05.2025 SALI', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`      | ORA-01835: day of week conflicts with Julian date |
+| `TO_DATE('20.05.2025 SALI', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`      | 20.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('21.05.2025 ÇARŞAMBA', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`  | 21.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('22.05.2025 PERŞEMBE', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`  | 22.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('23.05.2025 CUMA', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`      | 23.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('24.05.2025 CUMARTESİ', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')` | 24.05.2025 12:00:00 AM AD                  |
+| `TO_DATE('25.05.2025 PAZAR', 'DD.MM.YYYY DAY', 'NLS_DATE_LANGUAGE = TURKISH')`     | 25.05.2025 12:00:00 AM AD                  |
 | `TO_DATE('19.05.2025 1', 'DD.MM.YYYY D')`                                   | 19.05.2025 12:00:00 AM AD                  |
 | `TO_DATE('19.05.2025 2', 'DD.MM.YYYY D')`                                   | ORA-01835: day of week conflicts with Julian date |
 | `TO_DATE('20.05.2025 2', 'DD.MM.YYYY D')`                                   | 20.05.2025 12:00:00 AM AD                  |
