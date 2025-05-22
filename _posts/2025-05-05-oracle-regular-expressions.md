@@ -156,7 +156,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 
 | Syntax                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------|
-| `REGEXP_INSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [donus_modu], [eslesme_modu], [alt_ifade])` |
+| `REGEXP_INSTR(metin, desen [,baslama_konumu] [,kacinci_eslesme] [,donus_modu] [,eslesme_modu] [,alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
@@ -207,7 +207,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 
 | Syntax                                                                                          |
 |-------------------------------------------------------------------------------------------------|
-| `REGEXP_SUBSTR(metin, desen, [baslama_konumu], [kacinci_eslesme], [eslesme_modu], [alt_ifade])` |
+| `REGEXP_SUBSTR(metin, desen [,baslama_konumu] [,kacinci_eslesme] [,eslesme_modu] [,alt_ifade])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
@@ -239,7 +239,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 
 | Syntax                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------|
-| `REGEXP_REPLACE(metin, desen, [degistirilecek_metin], [baslama_konumu], [kacinci_eslesme], [eslesme_modu])` |
+| `REGEXP_REPLACE(metin, desen [,degistirilecek_metin] [,baslama_konumu] [,kacinci_eslesme] [,eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
@@ -272,7 +272,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 
 | Syntax                                                         |
 |----------------------------------------------------------------|
-| `REGEXP_COUNT(metin, desen, [baslama_konumu], [eslesme_modu])` |
+| `REGEXP_COUNT(metin, desen [,baslama_konumu] [,eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
@@ -304,7 +304,7 @@ Aşağıdaki tabloda [burada](#desenler-ve-aciklamalari) açıklamaları yer ala
 
 | Syntax                                      |
 |---------------------------------------------|
-| `REGEXP_LIKE(metin, desen, [eslesme_modu])` |
+| `REGEXP_LIKE(metin, desen [,eslesme_modu])` |
 
 1. ```metin``` *(zorunlu)* — Desenin üzerinde çalışacağı string ifadedir.
 2. ```desen``` *(zorunlu)* — Regular expression. Maksimum 512 byte uzunlukta olabilir.
