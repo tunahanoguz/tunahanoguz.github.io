@@ -91,7 +91,27 @@ Aşağıdaki tabloda `format` isim parametrenin alabileceği değerler ve onlar�
 | `TO_TIMESTAMP('24', 'HH24')`                                                     | ORA-01850: hour must be between 0 and 23 |
 | `TO_TIMESTAMP('38', 'MI')`                                                       | 01.05.2025 12:38:00 AM AD                |
 | `TO_TIMESTAMP('47', 'SS')`                                                       | 01.05.2025 12:00:47 AM AD                |
+| `TO_TIMESTAMP('1', 'FF')`                                                        | 01.05.2025 12:00:00.100000000 AM AD      |
+| `TO_TIMESTAMP('01', 'FF')`                                                       | 01.05.2025 12:00:00.010000000 AM AD      |
+| `TO_TIMESTAMP('001', 'FF')`                                                      | 01.05.2025 12:00:00.001000000 AM AD      |
+| `TO_TIMESTAMP('0001', 'FF')`                                                     | 01.05.2025 12:00:00.000100000 AM AD      |
+| `TO_TIMESTAMP('00001', 'FF')`                                                    | 01.05.2025 12:00:00.000010000 AM AD      |
+| `TO_TIMESTAMP('000001', 'FF')`                                                   | 01.05.2025 12:00:00.000001000 AM AD      |
+| `TO_TIMESTAMP('0000001', 'FF')`                                                  | 01.05.2025 12:00:00.000000100 AM AD      |
+| `TO_TIMESTAMP('00000001', 'FF')`                                                 | 01.05.2025 12:00:00.000000010 AM AD      |
+| `TO_TIMESTAMP('000000001', 'FF')`                                                | 01.05.2025 12:00:00.000000001 AM AD      |
+| `TO_TIMESTAMP('999999999', 'FF')`                                                | 01.05.2025 12:00:00.999999999 AM AD      |
 | `TO_TIMESTAMP('16:38:47', 'HH24:MI:SS')`                                         | 01.05.2025 04:38:47 AM AD                |
+| `TO_TIMESTAMP('16:38:47 1', 'HH24:MI:SS FF')`                                    | 01.05.2025 12:00:00.100000000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 01', 'HH24:MI:SS FF')`                                   | 01.05.2025 12:00:00.010000000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 001', 'HH24:MI:SS FF')`                                  | 01.05.2025 12:00:00.001000000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 0001', 'HH24:MI:SS FF')`                                 | 01.05.2025 12:00:00.000100000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 00001', 'HH24:MI:SS FF')`                                | 01.05.2025 12:00:00.000010000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 000001', 'HH24:MI:SS FF')`                               | 01.05.2025 12:00:00.000001000 AM AD      |
+| `TO_TIMESTAMP('16:38:47 0000001', 'HH24:MI:SS FF')`                              | 01.05.2025 12:00:00.000000100 AM AD      |
+| `TO_TIMESTAMP('16:38:47 00000001', 'HH24:MI:SS FF')`                             | 01.05.2025 12:00:00.000000010 AM AD      |
+| `TO_TIMESTAMP('16:38:47 000000001', 'HH24:MI:SS FF')`                            | 01.05.2025 12:00:00.000000001 AM AD      |
+| `TO_TIMESTAMP('16:38:47 999999999', 'HH24:MI:SS FF')`                            | 01.05.2025 12:00:00.999999999 AM AD      |
 | `TO_TIMESTAMP('1', 'DD')`                                                        | 01.05.2025 12:00:00 AM AD                |
 | `TO_TIMESTAMP('15', 'DD')`                                                       | 15.05.2025 12:00:00 AM AD                |
 | `TO_TIMESTAMP('30', 'DD')`                                                       | 30.05.2025 12:00:00 AM AD                |
