@@ -11,7 +11,7 @@ categories: oracle
 |--------------------------------------------------------------------------------------------------|
 | `TO_TIMESTAMP(metin [DEFAULT deger ON CONVERSION ERROR] [,format] [,'NLS_DATE_LANGUAGE = dil'])` |
 
-- `metin` isimli parametre, `DATE` tipine dönüştürülecek string ifadedir.
+- `metin` isimli parametre, `TIMESTAMP` tipine dönüştürülecek string ifadedir.
 - `[DEFAULT deger ON CONVERSION ERROR]` ifadesi, dönüştürme işleminin hata alması durumunda, `metin` isimli parametre için varsayılan bir değer belirler. Dönüştürme işlemi bu varsayılan değere göre yapılır.
 - `format` isimli parametre, string ifadenin hangi formatta olduğunu belirtir.
   - Bu parametre verilmezse, `initialization parameter` grubunda yer alan `NLS_TIMESTAMP_FORMAT` ve `NLS_TERRITORY` parametrelerinin değerleri dikkate alınır.
