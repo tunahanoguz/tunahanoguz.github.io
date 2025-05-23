@@ -15,7 +15,7 @@ categories: oracle
 - `orijinal_zaman_dilimi` parametresi, `tarih` parametresinin zaman dilimini ifade eder.
 - `yeni_zaman_dilimi` parametresi, dönüşüm yapılacak yeni zaman dilimidir.
 
-Her iki zaman dilimi için de kullanılabilecek zaman dilimleri aşağıdaki tabloda yer almaktadır:
+Her iki zaman dilimi için de kullanılabilecek değerler aşağıdaki tabloda yer almaktadır:
 
 | Değer | Açıklama                    |
 |-------|-----------------------------|
