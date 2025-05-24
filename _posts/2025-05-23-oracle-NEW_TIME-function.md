@@ -40,6 +40,11 @@ Her iki zaman dilimi için de kullanılabilecek değerler aşağıdaki tabloda y
 
 ---
 
-| Kullanım | Sonuç |
-|----------|-------|
-| x        | x     |
+- Aşağıdaki tabloda `NEW_TIME` fonksiyonu için kullanım örnekleri yer almaktadır.
+- `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS.FF AM BC` olarak belirlenmiştir.
+
+| Kullanım                                                                                                 | Sonuç                     |
+|----------------------------------------------------------------------------------------------------------|---------------------------|
+| `NEW_TIME(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'GMT', 'EST')`                        | 19.05.2025 11:37:48 AM AD |
+| `NEW_TIME(TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'GMT', 'EST')`                   | 19.05.2025 11:37:48 AM AD |
+| `NEW_TIME(TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'), 'GMT', 'EST')` | 19.05.2025 11:37:48 AM AD |
