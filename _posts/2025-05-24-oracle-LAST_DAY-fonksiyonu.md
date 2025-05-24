@@ -5,7 +5,7 @@ layout: post
 categories: oracle
 ---
 
-`LAST_DAY` fonksiyonu, `DATE`, `TIMESTAMP` ve `TIMESTAMP WITH TIME ZONE` tipinde bir tarihin bulunduğu ayın son gününü verir.
+`LAST_DAY` fonksiyonu, `DATE`, `TIMESTAMP` ve `TIMESTAMP WITH TIME ZONE` tipinde bir tarihin bulunduğu ayın son gününü `DATE` tipinde verir.
 
 | Syntax            |
 |-------------------|
