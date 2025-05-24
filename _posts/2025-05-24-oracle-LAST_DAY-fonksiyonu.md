@@ -5,7 +5,7 @@ layout: post
 categories: oracle
 ---
 
-`LAST_DAY` fonksiyonu, bir tarihin bulunduğu ayın son gününü verir.
+`LAST_DAY` fonksiyonu, `DATE`, `TIMESTAMP` ve `TIMESTAMP WITH TIME ZONE` tipinde bir tarihin bulunduğu ayın son gününü verir.
 
 | Syntax            |
 |-------------------|
@@ -16,7 +16,9 @@ categories: oracle
 - Aşağıdaki tabloda `LAST_DAY` fonksiyonu için kullanım örnekleri yer almaktadır.
 - `NLS_DATE_FORMAT` değeri `DD.MM.YYYY HH12:MI:SS AM BC` olarak belirlenmiştir.
 
-| Kullanım                                                            | Sonuç                     |
-|---------------------------------------------------------------------|---------------------------|
-| `LAST_DAY(TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                     | 31.05.2025 12:00:00 AM AD |
-| `LAST_DAY(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))` | 31.05.2025 16:37:48 AM AD |
+| Kullanım                                                                                   | Sonuç                     |
+|--------------------------------------------------------------------------------------------|---------------------------|
+| `LAST_DAY(TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                                            | 31.05.2025 12:00:00 AM AD |
+| `LAST_DAY(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`                        | 31.05.2025 16:37:48 AM AD |
+| `LAST_DAY(TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`                   | 31.05.2025 16:37:48 AM AD |
+| `LAST_DAY(TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))` | 31.05.2025 16:37:48 AM AD |
