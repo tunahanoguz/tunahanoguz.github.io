@@ -30,3 +30,6 @@ categories: oracle
 | `MONTHS_BETWEEN(TO_DATE('30.04.2025', 'DD.MM.YYYY'), TO_DATE('31.05.2025', 'DD.MM.YYYY'))` | -1                                   |
 | `MONTHS_BETWEEN(TO_DATE('30.04.2025', 'DD.MM.YYYY'), TO_DATE('01.05.2025', 'DD.MM.YYYY'))` | -0.06451613 (2 / 31)                 |
 | `MONTHS_BETWEEN(TO_DATE('29.04.2025', 'DD.MM.YYYY'), TO_DATE('01.05.2025', 'DD.MM.YYYY'))` | -0.09677419 (3 / 31)                 |
+| `MONTHS_BETWEEN(TO_DATE('19.05.2025', 'DD.MM.YYYY'), TO_DATE('19.05.2025', 'DD.MM.YYYY'))` | 0                                    |
+| `MONTHS_BETWEEN(TO_DATE('20.05.2025', 'DD.MM.YYYY'), TO_DATE('19.05.2025', 'DD.MM.YYYY'))` | 0.032258065 (1/31)                   |
+| `MONTHS_BETWEEN(TO_DATE('20.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), TO_DATE('19.05.2025 14:37:48', 'DD.MM.YYYY HH24:MI:SS'))` | 0.034946237 ((1 / 31) + (2 / 24 / 31)) |
