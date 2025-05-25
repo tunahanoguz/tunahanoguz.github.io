@@ -5,7 +5,7 @@ layout: post
 categories: oracle
 ---
 
-`ADD_MONTHS` fonksiyonu, `DATE`, `TIMESTAMP` ve `TIMESTAMP WITH TIME ZONE` tipinde bir tarihe belirtilen sayıda ay ekleyerek ve yeni tarihi yine `DATE` tipinde döner.
+`ADD_MONTHS` fonksiyonu, `DATE`, `TIMESTAMP` ve `TIMESTAMP WITH TIME ZONE` tipinde bir tarihe belirtilen sayıda ay ekler ve yeni tarihi yine `DATE` tipinde döner.
 
 | Syntax                         |
 |--------------------------------|
