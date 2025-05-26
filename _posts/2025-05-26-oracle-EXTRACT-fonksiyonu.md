@@ -50,3 +50,5 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.999999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.999999999  |
 | `EXTRACT(TIMEZONE_HOUR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`       | ORA-30076: invalid extract field for extract source |
 | `EXTRACT(TIMEZONE_MINUTE FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`     | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`     | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`       | ORA-30076: invalid extract field for extract source |
