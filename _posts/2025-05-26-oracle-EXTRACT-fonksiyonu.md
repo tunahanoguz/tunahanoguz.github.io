@@ -82,3 +82,12 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(YEAR FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                    | 10            |
 | `EXTRACT(MONTH FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                   | 0             |
 | `EXTRACT(DAY FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                     | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(YEAR FROM NUMTOYMINTERVAL(10, 'MONTH'))`                                                                   | 0             |
+| `EXTRACT(MONTH FROM NUMTOYMINTERVAL(10, 'MONTH'))`                                                                  | 10            |
+| `EXTRACT(DAY FROM NUMTOYMINTERVAL(10, 'MONTH'))`                                                                    | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(HOUR FROM TO_DSINTERVAL('0 0:0:0.0'))`                                                                     | 0             |
+| `EXTRACT(MINUTE FROM TO_DSINTERVAL('0 0:0:0.0'))`                                                                   | 0             |
+| `EXTRACT(SECOND FROM TO_DSINTERVAL('0 0:0:0.0'))`                                                                   | 0             |
+| `EXTRACT(HOUR FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                  | 23            |
+| `EXTRACT(MINUTE FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                | 59            |
+| `EXTRACT(SECOND FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                | 59.999999999  |
