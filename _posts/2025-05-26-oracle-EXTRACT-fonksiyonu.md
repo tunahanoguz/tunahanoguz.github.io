@@ -74,5 +74,11 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | +03           |
 | `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Paris  |
 | `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | CEST          |
-| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Lisbon  |
+| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Lisbon |
 | `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | WEST          |
+| `EXTRACT(YEAR FROM TO_YMINTERVAL('10-2'))`                                                                          | 10            |
+| `EXTRACT(MONTH FROM TO_YMINTERVAL('10-2'))`                                                                         | 2             |
+| `EXTRACT(DAY FROM TO_YMINTERVAL('10-2'))`                                                                           | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(YEAR FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                    | 10            |
+| `EXTRACT(MONTH FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                   | 0             |
+| `EXTRACT(DAY FROM NUMTOYMINTERVAL(10, 'YEAR'))`                                                                     | ORA-30076: invalid extract field for extract source |
