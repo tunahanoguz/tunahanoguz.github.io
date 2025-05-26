@@ -31,12 +31,13 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(YEAR FROM TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                                         | 2025          |
 | `EXTRACT(MONTH FROM TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                                        | 5             |
 | `EXTRACT(DAY FROM TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                                          | 19            |
-| `EXTRACT(YEAR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`             | 2025          |
-| `EXTRACT(MONTH FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`            | 5             |
-| `EXTRACT(DAY FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`              | 19            |
-| `EXTRACT(HOUR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`             | 16            |
-| `EXTRACT(MINUTE FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`           | 37            |
-| `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS.FF'))`           | 48            |
+| `EXTRACT(HOUR FROM TO_DATE('19.05.2025', 'DD.MM.YYYY'))`                                         | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(YEAR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`                | 2025          |
+| `EXTRACT(MONTH FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`               | 5             |
+| `EXTRACT(DAY FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`                 | 19            |
+| `EXTRACT(HOUR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`                | 16            |
+| `EXTRACT(MINUTE FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`              | 37            |
+| `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`              | 48            |
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.099999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.099999999  |
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.199999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.199999999  |
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.299999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.299999999  |
@@ -47,3 +48,5 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.799999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.799999999  |
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.899999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.899999999  |
 | `EXTRACT(SECOND FROM TO_TIMESTAMP('19.05.2025 16:37:48.999999999', 'DD.MM.YYYY HH24:MI:SS.FF'))` | 48.999999999  |
+| `EXTRACT(TIMEZONE_HOUR FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`       | ORA-30076: invalid extract field for extract source |
+| `EXTRACT(TIMEZONE_MINUTE FROM TO_TIMESTAMP('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'))`     | ORA-30076: invalid extract field for extract source |
