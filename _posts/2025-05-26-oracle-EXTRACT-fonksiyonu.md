@@ -60,8 +60,8 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(SECOND FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`               | 48            |
 | `EXTRACT(TIMEZONE_HOUR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`        | 3             |
 | `EXTRACT(TIMEZONE_MINUTE FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`      | 0             |
-| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`      | UNKNOWN       |
-| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`        | UNK           |
+| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`      | UNKNOWN (Zaman diliminin numerik olarak verilmesi ve aynı zaman diliminde birden fazla zaman dilimi bölge adının yer alması sebebiyle belirsizlik oluşmaktadır.)                                      |
+| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 +03:00', 'DD.MM.YYYY HH24:MI:SS TZH:TZM'))`        | UNK (Zaman diliminin numerik olarak verilmesi ve aynı zaman diliminde birden fazla zaman dilimi bölge adının yer alması sebebiyle belirsizlik oluşmaktadır.)                                      |
 | `EXTRACT(YEAR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`            | 2025          |
 | `EXTRACT(MONTH FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZHR'))`          | 5             |
 | `EXTRACT(DAY FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`             | 19            |
