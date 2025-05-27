@@ -14,7 +14,7 @@ categories: oracle
 | `TRUNC(tarih, format)` |
 
 - `tarih` parametresi, belirtilen formata göre indirgenecek tarih verisidir.
-- `format` parametresi, tarih/saat değerinin hangi formata/düzeye kadar indirgeneceğini belirtir.
+- `format` parametresi, tarih/saat değerinin hangi formata/düzeye kadar indirgeneceğini belirtir. Eğer bu parametre belirtilmezse, değeri varsayılan olarak `DD` olur.
 
 ---
 
