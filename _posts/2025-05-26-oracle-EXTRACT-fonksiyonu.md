@@ -5,9 +5,9 @@ layout: post
 categories: oracle
 ---
 
-`EXTRACT` fonksiyonu, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir veriden bazı bilgilerin elde edilmesini sağlar.
+`EXTRACT` fonksiyonu, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir veriden belirli bir tarih/saat bileşeninin elde edilmesini sağlar.
 
-Aşağıdaki tabloda bu bilgiler ve bu bilgilerin hangi tipteki verilerden elde edilebileceği yer almaktadır.
+Aşağıdaki tabloda bu bileşenler ve bu bileşenlerin hangi tipteki verilerden elde edilebileceği yer almaktadır.
 
 | Bilgi             | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | INTERVAL YEAR TO MONTH | INTERVAL DAY TO SECOND |
 |-------------------|------|-----------|--------------------------|------------------------|------------------------|
@@ -72,10 +72,10 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(TIMEZONE_MINUTE FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | 0             |
 | `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Istanbul |
 | `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | +03           |
-| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Paris  |
-| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | CEST          |
-| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))` | Europe/Lisbon |
-| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Istanbul', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | WEST          |
+| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Paris', 'DD.MM.YYYY HH24:MI:SS TZR'))`    | Europe/Paris  |
+| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Paris', 'DD.MM.YYYY HH24:MI:SS TZR'))`      | CEST          |
+| `EXTRACT(TIMEZONE_REGION FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Lisbon', 'DD.MM.YYYY HH24:MI:SS TZR'))`   | Europe/Lisbon |
+| `EXTRACT(TIMEZONE_ABBR FROM TO_TIMESTAMP_TZ('19.05.2025 16:37:48 Europe/Lisbon', 'DD.MM.YYYY HH24:MI:SS TZR'))`     | WEST          |
 | `EXTRACT(YEAR FROM TO_YMINTERVAL('10-2'))`                                                                          | 10            |
 | `EXTRACT(MONTH FROM TO_YMINTERVAL('10-2'))`                                                                         | 2             |
 | `EXTRACT(DAY FROM TO_YMINTERVAL('10-2'))`                                                                           | ORA-30076: invalid extract field for extract source |
@@ -91,3 +91,19 @@ Aşağıdaki tabloda `EXTRACT` fonksiyonu için kullanım örnekleri yer almakta
 | `EXTRACT(HOUR FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                  | 23            |
 | `EXTRACT(MINUTE FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                | 59            |
 | `EXTRACT(SECOND FROM TO_DSINTERVAL('999999999 23:59:59.999999999'))`                                                | 59.999999999  |
+| `EXTRACT(DAY FROM NUMTODSINTERVAL(10, 'DAY'))`                                                                      | 10            |
+| `EXTRACT(HOUR FROM NUMTODSINTERVAL(10, 'DAY'))`                                                                     | 0             |
+| `EXTRACT(MINUTE FROM NUMTODSINTERVAL(10, 'DAY'))`                                                                   | 0             |
+| `EXTRACT(SECOND FROM NUMTODSINTERVAL(10, 'DAY'))`                                                                   | 0             |
+| `EXTRACT(HOUR FROM NUMTODSINTERVAL(16, 'HOUR'))`                                                                    | 16            |
+| `EXTRACT(DAY FROM NUMTODSINTERVAL(16, 'HOUR'))`                                                                     | 0             |
+| `EXTRACT(MINUTE FROM NUMTODSINTERVAL(16, 'HOUR'))`                                                                  | 0             |
+| `EXTRACT(SECOND FROM NUMTODSINTERVAL(16, 'HOUR'))`                                                                  | 0             |
+| `EXTRACT(MINUTE FROM NUMTODSINTERVAL(37, 'MINUTE'))`                                                                | 37            |
+| `EXTRACT(DAY FROM NUMTODSINTERVAL(37, 'MINUTE'))`                                                                   | 0             |
+| `EXTRACT(HOUR FROM NUMTODSINTERVAL(37, 'MINUTE'))`                                                                  | 0             |
+| `EXTRACT(SECOND FROM NUMTODSINTERVAL(37, 'MINUTE'))`                                                                | 0             |
+| `EXTRACT(SECOND FROM NUMTODSINTERVAL(48, 'SECOND'))`                                                                | 48            |
+| `EXTRACT(DAY FROM NUMTODSINTERVAL(48, 'SECOND'))`                                                                   | 0             |
+| `EXTRACT(HOUR FROM NUMTODSINTERVAL(48, 'SECOND'))`                                                                  | 0             |
+| `EXTRACT(MINUTE FROM NUMTODSINTERVAL(48, 'SECOND'))`                                                                | 0             |
