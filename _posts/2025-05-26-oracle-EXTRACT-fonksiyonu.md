@@ -5,7 +5,7 @@ layout: post
 categories: oracle
 ---
 
-`EXTRACT` fonksiyonu, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir veriden belirli bir tarih/saat bileşeninin elde edilmesini sağlar.
+`EXTRACT` fonksiyonu, `DATE`, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir veriden belirli bir tarih/saat bileşeninin elde edilmesini sağlar.
 
 Aşağıdaki tabloda bu bileşenler ve bu bileşenlerin hangi tipteki verilerden elde edilebileceği yer almaktadır.
 
