@@ -20,9 +20,13 @@ categories: oracle
 
 Aşağıdaki tabloda bu fonksiyon için kullanılabilecek formatlar ve açıklamaları yer almaktadır.
 
-| Format | Açıklama |
-|--------|----------|
-| x      | x        |
+| Format                                             | Açıklama                                                                                                |
+|----------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| `SYYYY`, `YYYY`, `YEAR`, `SYEAR`, `YYY`, `YY`, `Y` | Tarihin yılın ilk gününe indirgenmesini sağlar.                                                         |
+| `Q`                                                | Tarihin bulunduğu çeyreğin ilk gününe indirgenmesini sağlar.                                            |
+| `MONTH`, `MON`, `MM`, `RM`                         | Tarihin bulunduğu ayın ilk gününe indirgenmesini sağlar.                                                |
+| `HH`, `HH12`, `HH24`                               | Tarihin saat bilgisinin saat başına indirgenmesini sağlar. Yani, dakika ve saniye bilgileri sıfırlanır. |
+| `MI`                                               | Tarihin saat bilgisinin dakika başına indirgenmesini sağlar. Yani, saniye bilgisi sıfırlanır.           |
 
 ---
 
