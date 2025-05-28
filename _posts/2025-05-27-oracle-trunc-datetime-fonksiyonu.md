@@ -26,8 +26,8 @@ Aşağıdaki tabloda bu fonksiyon için kullanılabilecek formatlar ve açıklam
 | `Q`                                                | Tarihin bulunduğu çeyreğin ilk gününe indirgenmesini sağlar.                                            |
 | `MONTH`, `MON`, `MM`, `RM`                         | Tarihin bulunduğu ayın ilk gününe indirgenmesini sağlar.                                                |
 | `IW`                                               | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar.	ISO haftasının ilk günü Pazartesi'dir.     |
-| `WW`                                               | x                                                                                                       |
-| `W`                                                | x                                                                                                       |
+| `WW`                                               | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar. ISO haftasından farkı, haftanın ilk gününün, yılın ilk gününe denk gelen gün olarak kabul edilmesidir. Örneğin, 01.01.2025 Çarşamba günüdür, bu sebeple 19.05.2025 Pazartesi tarihinin haftanın ilk gününe indirgenmiş hali 14.05.2025 Çarşamba olur. |
+| `W`                                                | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar. ISO haftasından farkı, haftanın ilk gününün, ayın ilk gününe denk gelen gün olarak kabul edilmesidir. Örneğin, 01.05.2025 Perşembe günüdür, bu sebeple 19.05.2025 Pazartesi tarihinin haftanın ilk gününe indirgenmiş hali 15.05.2025 Perşembe olur. |
 | `DDD`, `DD`, `J`                                   | Tarihin saat bilgisinin sıfırlanmasını sağlar.                                                          |
 | `DAY`, `DY`, `D`                                   | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar. Haftanın ilk günü `NLS_TERRITORY` değerine göre değişebilir. |
 | `HH`, `HH12`, `HH24`                               | Tarihin saat bilgisinin saat başına indirgenmesini sağlar. Yani, dakika ve saniye bilgileri sıfırlanır. |
@@ -52,6 +52,8 @@ Aşağıdaki tabloda `TRUNC(datetime)` fonksiyonu için kullanım örnekleri yer
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'MM')`    | 01.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'RM')`    | 01.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'IW')`    | 19.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'WW')`    | 14.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'W')`     | 15.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DDD')`   | 19.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DD')`    | 19.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'J')`     | 19.05.2025 00:00:00 |
