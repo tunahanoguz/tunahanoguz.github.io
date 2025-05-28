@@ -29,7 +29,7 @@ Aşağıdaki tabloda bu fonksiyon için kullanılabilecek formatlar ve açıklam
 | `WW`                                               | x                                                                                                       |
 | `W`                                                | x                                                                                                       |
 | `DDD`, `DD`, `J`                                   | Tarihin saat bilgisinin sıfırlanmasını sağlar.                                                          |
-| `DAY`, `DY`, `D`                                   | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar.                                            |
+| `DAY`, `DY`, `D`                                   | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar. Haftanın ilk günü `NLS_TERRITORY` değerine göre değişebilir. |
 | `HH`, `HH12`, `HH24`                               | Tarihin saat bilgisinin saat başına indirgenmesini sağlar. Yani, dakika ve saniye bilgileri sıfırlanır. |
 | `MI`                                               | Tarihin saat bilgisinin dakika başına indirgenmesini sağlar. Yani, saniye bilgisi sıfırlanır.           |
 
@@ -52,3 +52,16 @@ Aşağıdaki tabloda `TRUNC(datetime)` fonksiyonu için kullanım örnekleri yer
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'MM')`    | 01.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'RM')`    | 01.05.2025 00:00:00 |
 | `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'IW')`    | 19.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DDD')`   | 19.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DD')`    | 19.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'J')`     | 19.05.2025 00:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DAY')`   | 18.05.2025 00:00:00 (`NLS_TERRITORY` => AMERICA) |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DY')`    | 18.05.2025 00:00:00 (`NLS_TERRITORY` => AMERICA) |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'D')`     | 18.05.2025 00:00:00 (`NLS_TERRITORY` => AMERICA) |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DAY')`   | 19.05.2025 00:00:00 (`NLS_TERRITORY` => TURKEY)  |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'DY')`    | 19.05.2025 00:00:00 (`NLS_TERRITORY` => TURKEY)  |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'D')`     | 19.05.2025 00:00:00 (`NLS_TERRITORY` => TURKEY)  |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'HH')`    | 19.05.2025 16:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'HH12')`  | 19.05.2025 16:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'HH24')`  | 19.05.2025 16:00:00 |
+| `TRUNC(TO_DATE('19.05.2025 16:37:48', 'DD.MM.YYYY HH24:MI:SS'), 'MI')`    | 19.05.2025 16:37:00 |
