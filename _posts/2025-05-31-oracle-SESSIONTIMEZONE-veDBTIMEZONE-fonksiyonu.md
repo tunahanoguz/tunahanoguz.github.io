@@ -8,7 +8,8 @@ categories: oracle
 - `SESSIONTIMEZONE` fonksiyonu, kullanıcı oturumundaki zaman dilimini (time zone) döndürür.
 - `DBTIMEZONE` fonksiyonu, veritabanının zaman dilimini (time zone) döndürür.
 - Her iki fonksiyon için de dönülen değer VARCHAR2 tipindedir.
-- Her iki fonksiyon için de dönüş formatı, `CREATE DATABASE` veya `ALTER DATABASE` üzerinden veritabanının zaman diliminin nasıl belirtildiğine göre değişiklik gösterebilir. Time zone offset ([+|-]TZH:TZM) veya zaman dilimi adı iki olası dönüş formatıdır.
+- Her iki fonksiyon için de `time zone offset ([+|-]TZH:TZM)` veya `zaman dilimi adı` olarak iki olası dönüş formatı bulunmaktadır. `CREATE DATABASE` veya `ALTER DATABASE` üzerinden veritabanının zaman diliminin nasıl belirtildiğine göre değişiklik gösterebilir.
+- Her iki fonksiyon da parametre almaz.
 
 | Syntax            |
 |-------------------|
