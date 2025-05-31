@@ -26,5 +26,5 @@ Aşağıdaki tabloda `TZ_OFFSET` fonksiyonu için kullanılabilecek formatlar ve
 | `TZ_OFFSET('02:00')`           | +02:00 |
 | `TZ_OFFSET('+02:00')`          | +02:00 |
 | `TZ_OFFSET('-04:00')`          | -04:00 |
-| `TZ_OFFSET(SESSIONTIMEZONE)`   | +02:00 |
-| `TZ_OFFSET(DBTIMEZONE)`        | -04:00 |
+| `TZ_OFFSET(SESSIONTIMEZONE)`   | +01:00 |
+| `TZ_OFFSET(DBTIMEZONE)`        | -05:00 |
