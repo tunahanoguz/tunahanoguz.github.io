@@ -8,6 +8,7 @@ categories: oracle
 - `TRUNC(datetime)` fonksiyonu, `DATE`, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir verinin belirtilen birim düzeyine kadar indirgenmesini sağlar.
 - Örnek olarak, değeri yılın ilk gününe, ayın ilk gününe veya haftanın ilk gününe indirger.
 - Zamanın belirli bir formatına odaklanmak için kullanışlı bir fonksiyondur.
+- Bu fonksiyonun dönüşü her zaman `DATE` tipindedir.
 
 | Syntax                 |
 |------------------------|
