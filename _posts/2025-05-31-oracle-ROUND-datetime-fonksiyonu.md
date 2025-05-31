@@ -5,14 +5,14 @@ layout: post
 categories: oracle
 ---
 
-`ROUND(datetime)` fonksiyonu, x.
+`ROUND(datetime)` fonksiyonu, `DATE`, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipindeki bir verinin belirtilen tarih/saat birimine göre yuvarlar ve döner.
 
 | Syntax                    |
 |---------------------------|
 | `ROUND(tarih [, format])` |
 
 - `tarih` parametresi, `DATE`, `TIMESTAMP`, `TIMESTAMP WITH TIME ZONE` ve `INTERVAL` tipinde bir tarih değeridir.
-- `format` parametresi, x.
+- `format` parametresi, tarih değerinin hangi tarih/saat birimine göre yuvarlanacağını belirtir.
 
 Aşağıdaki tabloda `ROUND(datetime)` fonksiyonu için kullanılabilecek formatlar ve açıklamaları yer almaktadır.
 
@@ -50,3 +50,11 @@ Aşağıdaki tabloda `ROUND(datetime)` fonksiyonu için kullanım örnekleri yer
 | `ROUND(TO_DATE('01.07.2025', 'DD.MM.YYYY'), 'YY')`    | 01.01.2025 00:00:00 |
 | `ROUND(TO_DATE('30.06.2025', 'DD.MM.YYYY'), 'Y')`     | 01.01.2025 00:00:00 |
 | `ROUND(TO_DATE('01.07.2025', 'DD.MM.YYYY'), 'Y')`     | 01.01.2025 00:00:00 |
+| `ROUND(TO_DATE('15.02.2025', 'DD.MM.YYYY'), 'Q')`     | 01.01.2025 00:00:00 |
+| `ROUND(TO_DATE('16.02.2025', 'DD.MM.YYYY'), 'Q')`     | 01.04.2025 00:00:00 |
+| `ROUND(TO_DATE('15.05.2025', 'DD.MM.YYYY'), 'Q')`     | 01.04.2025 00:00:00 |
+| `ROUND(TO_DATE('16.05.2025', 'DD.MM.YYYY'), 'Q')`     | 01.07.2025 00:00:00 |
+| `ROUND(TO_DATE('15.08.2025', 'DD.MM.YYYY'), 'Q')`     | 01.07.2025 00:00:00 |
+| `ROUND(TO_DATE('16.08.2025', 'DD.MM.YYYY'), 'Q')`     | 01.10.2025 00:00:00 |
+| `ROUND(TO_DATE('15.11.2025', 'DD.MM.YYYY'), 'Q')`     | 01.10.2025 00:00:00 |
+| `ROUND(TO_DATE('16.11.2025', 'DD.MM.YYYY'), 'Q')`     | 01.01.2026 00:00:00 |
