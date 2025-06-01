@@ -28,8 +28,8 @@ Aşağıdaki tabloda `ROUND(datetime)` fonksiyonu için kullanılabilecek format
 | `W`                                                            | Tarihin bulunduğu haftanın ilk gününe indirgenmesini sağlar. ISO haftasından farkı, haftanın ilk gününün, ayın ilk gününe denk gelen gün olarak kabul edilmesidir. Örneğin, 01.05.2025 Perşembe günüdür, bu sebeple 19.05.2025 Pazartesi tarihinin haftanın ilk gününe indirgenmiş hali 15.05.2025 Perşembe olur. |
 | `DDD`<br>`DD`<br>`J`                                           | Tarih, öğlen 12'den önceyse bulunduğu günün başına, değilse sonraki günün başına yuvarlanır.            |
 | `DAY`<br>`DY`<br>`D`                                           | Tarih, bulunduğu haftanın 5. gününden önceyse o haftanın ilk gününe, değilse sonraki haftanın ilk gününe yuvarlanır. Haftanın ilk günü, `NLS_TERRITORY` değerine göre değişebilir.                                                                                                              |
-| `HH`<br>`HH12`<br>`HH24`                                       | Tarihin saat bilgisinin saat başına indirgenmesini sağlar. Yani, dakika ve saniye bilgileri sıfırlanır. |
-| `MI`                                                           | Tarihin saat bilgisinin dakika başına indirgenmesini sağlar. Yani, saniye bilgisi sıfırlanır.           |
+| `HH`<br>`HH12`<br>`HH24`                                       | Tarihin saat/dakika bilgisi, 30:00 öncesiyse içinde bulunulan saatin başına, değilse sonraki saatin başına yuvarlanır. |
+| `MI`                                                           | Tarihin dakika bilgisi, 30'dan küçükse içinde bulunulan dakikanın başına, değilse sonraki dakikanın başına yuvarlanır. |
 
 ---
 
@@ -88,8 +88,9 @@ Aşağıdaki tabloda `ROUND(datetime)` fonksiyonu için kullanılabilecek format
 | `ROUND(TO_DATE('23.05.2025', 'DD.MM.YYYY'), 'DAY')` (`NLS_TERRITORY = 'America'`) | 25.05.2025 00:00:00 |
 | `ROUND(TO_DATE('24.05.2025', 'DD.MM.YYYY'), 'DAY')` (`NLS_TERRITORY = 'America'`) | 25.05.2025 00:00:00 |
 | `ROUND(TO_DATE('25.05.2025', 'DD.MM.YYYY'), 'DAY')` (`NLS_TERRITORY = 'America'`) | 25.05.2025 00:00:00 |
-
-
-
-
-
+| `ROUND(TO_DATE('19.05.2025 14:29:59', 'DD.MM.YYYY HH24:MI:SS'), 'HH')`   | 19.05.2025 14:00:00 |
+| `ROUND(TO_DATE('19.05.2025 14:30:00', 'DD.MM.YYYY HH24:MI:SS'), 'HH')`   | 19.05.2025 15:00:00 |
+| `ROUND(TO_DATE('19.05.2025 14:29:59', 'DD.MM.YYYY HH24:MI:SS'), 'HH12')` | 19.05.2025 14:00:00 |
+| `ROUND(TO_DATE('19.05.2025 14:30:00', 'DD.MM.YYYY HH24:MI:SS'), 'HH12')` | 19.05.2025 15:00:00 |
+| `ROUND(TO_DATE('19.05.2025 14:29:59', 'DD.MM.YYYY HH24:MI:SS'), 'HH24')` | 19.05.2025 14:00:00 |
+| `ROUND(TO_DATE('19.05.2025 14:30:00', 'DD.MM.YYYY HH24:MI:SS'), 'HH24')` | 19.05.2025 15:00:00 |
