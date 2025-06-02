@@ -1,5 +1,5 @@
 ---
-title:  "Oracle - NVL, NVL2 ve COALESCE Fonksiyonu"
+title:  "Oracle - NVL, NVL2, NULLIF ve COALESCE Fonksiyonu"
 date: 2025-06-02 21:30:00 +0300
 layout: post
 categories: oracle
@@ -30,6 +30,20 @@ Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır
 | `NVL2(deger, null_degilse_deger, null_ise_deger)` |
 
 Aşağıdaki tabloda `NVL2` fonksiyonu için kullanım örnekleri yer almaktadır.
+
+| Kullanım | Sonuç |
+|----------|-------|
+| x        | x     |
+
+---
+
+- `NULLIF` fonksiyonu, iki değeri birbiriyle karşılaştırır. Birbirlerine eşitse `NULL`, değilse birinci değeri döndürür.
+
+| Syntax                     |
+|----------------------------|
+| `NULLIF(deger_1, deger_2)` |
+
+Aşağıdaki tabloda `NULLIF` fonksiyonu için kullanım örnekleri yer almaktadır.
 
 | Kullanım | Sonuç |
 |----------|-------|
