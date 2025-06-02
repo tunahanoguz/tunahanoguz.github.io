@@ -13,6 +13,12 @@ categories: oracle
 |--------------------------------|
 | `NVL(deger, alternatif_deger)` |
 
+Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
+
+| Kullanım | Sonuç |
+|----------|-------|
+| x        | x     |
+
 ---
 
 - `NVL2` fonksiyonu, bir değerin `NULL` olduğu ve olmadığı durumlar için birer değer belirlenmesini sağlar.
@@ -23,6 +29,12 @@ categories: oracle
 |---------------------------------------------------|
 | `NVL2(deger, null_degilse_deger, null_ise_deger)` |
 
+Aşağıdaki tabloda `NVL2` fonksiyonu için kullanım örnekleri yer almaktadır.
+
+| Kullanım | Sonuç |
+|----------|-------|
+| x        | x     |
+
 ---
 
 - `COALESCE` fonksiyonu, **n** sayıda değerden ilk `NULL` olmayan değeri döndürür.
@@ -30,3 +42,9 @@ categories: oracle
 | Syntax                                     |
 |--------------------------------------------|
 | `COALESCE(deger_1, deger_2, ..., deger_n)` |
+
+Aşağıdaki tabloda `COALESCE` fonksiyonu için kullanım örnekleri yer almaktadır.
+
+| Kullanım | Sonuç |
+|----------|-------|
+| x        | x     |
