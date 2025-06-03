@@ -17,28 +17,31 @@ Aşağıdaki tabloda veritabanındaki `KISILER` tablosundaki veriler yer almakta
 
 ```sql
 CREATE TABLE KISILER (
-  AD       VARCHAR2(1000 CHAR),
-  SOYAD    VARCHAR2(1000 CHAR),
-  SEHIR    VARCHAR2(1000 CHAR),
-  YAS      NUMBER(3)
+    AD       VARCHAR2(1000 CHAR),
+    SOYAD    VARCHAR2(1000 CHAR),
+    SEHIR    VARCHAR2(1000 CHAR),
+    YAS      NUMBER(3)
 );
 ```
 
-| AD     | SOYAD  | SEHIR    | YAS |
-|--------|--------|----------|-----|
-| Ahmet  | Çelik  | İstanbul | 30  |
-| Mehmet | Demir  | Ankara   | 28  |
-| Ayşe   | NULL   | İzmir    | 32  |
-| Zeynep | Şahin  | Adana    | 36  |
-| Mahmut | Çelik  | NULL     | 24  |
-| Hazal  | Demir  | Aydın    | 22  |
+| AD     | SOYAD  | SEHIR    | YAS  |
+|--------|--------|----------|------|
+| Ahmet  | Çelik  | İstanbul | 30   |
+| Mehmet | Demir  | Ankara   | NULL |
+| Ayşe   | NULL   | İzmir    | 32   |
+| Zeynep | Şahin  | Adana    | 36   |
+| Mahmut | Çelik  | NULL     | 24   |
+| Hazal  | Demir  | Aydın    | 22   |
 
 Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
 
-| Kullanım | Sonuç |
-|----------|-------|
-| `SELECT NVL(SEHİR, 'Muğla') FROM KISILER`  | İstanbul, Ankara, İzmir, Adana, **Muğla**, Aydın |
-| `SELECT NVL(SOYAD, 'Yılmaz') FROM KISILER` | Çelik, Demir, **Yılmaz**, Şahin, Çelik, Demir    |
+| Kullanım | Sonuç | Dönüş Tipi |
+|----------|-------|------------|
+| `SELECT NVL(SEHİR, 'Muğla') FROM KISILER`  | İstanbul, Ankara, İzmir, Adana, **Muğla**, Aydın | VARCHAR2 |
+| `SELECT NVL(SEHİR, 10) FROM KISILER`       | İstanbul, Ankara, İzmir, Adana, 10, Aydın        | VARCHAR2 |
+| `SELECT NVL(YAS, SEHİR) FROM KISILER`      | ORA-01722: unable to convert string value containing UNISTR('\FFFD') to a number: SEHIR<br>ORA-03302: (ORA-01722 details) invalid string value: Ankara                                                                                   | VARCHAR2 |
+| `SELECT NVL(SOYAD, 'Yılmaz') FROM KISILER` | Çelik, Demir, **Yılmaz**, Şahin, Çelik, Demir    | VARCHAR2 |
+| `SELECT NVL(YAS, 28) FROM KISILER`         | 30, **28**, 32, 36, 24, 22                       | NUMBER   |
 
 ---
 
