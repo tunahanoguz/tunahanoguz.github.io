@@ -39,7 +39,7 @@ Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır
 |----------|-------|------------|
 | `SELECT NVL(SEHİR, 'Muğla') FROM KISILER`  | İstanbul, Ankara, İzmir, Adana, **Muğla**, Aydın | VARCHAR2 |
 | `SELECT NVL(SEHİR, 10) FROM KISILER`       | İstanbul, Ankara, İzmir, Adana, 10, Aydın        | VARCHAR2 |
-| `SELECT NVL(YAS, SEHİR) FROM KISILER`      | ORA-01722: unable to convert string value containing UNISTR('\FFFD') to a number: SEHIR<br>ORA-03302: (ORA-01722 details) invalid string value: Ankara                                                                                   | VARCHAR2 |
+| `SELECT NVL(YAS, SEHİR) FROM KISILER`      | ORA-01722: unable to convert string value containing UNISTR('\FFFD') to a number: SEHIR<br><br>ORA-03302: (ORA-01722 details) invalid string value: Ankara                                                                                   | VARCHAR2 |
 | `SELECT NVL(SOYAD, 'Yılmaz') FROM KISILER` | Çelik, Demir, **Yılmaz**, Şahin, Çelik, Demir    | VARCHAR2 |
 | `SELECT NVL(YAS, 28) FROM KISILER`         | 30, **28**, 32, 36, 24, 22                       | NUMBER   |
 
