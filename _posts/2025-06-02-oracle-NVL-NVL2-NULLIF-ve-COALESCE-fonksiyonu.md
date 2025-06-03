@@ -15,11 +15,22 @@ categories: oracle
 
 Aşağıdaki tabloda veritabanındaki `KISILER` tablosundaki veriler yer almaktadır.
 
+```sql
+CREATE TABLE KISILER (
+  AD VARCHAR2(1000 CHAR),
+  SOYAD VARCHAR2(1000 CHAR),
+  SEHIR VARCHAR2(1000 CHAR),
+  YAS NUMBER
+);
+```
+
+
+
 | AD     | SOYAD  | SEHIR    | YAS |
 |--------|--------|----------|-----|
 | Ahmet  | Çelik  | İstanbul | 30  |
 | Mehmet | Demir  | Ankara   | 28  |
-| Ayşe   | NULL   | İzmir     | 32  |
+| Ayşe   | NULL   | İzmir    | 32  |
 | Zeynep | Şahin  | Adana    | 36  |
 | Mahmut | Çelik  | NULL     | 24  |
 | Hazal  | Demir  | Aydın    | 22  |
