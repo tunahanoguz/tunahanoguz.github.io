@@ -13,7 +13,7 @@ categories: oracle
 |--------------------------------|
 | `NVL(deger, alternatif_deger)` |
 
-Aşağıdaki tablolarda, veritabanındaki `KISILER` tablosundaki veriler ve `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
+Aşağıdaki tabloda veritabanındaki `KISILER` tablosundaki veriler yer almaktadır.
 
 | AD     | SOYAD  | SEHIR    | YAS |
 |--------|--------|----------|-----|
@@ -23,6 +23,8 @@ Aşağıdaki tablolarda, veritabanındaki `KISILER` tablosundaki veriler ve `NVL
 | Zeynep | Şahin  | Adana    | 36  |
 | Mahmut | Çelik  | NULL     | 24  |
 | Hazal  | Demir  | Aydın    | 22  |
+
+Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
 
 | Kullanım | Sonuç |
 |----------|-------|
