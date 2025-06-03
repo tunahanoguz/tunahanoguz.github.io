@@ -17,14 +17,12 @@ Aşağıdaki tabloda veritabanındaki `KISILER` tablosundaki veriler yer almakta
 
 ```sql
 CREATE TABLE KISILER (
-  AD VARCHAR2(1000 CHAR),
-  SOYAD VARCHAR2(1000 CHAR),
-  SEHIR VARCHAR2(1000 CHAR),
-  YAS NUMBER
+  AD       VARCHAR2(1000 CHAR),
+  SOYAD    VARCHAR2(1000 CHAR),
+  SEHIR    VARCHAR2(1000 CHAR),
+  YAS      NUMBER(3)
 );
 ```
-
-
 
 | AD     | SOYAD  | SEHIR    | YAS |
 |--------|--------|----------|-----|
