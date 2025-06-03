@@ -13,11 +13,21 @@ categories: oracle
 |--------------------------------|
 | `NVL(deger, alternatif_deger)` |
 
-Aşağıdaki tabloda `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
+Aşağıdaki tablolarda, veritabanındaki `KISILER` tablosundaki veriler ve `NVL` fonksiyonu için kullanım örnekleri yer almaktadır.
+
+| AD     | SOYAD  | SEHIR    | YAS |
+|--------|--------|----------|-----|
+| Ahmet  | Çelik  | İstanbul | 30  |
+| Mehmet | Demir  | Ankara   | 28  |
+| Ayşe   | NULL   | İzmir     | 32  |
+| Zeynep | Şahin  | Adana    | 36  |
+| Mahmut | Çelik  | NULL     | 24  |
+| Hazal  | Demir  | Aydın    | 22  |
 
 | Kullanım | Sonuç |
 |----------|-------|
-| x        | x     |
+| `SELECT NVL(SEHİR, 'Muğla') FROM KISILER`  | İstanbul, Ankara, İzmir, Adana, **Muğla**, Aydın |
+| `SELECT NVL(SOYAD, 'Yılmaz') FROM KISILER` | Çelik, Demir, **Yılmaz**, Şahin, Çelik, Demir    |
 
 ---
 
