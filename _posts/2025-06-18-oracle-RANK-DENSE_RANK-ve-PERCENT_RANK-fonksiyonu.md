@@ -83,7 +83,8 @@ categories: oracle
 | Analytic           | `DENSE_RANK() OVER([query_partition_clause] ORDER BY clause)`                                    |
 | Aggregate          | `PERCENT_RANK(expr1 [, expr2, ... expr_n]) WITHIN GROUP (ORDER BY expr1 [, expr_2, ... expr_n])` |
 | Analytic           | `PERCENT_RANK() OVER([query_partition_clause] ORDER BY clause)`                                  |
-Üç fonksiyon da hem `aggregate function` hem de `analytic function` olarak kullanılabilir. `Aggregate function` ve `analytic function` hakkında genel bilgilere buradan ulaşılabilir. Her iki kullanımda da syntax değişim göstermektedir.
+
+Üç fonksiyon da hem `aggregate function` hem de `analytic function` olarak kullanılabilir. `Aggregate function` ve `analytic function` hakkında genel bilgilere [buradan]({% post_url 2025-06-06-oracle-aggregate-function-vs-analytic-function %} "Oracle - Aggregate Function vs Analytic Function") ulaşılabilir. Her iki kullanımda da syntax değişim göstermektedir.
 
 `Analytic function` olarak kullanıldığında sadece `query_partition_clause` (opsiyonel) ve `ORDER BY clause` (zorunlu) üzerinden sıra/derece/rütbe numarası döner. Ayrıca herhangi bir kolon/ifade belirtilmez.
 
@@ -112,9 +113,9 @@ Aşağıda örnek sorgularda kullanılan `SATISLAR` tablosundaki kayıtlar yer a
 
 ```sql
 SELECT  TUTAR,
-		    RANK() OVER(ORDER BY TUTAR),
-		    DENSE_RANK() OVER(ORDER BY TUTAR),
-		    PERCENT_RANK() OVER(ORDER BY TUTAR)
+	RANK() OVER(ORDER BY TUTAR),
+    	DENSE_RANK() OVER(ORDER BY TUTAR),
+    	PERCENT_RANK() OVER(ORDER BY TUTAR)
 FROM SATISLAR
 ORDER BY TUTAR;
 ```
@@ -136,10 +137,10 @@ ORDER BY TUTAR;
 
 ```sql
 SELECT  KATEGORI,
-		    TUTAR,
-		    RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR),
-		    DENSE_RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR),
-		    PERCENT_RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR)
+    	TUTAR,
+    	RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR),
+    	DENSE_RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR),
+    	PERCENT_RANK() OVER(PARTITION BY KATEGORI ORDER BY TUTAR)
 FROM SATISLAR
 ORDER BY KATEGORI, TUTAR;
 ```
