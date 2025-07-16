@@ -20,6 +20,8 @@ categories: oracle
 | 50                         | 6    |
 | NULL                       | 7    |
 
+<br>
+
 | TUTAR (descending sıralama) | RANK |
 | --------------------------- | ---- |
 | NULL                        | 1    |
@@ -45,6 +47,8 @@ categories: oracle
 | 40                         | 4          |
 | 50                         | 5          |
 | NULL                       | 6          |
+
+<br>
 
 | TUTAR (descending sıralama) | RANK |
 | --------------------------- | ---- |
