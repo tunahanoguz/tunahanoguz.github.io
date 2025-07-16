@@ -12,6 +12,7 @@ categories: oracle
 | ---------------------------------------------------------------------------------------- |
 | `LAG(expression [, offset [, default]]) OVER([query_partition_clause] order_by_clause)`  |
 | `LEAD(expression [, offset [, default]]) OVER([query_partition_clause] order_by_clause)` |
+
 - `expression`, bir kolondur veya değeri oluşturacak bir ifadedir.
 - `offset`, kaç önceki/sonraki satıra bakılacağını ifade eden sayıdır. Varsayılan değeri 1'dir. (opsiyonel)
 - `default`, bakılacak satır yoksa dönülecek varsayılan değerdir. Varsayılan değeri NULL'dur. (opsiyonel)
