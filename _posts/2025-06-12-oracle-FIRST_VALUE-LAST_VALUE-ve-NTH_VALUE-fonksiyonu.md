@@ -246,7 +246,7 @@ ORDER BY KATEGORI ASC, TUTAR DESC;
 - `[RESPECT NULLS | IGNORE NULLS]`, `NULL` değerlerin analitik fonksiyon tarafından dikkate alınıp alınmayacağını belirler. Eğer belirtilmezse varsayılan değeri `RESPECT NULLS` olur. `IGNORE NULLS` olarak belirtilse bile tüm değerler `NULL` ise fonksiyonun dönüş değeri `NULL` olur. (opsiyonel)
 - `[PARTITION CLAUSE]`, değerin belli bir gruba göre elde edilmesini sağlar. (opsiyonel)
 - `[ORDER BY CLAUSE]`, değerin hangi sıralama üzerinden elde edileceğini belirtir. Bu sıralama yalnızca analitik fonksiyon için geçerlidir, `SELECT` sorgusudan dönen kayıtların farklı bir sıralamada olma ihtimali vardır, `SELECT` sorgusunun sıralama davranışını değiştirmek için o sorgu içinde açık bir şekilde `ORDER BY` kullanmak gerekir. `SELECT` sorgusu için yapılan sıralama, fonksiyonun çalışma şeklinde bir değişime sebep olmaz. (opsiyonel)
-- `[WINDOWING CLAUSE]` için detaylı açıklamalara buradan ulaşılabilir. (opsiyonel)
+- `[WINDOWING CLAUSE]` için detaylı açıklamalara [buradan]({% post_url 2025-06-10-oracle-windowing-clause %} "Oracle - Windowing Clause") ulaşılabilir. (opsiyonel)
 
 ```sql
 SELECT  MUSTERIID,
@@ -387,7 +387,7 @@ ORDER BY KATEGORI, TUTAR;
 - `[RESPECT NULLS | IGNORE NULLS]`, `NULL` değerlerin analitik fonksiyon tarafından dikkate alınıp alınmayacağını belirler. Eğer belirtilmezse varsayılan değeri `RESPECT NULLS` olur. `IGNORE NULLS` olarak belirtilse bile tüm değerler `NULL` ise fonksiyonun dönüş değeri `NULL` olur. (opsiyonel)
 - `[PARTITION CLAUSE]`, değerin belli bir gruba göre elde edilmesini sağlar. (opsiyonel)
 - `[ORDER BY CLAUSE]`, değerin hangi sıralama üzerinden elde edileceğini belirtir. Bu sıralama yalnızca analitik fonksiyon için geçerlidir, `SELECT` sorgusudan dönen kayıtların farklı bir sıralamada olma ihtimali vardır, `SELECT` sorgusunun sıralama davranışını değiştirmek için o sorgu içinde açık bir şekilde `ORDER BY` kullanmak gerekir. `SELECT` sorgusu için yapılan sıralama, fonksiyonun çalışma şeklinde bir değişime sebep olmaz. (opsiyonel)
-- `[WINDOWING CLAUSE]` için detaylı açıklamalara buradan ulaşılabilir. (opsiyonel)
+- `[WINDOWING CLAUSE]` için detaylı açıklamalara [buradan]({% post_url 2025-06-10-oracle-windowing-clause %} "Oracle - Windowing Clause") ulaşılabilir. (opsiyonel)
 - `[FROM FIRST | FROM LAST]`, n'inci değerin analitik fonksiyon özelindeki sıralamada baştan mı yoksa sondan mı alınacağını belirtir. `FROM FIRST` varsayılan değeridir. (opsiyonel)
 
 Aşağıda `NTH_VALUE` fonksiyonu için örnekler yer almaktadır. `WINDOWING CLAUSE` için varsayılan değerin `UNBOUNDED PRECEDING AND CURRENT ROW` olduğu unutulmamalıdır.
