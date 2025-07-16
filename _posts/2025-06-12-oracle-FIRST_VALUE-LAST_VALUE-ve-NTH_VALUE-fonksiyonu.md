@@ -1,5 +1,5 @@
 ---
-title: "FIRST_VALUE, LAST_VALUE ve NTH_VALUE Fonksiyonu"
+title: "Oracle - FIRST_VALUE, LAST_VALUE ve NTH_VALUE Fonksiyonu"
 date: 2025-06-12 12:30:00 +0300
 layout: post
 categories: oracle
