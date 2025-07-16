@@ -29,6 +29,8 @@ Aşağıda aggregate ve analytic function için örnekler bulunmaktadır.
 | Ege     | Muğla     | 1.100.000  |
 | Ege     | Aydın     | 1.200.000  |
 
+<br>
+
 ```sql
 SELECT SUM(NUFUS)
 FROM SEHIRLER
@@ -37,6 +39,8 @@ FROM SEHIRLER
 | SUM(NUFUS) |
 | ---------- |
 | 27.100.000 |
+
+<br>
 
 ```sql
 SELECT BOLGE, SUM(NUFUS)
@@ -49,6 +53,8 @@ ORDER BY BOLGE
 | ------- | ---------- |
 | Ege     | 7.300.000  |
 | Marmara | 19.800.000 |
+
+<br>
 
 ```sql
 SELECT BOLGE, SEHIR, NUFUS, SUM(NUFUS) OVER(PARTITION BY BOLGE)
