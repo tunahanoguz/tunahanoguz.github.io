@@ -1,6 +1,6 @@
 ---
 title:  "Oracle - Windowing Clause"
-date: 2025-06-10 18:30:00 +0300
+date: 2025-06-10 20:30:00 +0300
 layout: post
 categories: oracle
 ---
