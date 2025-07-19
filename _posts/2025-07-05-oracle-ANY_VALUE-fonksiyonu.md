@@ -11,6 +11,8 @@ categories: oracle
 | ----------------------- |
 | `ANY_VALUE(expression)` |
 
+---
+
 Aşağıda örnek sorgularda kullanılan `CALISANLAR` tablosundaki kayıtlar yer almaktadır.
 
 | CALISAN_ID | AD       | SOYAD      | MAAS | DEPARTMAN      | ROL       |
