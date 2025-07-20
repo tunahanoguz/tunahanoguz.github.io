@@ -10,6 +10,8 @@ categories: oracle
 - Yalnızca `COUNT` fonksiyonunun `COUNT(*)` ve `COUNT(sabit_deger)` kullanımları `NULL` gönderen satırları dikkate alır. Bunun sebebi, bu kullanımların amacının satır bazlı kayıt sayısını belirlemek olmasıdır.
 	- `COUNT(kolon)` ve `COUNT(sql_expression)` kullanımları ise, `NULL` gönderen satırları dikkate almayacaktır. Bunun sebebi ise, bu tür kullanımların amacının, gerçek bir değer içeren/oluşturan kolon veya SQL ifadesinin yer aldığı satırların sayısını belirlemek olmasıdır.
 
+<br>
+
 ```sql
 SELECT  COUNT(TUTAR),
 		    COUNT(NVL(TUTAR, 0)),
